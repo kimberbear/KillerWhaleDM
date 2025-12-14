@@ -5,6 +5,8 @@ weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
 weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"
 weapons/weaponopen "Sounds/Weapons/weaponopen.ogg"
 weapons/weaponclose "Sounds/Weapons/weaponclose.ogg"
+weapons/flarefire "Sounds/Weapons/flaregunfire.ogg"
+whale/flaregunexplode "Sounds/flareexplode.ogg"
 
 items/eat "Sounds/yom.ogg"
 items/armor1 "Sounds/arm1pickup.ogg"
