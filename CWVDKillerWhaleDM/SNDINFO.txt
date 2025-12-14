@@ -15,6 +15,6 @@ misc/chat2 "Sounds/chatSound.wav"
 
 menu/choose			"Sounds/Weapons/shotgunprimary.ogg"	// Choose a menu item
 
-plats/pt1_strt			"Sounds/elevatorstart"
-plats/pt1_stop			"Sounds/elevatorend"
-plats/pt1_mid			"Sounds/elevatorloop"
+plats/pt1_strt			"Sounds/elevatorstart.ogg"
+plats/pt1_stop			"Sounds/elevatorend.ogg"
+plats/pt1_mid			"Sounds/elevatorloop.ogg"
