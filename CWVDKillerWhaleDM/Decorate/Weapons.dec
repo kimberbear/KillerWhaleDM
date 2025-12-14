@@ -63,6 +63,13 @@ ACTOR KWDMShotgun: KWDMweapon 1024
 	}
 }
 
+actor KWDMrifleShotCount : Inventory
+{
+	Inventory.MaxAmount 24
+	Inventory.InterHubAmount 0
+	+INVENTORY.UNDROPPABLE
+}
+
 ACTOR KWDMrifle: KWDMweapon 1025
 {
 //$Category Weapon
@@ -83,7 +90,7 @@ ACTOR KWDMrifle: KWDMweapon 1025
 		SGIP A -1
 		Stop
 	Ready:
-		RFLE A 1 A_WeaponReady
+		RFLE A 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		Loop
 	Select:
 		RFLE A 1 A_Raise
@@ -92,6 +99,8 @@ ACTOR KWDMrifle: KWDMweapon 1025
 		RFLE A 1 A_Lower
 		Loop
 	Fire:
+		RFLE A 0 A_JumpIfInventory("KWDMrifleShotCount",24,"Reload")
+		RFLE A 0 A_GiveInventory("KWDMrifleShotCount", 1)
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
 		RFLE B 1 BRIGHT A_FireBullets(2,2,1,8,"KWDMbulletPuff")
@@ -99,6 +108,15 @@ ACTOR KWDMrifle: KWDMweapon 1025
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
 		Goto Ready
+	Reload:
+		RFLE A 0 A_TakeInventory("KWDMrifleShotCount",24)
+
+		RFLE ADEFGHI 2
+		TNT1 A 0 A_PlaySound("weapons/weaponopen")
+		RFLE JKLMNOP 2
+		TNT1 A 0 A_PlaySound("weapons/weaponclose")
+		RFLE QRST 2
+		goto ready
 	}
 }
 
@@ -107,21 +125,21 @@ Actor FlareProjectile
     Damage 20
     Radius 8
     Height 8
-    Speed 35
+    Speed 70
     Projectile
     Obituary "%o was killed by a flare."
 
     States
     {
     Spawn:
-        FLAR A 1 BRIGHT //A_SpawnItem("WynSmokeTrail") //this was causing lag as it's super buggy
+        FLAR A 1 BRIGHT //A_SpawnItem("WynSmokeTrail") //this was causing lag as it's super buggy and removed now
         Loop
 
     Death:
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
-        //TNT1 A 0 A_SpawnItem("WynSmallExplosion") //this was causing lag as it's super buggy
+        //TNT1 A 0 A_SpawnItem("WynSmallExplosion") //this was causing lag as it's super buggy and removed now
         TNT1 A 25 A_PlaySound("whale/flaregunexplode", CHAN_5)
         Stop
     }
@@ -160,7 +178,7 @@ ACTOR KWDMgrenadeLauncher: KWDMweapon 1026
 		FLAR B 0 A_PlayWeaponSound("weapons/grenadefire")
 		GGUN B 1 a_firecustommissile("FlareProjectile")
 		GGUN B 0 A_Light0
-		GGUN BBBBB 8
+		GGUN BBCCA 6
 		Goto Ready
 	}
 }
@@ -198,7 +216,7 @@ ACTOR KWDMflare: KWDMweapon 1027
 		FLGN B 0 A_PlayWeaponSound("weapons/grenadefire")
 		FLGN B 1 a_firecustommissile("FlareProjectile")
 		FLGN B 0 A_Light0
-		FLGN BBBBB 8
+		FLGN BBCCA 6
 		Goto Ready
 	}
 }

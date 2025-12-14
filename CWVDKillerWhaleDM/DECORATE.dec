@@ -1,5 +1,5 @@
+#include "Decorate/FX.dec"
 #include "Decorate/Player.dec"
 #include "Decorate/Ammo.dec"
 #include "Decorate/Items.dec"
-#include "Decorate/FX.dec"
 #include "Decorate/Weapons.dec"

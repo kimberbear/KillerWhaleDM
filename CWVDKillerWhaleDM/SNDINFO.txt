@@ -3,6 +3,9 @@ blank blank
 weapons/riflefire "Sounds/Weapons/chaingunfire.ogg"
 weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
 weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"
+weapons/weaponopen "Sounds/Weapons/weaponopen.ogg"
+weapons/weaponclose "Sounds/Weapons/weaponclose.ogg"
+
 items/eat "Sounds/yom.ogg"
 items/armor1 "Sounds/arm1pickup.ogg"
 ammoget "Sounds/ammoget.ogg"
