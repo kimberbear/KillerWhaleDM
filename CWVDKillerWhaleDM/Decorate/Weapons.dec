@@ -176,7 +176,7 @@ ACTOR KWDMgrenadeLauncher: KWDMweapon 1026
 		GGUN B 0 A_Light2
 		GGUN B 0 A_Quake(2,5,0,5)
 		FLAR B 0 A_PlayWeaponSound("weapons/grenadefire")
-		GGUN B 1 a_firecustommissile("FlareProjectile")
+		GGUN B 1 A_FireGrenade
 		GGUN B 0 A_Light0
 		GGUN BBCCA 6
 		Goto Ready
