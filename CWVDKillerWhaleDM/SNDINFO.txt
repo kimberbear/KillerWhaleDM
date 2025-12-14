@@ -1,0 +1,14 @@
+blank blank
+
+weapons/riflefire "Sounds/Weapons/chaingunfire.ogg"
+weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
+weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"
+items/eat "Sounds/yom.ogg"
+items/armor1 "Sounds/arm1pickup.ogg"
+ammoget "Sounds/ammoget.ogg"
+powerup "Sounds/powerup.ogg"
+
+DSTELEPT "enemyspawn.ogg"
+
+misc/chat "Sounds/chatSound.wav"
+misc/chat2 "Sounds/chatSound.wav"

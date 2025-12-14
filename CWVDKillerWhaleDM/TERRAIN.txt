@@ -1,0 +1,12 @@
+Terrain WaterSink
+{
+    //Splash WaterSplash
+    Footclip 8
+	liquid
+    //StepSounds misc/waterstep
+    //StepVolume 1.0
+    //WalkStepTics 16
+    //RunStepTics 8
+}
+
+floor WYNWA1 WaterSink
