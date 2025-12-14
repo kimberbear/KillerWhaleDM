@@ -1,0 +1,5 @@
+#include "Decorate/Player.txt"
+#include "Decorate/Ammo.txt"
+#include "Decorate/Items.txt"
+#include "Decorate/FX.txt"
+#include "Decorate/Weapons.txt"
