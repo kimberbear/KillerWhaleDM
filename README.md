@@ -3,7 +3,7 @@ A Zandronum compatible pk3 based upon Captain Wayne: Vacation Desperation by Cia
 <br>
 ## Features implemented
 Multiple playable Killer Whales as selectable classes<br>
-etc<br>
+etc...<br>
 <br>
 ## Features planned
 Powerups allowing temporary transformation into boss characters<br>
