@@ -2,6 +2,7 @@ GameInfo
 {
    PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass"
    //PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass"
+   TitleMusic = "SAILOR"
 }
 
 clearEpisodes
