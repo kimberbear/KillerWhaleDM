@@ -3,8 +3,9 @@ actor KWDMplayer : PlayerPawn
 	Speed 0.9
 	Health 100
 	Radius 20
-	Height 60
-	Mass 75
+	Height 65
+	Mass 100
+	Gravity 0.8
 	PainChance 255
 }
 
