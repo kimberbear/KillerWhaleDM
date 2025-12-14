@@ -103,7 +103,7 @@ ACTOR KWDMrifle: KWDMweapon 1025
 		RFLE A 0 A_GiveInventory("KWDMrifleShotCount", 1)
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
-		RFLE B 1 BRIGHT A_FireBullets(2,2,1,8,"KWDMbulletPuff")
+		RFLE B 1 BRIGHT A_FireBullets(2,2,1,10,"KWDMbulletPuff")
 		RFLE B 0 A_Light0
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
