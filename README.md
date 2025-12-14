@@ -16,3 +16,4 @@ The Ultimate Doom Builder configs are a sight for sore eyes right now so maybe w
 <br>
 ## Feel free to contribute or leave feedback!
 This is my first Zandronum project (of this scope at least) so if you spot any mistakes or areas of improvement, feel free to contribute or suggest changes!<br>
+New features and mapping config improvement are especially welcome at the moment!
