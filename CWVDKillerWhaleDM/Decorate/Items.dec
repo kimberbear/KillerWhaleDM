@@ -102,6 +102,7 @@ actor KWDMskullOfPowerPickup : CustomInventory 1324
     +INVENTORY.ALWAYSPICKUP
     Inventory.Pickupsound "powerup"
     Inventory.PickupMessage "Quad Damage!"
+    Inventory.RespawnTics  2100 
 	scale 2
 
     States
