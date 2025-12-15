@@ -1,6 +1,6 @@
 GameInfo
 {
-   PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass"
+   PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass","KWDMgunslingerClass"
    //PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass"
    TitleMusic = "SAILOR"
 }

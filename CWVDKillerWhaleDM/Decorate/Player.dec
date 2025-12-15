@@ -7,6 +7,20 @@ actor KWDMplayer : PlayerPawn
 	Mass 100
 	Gravity 0.8
 	PainChance 255
+	States
+	{
+	Death.Extreme:
+		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"KWDMgib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(2,4),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+	}
 }
 
 actor KWDMshotgunnerClass : KWDMplayer
@@ -28,17 +42,6 @@ actor KWDMshotgunnerClass : KWDMplayer
 		SPOS E 4
 		SPOS F 4 BRIGHT
 		goto spawn
-	Death.Extreme:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMgib",
-			0, 0, 16,
-			Random(-2,2),
-			Random(-2,2),
-			Random(2,4),
-			0,
-			SXF_NOCHECKPOSITION
-		)
 	}
 }
 
@@ -62,17 +65,6 @@ actor KWDMriflemanClass : KWDMplayer
 		POSS E 4
 		POSS F 4 BRIGHT
 		goto spawn
-	Death.Extreme:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMgib",
-			0, 0, 16,
-			Random(-2,2),
-			Random(-2,2),
-			Random(2,4),
-			0,
-			SXF_NOCHECKPOSITION
-		)
 	}
 }
 
@@ -95,17 +87,6 @@ actor KWDMmurkymanClass : KWDMplayer
 	Melee:
 		MURK EF 4
 		goto spawn
-	Death.Extreme:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMgib",
-			0, 0, 16,
-			Random(-2,2),
-			Random(-2,2),
-			Random(2,4),
-			0,
-			SXF_NOCHECKPOSITION
-		)
 	}
 }
 
@@ -128,16 +109,28 @@ actor KWDMgrenadierClass : KWDMplayer
 	Melee:
 		GREN EF 4
 		goto spawn
-	Death.Extreme:
+	}
+}
+
+
+actor KWDMgunslingerClass : KWDMplayer
+{
+	Player.DisplayName "Gunslinger"
+	Player.StartItem "KWDMdual1887"
+	States
+	{
+	Spawn:
+		KWIP A -1 
+		Loop
+	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMgib",
-			0, 0, 16,
-			Random(-2,2),
-			Random(-2,2),
-			Random(2,4),
-			0,
-			SXF_NOCHECKPOSITION
-		)
+		goto FullDeath
+	FullDeath:
+		SPOS L -1
+		Loop
+	// Melee:
+	// 	SPOS E 4
+	// 	SPOS F 4 BRIGHT
+	// 	goto spawn
 	}
 }

@@ -220,3 +220,55 @@ ACTOR KWDMflare: KWDMweapon 1027
 		Goto Ready
 	}
 }
+
+actor KWDM1887firedOnce : Inventory
+{
+	Inventory.MaxAmount 1
+	Inventory.InterHubAmount 0
+	+INVENTORY.UNDROPPABLE
+}
+
+actor KWDMdual1887: KWDMweapon
+{
+	AttackSound "weapons/shotgunfire"
+	Tag "Dual 1887s"
+	States
+	{
+	Spawn:
+		DWLA A -1
+		Stop
+	Ready:
+		DWLA A 1 A_WeaponReady
+		Loop
+	Select:
+		DWLA A 1 A_Raise
+		Loop
+	Deselect:
+		DWLA A 1 A_Lower
+		Loop
+	Fire:
+		DWLA A 0 A_JumpIfInventory("KWDM1887firedOnce",1,"FireRight")
+		DWLA A 1
+		Goto FireLeft
+	FireLeft:
+		DWLA A 0 A_GiveInventory("KWDM1887firedOnce", 1)
+		DWLA A 0 A_Light2
+		DWLA A 0 A_Quake(2,5,0,5)
+		DWLL A 2 BRIGHT A_FireBullets(4,4,5,8,"KWDMbulletPuff")
+		DWLL B 0 A_Light0
+		DWLL B 4
+		DWLL DEDE 2
+		DWLL BC 4
+		goto Ready
+	FireRight:
+		DWLA A 0 A_TakeInventory("KWDM1887firedOnce", 1)
+		DWLA A 0 A_Light2
+		DWLA A 0 A_Quake(2,5,0,5)
+		DWLR A 2 BRIGHT A_FireBullets(4,4,5,8,"KWDMbulletPuff")
+		DWLR A 0 A_Light0
+		DWLR B 4
+		DWLR DEDE 2
+		DWLR BC 4
+		goto Ready
+	}
+}
