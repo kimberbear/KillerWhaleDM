@@ -20,6 +20,10 @@ actor KWDMplayer : PlayerPawn
 			0,
 			SXF_NOCHECKPOSITION
 		)
+		goto FullDeathExtreme
+	FullDeathExtreme:
+		TNT1 A 1
+		loop
 	}
 }
 

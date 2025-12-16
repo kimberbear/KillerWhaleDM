@@ -216,7 +216,10 @@ ACTOR KWDMflare: KWDMweapon 1027
 		FLGN B 0 A_PlayWeaponSound("weapons/flarefire")
 		FLGN B 1 a_firecustommissile("FlareProjectile")
 		FLGN B 0 A_Light0
-		FLGN BBCCA 6
+		FLGN BBCCA 3
+		FLGN DEFGHIJK 2
+		FLGN B 0 A_PlayWeaponSound("weapons/flareload")
+		FLGN LMNOPQ 2
 		Goto Ready
 	}
 }
@@ -230,7 +233,7 @@ actor KWDM1887firedOnce : Inventory
 
 actor KWDMdual1887: KWDMweapon
 {
-	AttackSound "weapons/shotgunfire"
+	AttackSound "weapons/1887fire"
 	Tag "Dual 1887s"
 	States
 	{
@@ -254,7 +257,7 @@ actor KWDMdual1887: KWDMweapon
 		DWLA A 0 A_GiveInventory("KWDM1887firedOnce", 1)
 		DWLA A 0 A_Light2
 		DWLA A 0 A_Quake(2,5,0,5)
-		DWLL A 2 BRIGHT A_FireBullets(4,4,5,8,"KWDMbulletPuff")
+		DWLL A 2 BRIGHT A_FireBullets(4,4,5,10,"KWDMbulletPuff")
 		DWLL B 0 A_Light0
 		DWLL B 4
 		DWLL DEDE 2
@@ -264,7 +267,7 @@ actor KWDMdual1887: KWDMweapon
 		DWLA A 0 A_TakeInventory("KWDM1887firedOnce", 1)
 		DWLA A 0 A_Light2
 		DWLA A 0 A_Quake(2,5,0,5)
-		DWLR A 2 BRIGHT A_FireBullets(4,4,5,8,"KWDMbulletPuff")
+		DWLR A 2 BRIGHT A_FireBullets(4,4,5,10,"KWDMbulletPuff")
 		DWLR A 0 A_Light0
 		DWLR B 4
 		DWLR DEDE 2

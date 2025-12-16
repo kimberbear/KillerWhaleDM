@@ -19,8 +19,8 @@ actor KWDMgib : actor
 {
     Radius 4
     Height 4
-    Mass 50
-    Gravity 0.4
+    Mass 100
+    Gravity 1
     BounceFactor 0.35
 
     +BOUNCEONFLOORS
