@@ -1,0 +1,59 @@
+blank "blank"
+
+//-----------------------------------------------------
+// weapons
+//-----------------------------------------------------
+
+weapons/riflefire "Sounds/Weapons/chaingunfire.ogg"
+weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
+weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"
+weapons/weaponopen "Sounds/Weapons/weaponopen.ogg"
+weapons/weaponclose "Sounds/Weapons/weaponclose.ogg"
+weapons/flarefire "Sounds/Weapons/flaregunfire.ogg"
+weapons/flareload "Sounds/Weapons/flaregunload.ogg"
+weapons/1887fire "Sounds/Weapons/1887fire.wav"
+whale/flaregunexplode "Sounds/flareexplode.ogg"
+
+//-----------------------------------------------------
+// items
+//-----------------------------------------------------
+
+items/eat "Sounds/yom.ogg"
+items/armor1 "Sounds/arm1pickup.ogg"
+ammoget "Sounds/ammoget.ogg"
+powerup "Sounds/powerup.ogg"
+
+//-----------------------------------------------------
+// player
+//-----------------------------------------------------
+
+$playersound 	player 		male 	*land blank
+$playersound 	player 		female 	*land blank
+$playersound 	player 		other 	*land blank
+$playeralias    player		male    *usefail    usefail
+$playeralias    player		female  *usefail    usefail
+$playeralias    player  	other   *usefail    usefail
+
+//-----------------------------------------------------
+// enviroment
+//-----------------------------------------------------
+
+plats/pt1_strt			"Sounds/elevatorstart.ogg"
+plats/pt1_stop			"Sounds/elevatorend.ogg"
+plats/pt1_mid			"Sounds/elevatorloop.ogg"
+
+
+//-----------------------------------------------------
+// misc
+//-----------------------------------------------------
+
+misc/teleport "Sounds/enemyspawn.ogg"
+
+misc/chat "Sounds/chatSound.wav"
+misc/chat2 "Sounds/chatSound.wav"
+
+usefail "Sounds/usefail.ogg"
+
+menu/choose	"Sounds/Weapons/shotgunprimary.ogg"	
+
+hitsounds/hit "Sounds/hitsounds/hit.ogg"

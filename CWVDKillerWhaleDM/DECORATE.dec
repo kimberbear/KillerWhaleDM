@@ -3,3 +3,4 @@
 #include "Decorate/Ammo.dec"
 #include "Decorate/Items.dec"
 #include "Decorate/Weapons.dec"
+#include "Decorate/hitsounds.dec"

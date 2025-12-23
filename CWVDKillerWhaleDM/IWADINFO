@@ -1,0 +1,10 @@
+IWAD
+{
+	Name = "CWVDKillerWhaleDM"
+	BannerColors = "dea840", "003d59"
+	Autoname = "CWVDKillerWhaleDM"
+	Game = "Doom"
+	Config = "CWVDKillerWhaleDM"
+	IWADName = "CWVDKillerWhaleDM.ipk3"
+	Mapinfo = "mapinfo/mindefaults.txt"
+}

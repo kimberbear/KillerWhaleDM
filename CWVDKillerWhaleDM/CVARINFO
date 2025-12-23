@@ -1,0 +1,2 @@
+user int cl_Hitsound = 1;
+user int cl_HitsoundVolume = 80;

@@ -1,0 +1,80 @@
+#library "HitSound.acs"
+#include "zcommon.acs"
+
+// special thanks to the BYOC team for being a huge help in making the programming possible!
+// this script is based upon their hitsound code
+// without their work, i wouldn't have gotten this working
+
+Script "HitProcess" (int type, int arg1, int arg2) EVENT
+{
+	if (type == GAMEEVENT_ACTOR_DAMAGED)
+	{
+		if (PlayerNumber() == -1)
+		{
+			terminate;
+		}
+		delay(1);
+		
+		int killednum; 
+		killednum = PlayerNumber();
+		
+		int markForDeath = 0;
+		if((GetActorProperty(0, APROP_HEALTH))<=0)
+		{
+		markForDeath = 1;
+		}
+
+
+		SetActivator(0, AAPTR_DAMAGE_SOURCE);
+		int plr = PlayerNumber();
+// 		if((plr == -1) || (plr == killednum))
+// 		{
+// 			terminate;
+// 		}
+
+		if (markForDeath == 0)
+		{
+			switch (GetCVAR("cl_Hitsound")) 
+			{
+				case 0: Break;
+				case 1: GiveInventory("HitSoundBeep", 1); break;
+				
+			}
+		}
+		else
+		{
+			SetActivator(0, AAPTR_DAMAGE_SOURCE);
+			switch (GetCVAR("cl_Killsound")) 
+			{
+				case 0: break;
+				case 1: GiveInventory("KillSoundBeep", 1); break;
+			}
+		}
+	}
+}
+
+Script "HitSoundAction" (int sound)
+{
+
+	switch (sound) {
+		case 0: Break;
+		case 1: GiveInventory("HitSoundBeep", 1); break;
+		// add more later!
+	}
+}
+
+Script "HitSoundVolume" (void)
+{
+
+	int plr = PlayerNumber();
+	int volumeMultiplier = Fixeddiv( GetUserCVAR(plr,"cl_HitsoundVolume"),  100);
+	SetResultValue(GetUserCVAR(plr,"cl_HitsoundVolume"));
+}
+
+
+Script "KillSoundVolume" (void)
+{
+	int plr = PlayerNumber();
+	int volumeMultiplier = Fixeddiv( GetUserCVAR(plr,"cl_KillsoundVolume"),  100);
+	SetResultValue(GetUserCVAR(plr,"cl_KillsoundVolume"));
+}

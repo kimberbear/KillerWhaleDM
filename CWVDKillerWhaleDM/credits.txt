@@ -1,13 +1,14 @@
-decorate scripting
+Programming
 kimberbear
+BYOC team (hit sounds and being a useful resource to learn from :])
 
-maps
+Map design
 kimberbear
 Ciaran Games
 
-art
+Art
 Ciaran Games
 kimberbear
 
-music
+Music
 Ciaran Games

@@ -1,1 +1,0 @@
-STARTUPTITLE = "CWVD - Killer Whale Deathmatch"

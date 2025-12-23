@@ -12,7 +12,7 @@ actor KWDMplayer : PlayerPawn
 	Death.Extreme:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMgib",
+			"KWDMBlood",
 			0, 0, 16,
 			Random(-2,2),
 			Random(-2,2),
