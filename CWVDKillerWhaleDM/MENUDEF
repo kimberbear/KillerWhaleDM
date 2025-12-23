@@ -7,12 +7,22 @@ OptionMenu "KWDMoptions"
 	StaticText ""
 	Option "Sound type","cl_HitSound", "HitSounds"
 	Slider	"Hitsound Volume",	"cl_HitsoundVolume", 0, 100, 1
+	StaticText ""
+	Option "Killsound type","cl_KillSound", "KillSounds"
+	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
 }
 
 OptionValue HitSounds
 {
 	0, "None"
 	1, "Quake"
+	2, "Metal Pipe"
+}
+
+OptionValue KillSounds
+{
+	0, "None"
+	1, "Metal Pipe"
 }
 
 OptionMenu "OptionsMenu"

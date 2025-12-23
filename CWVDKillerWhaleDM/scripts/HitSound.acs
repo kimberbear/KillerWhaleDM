@@ -38,6 +38,7 @@ Script "HitProcess" (int type, int arg1, int arg2) EVENT
 			{
 				case 0: Break;
 				case 1: GiveInventory("HitSoundBeep", 1); break;
+				case 2: GiveInventory("HitSoundBeep2", 1); break;
 				
 			}
 		}

@@ -57,3 +57,4 @@ usefail "Sounds/usefail.ogg"
 menu/choose	"Sounds/Weapons/shotgunprimary.ogg"	
 
 hitsounds/hit "Sounds/hitsounds/hit.ogg"
+hitsounds/hit1 "Sounds/hitsounds/pipesound.ogg"
