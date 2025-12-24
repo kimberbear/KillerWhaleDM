@@ -14,11 +14,10 @@ Deathmatch conversions of CWVD maps (Riptide Rampage or Campaign where possible)
 ## Installation
 As this is still very early in development you will need to manually build the game.<br>
 Don't worry as it's pretty easy to do and Doom II is not required to play.<br>
-1. Download source<br>
-2. Zip the contents of KillerWhaleDM and change it's extension from ".zip" to ".pk3"<br>
-3. Download Zandronum<br>
-4. Put the pk3 and "kwgame.wad" into the same directory as "zandronum.exe"<br>
-<br>
+1. Download source
+2. Zip the contents of KillerWhaleDM and change it's extension from ".zip" to ".pk3"
+3. Download Zandronum
+4. Put the pk3 and "kwgame.wad" into the same directory as "zandronum.exe"
 From there, you can drag the pk3 onto zandronum to start the game.<br>
 <br>
 ## Mapping
