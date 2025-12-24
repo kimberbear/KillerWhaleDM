@@ -27,13 +27,9 @@ ACTOR KWDMweapon : Weapon
 
 ACTOR KWDMShotgun: KWDMweapon 1024
 {
-//$Category Weapon
-//$Title "Shotgun"
-//$Sprite SGIPA0
 	Obituary "%o tasted %k's boomstick."
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
-	//Weapon.AmmoType "KWDMshell"
 	Weapon.SlotNumber 2
 	Xscale 0.5
 	Yscale 0.5
@@ -72,13 +68,9 @@ actor KWDMrifleShotCount : Inventory
 
 ACTOR KWDMrifle: KWDMweapon 1025
 {
-//$Category Weapon
-//$Title "Rifle"
-//$Sprite SGIPA0
 	Obituary "%k opened fire on %o."
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
-	//Weapon.AmmoType "KWDMbullet"
 	Weapon.SlotNumber 2
 	Xscale 0.5
 	Yscale 0.5
@@ -139,7 +131,7 @@ Actor FlareProjectile
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
-        //TNT1 A 0 A_SpawnItem("WynSmallExplosion") //this was causing lag as it's super buggy and removed now
+        TNT1 A 0 A_SpawnItem("KWDMsmallExplosion") //this was causing lag as it's super buggy and removed now
         TNT1 A 25 A_PlaySound("whale/flaregunexplode", CHAN_5)
         Stop
     }
@@ -159,7 +151,7 @@ ACTOR KWDMgrenade: grenade
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
 		TNT1 A 0 A_Explode
-        //TNT1 A 0 A_SpawnItem("WynSmallExplosion") //this was causing lag as it's super buggy and removed now
+        TNT1 A 0 A_SpawnItem("KWDMsmallExplosion")
         TNT1 A 25 A_PlaySound("whale/flaregunexplode", CHAN_5)
         Stop
     }
@@ -167,9 +159,6 @@ ACTOR KWDMgrenade: grenade
 
 ACTOR KWDMgrenadeLauncher: KWDMweapon 1026
 {
-//$Category Weapon
-//$Title "Grenade Launcher"
-//$Sprite SGIPA0
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
 	//Weapon.AmmoType "KWDMshell"
@@ -205,12 +194,8 @@ ACTOR KWDMgrenadeLauncher: KWDMweapon 1026
 
 ACTOR KWDMflare: KWDMweapon 1027
 {
-//$Category Weapon
-//$Title "Flare"
-//$Sprite SGIPA0
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
-	//Weapon.AmmoType "KWDMshell"
 	Weapon.SlotNumber 2
 	Xscale 0.5
 	Yscale 0.5

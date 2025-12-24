@@ -95,3 +95,18 @@ actor KWDMgib : actor
         Stop
     }
 }
+
+actor KWDMexplosion : FXBase
+{
+	States
+	{
+	Spawn:
+		EXP2 ABCDEFGH 2 BRIGHT
+		stop
+	}
+}
+
+actor KWDMsmallExplosion : KWDMexplosion
+{
+	Scale 0.5
+}

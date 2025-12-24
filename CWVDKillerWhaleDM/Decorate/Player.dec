@@ -27,10 +27,17 @@ actor KWDMplayer : PlayerPawn
 	}
 }
 
+actor KWDMisShotgunner : ClassToken
+{
+}
+
+
 actor KWDMshotgunnerClass : KWDMplayer
 {
 	Player.DisplayName "Shotgunner"
 	Player.StartItem "KWDMShotgun"
+	Player.StartItem "KWDMisShotgunner"
+
 	States
 	{
 	Spawn:
@@ -49,10 +56,15 @@ actor KWDMshotgunnerClass : KWDMplayer
 	}
 }
 
+actor KWDMisSRifleman : ClassToken
+{
+}
+
 actor KWDMriflemanClass : KWDMplayer
 {
 	Player.DisplayName "Rifleman"
 	Player.StartItem "KWDMrifle"
+	Player.StartItem "KWDMisSRifleman"
 
 	States
 	{
@@ -72,11 +84,16 @@ actor KWDMriflemanClass : KWDMplayer
 	}
 }
 
+actor KWDMisMurkyman : ClassToken
+{
+}
+
 actor KWDMmurkymanClass : KWDMplayer
 {
 	Player.DisplayName "Murkyman"
 	Player.StartItem "KWDMflare"
-	
+	Player.StartItem "KWDMisMurkyman"
+
 	States
 	{
 	Spawn:
@@ -94,10 +111,15 @@ actor KWDMmurkymanClass : KWDMplayer
 	}
 }
 
+actor KWDMisGrenadier : ClassToken
+{
+}
+
 actor KWDMgrenadierClass : KWDMplayer
 {
 	Player.DisplayName "Grenadier"
 	Player.StartItem "KWDMgrenadeLauncher"
+	Player.StartItem "KWDMisGrenadier"
 	
 	States
 	{
@@ -116,11 +138,15 @@ actor KWDMgrenadierClass : KWDMplayer
 	}
 }
 
+actor KWDMisGunslinger : ClassToken
+{
+}
 
 actor KWDMgunslingerClass : KWDMplayer
 {
 	Player.DisplayName "Gunslinger"
 	Player.StartItem "KWDMdual1887"
+	Player.StartItem "KWDMisGunslinger"
 	States
 	{
 	Spawn:
