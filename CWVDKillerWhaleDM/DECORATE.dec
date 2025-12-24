@@ -5,3 +5,4 @@
 #include "Decorate/Weapons.dec"
 #include "Decorate/Hitsounds.dec"
 #include "Decorate/FX.dec"
+#include "Decorate/Decor.dec"

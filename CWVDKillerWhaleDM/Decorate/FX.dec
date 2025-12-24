@@ -73,17 +73,22 @@ ACTOR KWDMBloodTrail : FXBase
 
 
 // this actor seems bugged
-actor KWDMgib : actor
+actor KWDMgib
 {
     Radius 4
     Height 4
     Mass 100
     Gravity 1
     BounceFactor 0.35
-
+	-NOGRAVITY
     +BOUNCEONFLOORS
-    //+NOBLOCKMAP
     +NOINTERACTION
+	+NOTONAUTOMAP
+	+CLIENTSIDEONLY
+	+NONETID
+	+THRUACTORS
+	+NOTELEPORT
+	+DONTSPLASH
 
     States
     {

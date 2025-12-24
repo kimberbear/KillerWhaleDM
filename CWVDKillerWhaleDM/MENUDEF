@@ -51,12 +51,20 @@ OptionMenu "OptionsMenu"
 	
 }
 
+OptionMenu "KWDMmultiplayerMenu"
+{
+	SubMenu	"Offline Skirmish",			"ZA_SkirmishMenu"
+	Submenu "Log in", 					"ZA_LoginMenu"
+	Submenu "Multiplayer Options",		"ZA_MultiplayerOptions" // [TP]
+	Submenu "Player Setup",				"PlayerMenu"
+}
+
 
 LISTMENU "MainMenu"
 {
 	StaticPatch 94, 2, "M_DOOM"
 	Position 97, 72
-	TextItem "Multiplayer Options", "m", "ZA_MultiplayerOptions" 
+	TextItem "Multiplayer", "m", "KWDMmultiplayerMenu"
 	TextItem "Options","o","OptionsMenu"
 	TextItem "Quit Game", "q", "QuitMenu"
 }

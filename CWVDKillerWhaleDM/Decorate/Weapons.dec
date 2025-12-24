@@ -25,7 +25,7 @@ ACTOR KWDMweapon : Weapon
 	+AMMO_OPTIONAL
 }
 
-ACTOR KWDMShotgun: KWDMweapon 1024
+ACTOR KWDMShotgun: KWDMweapon 
 {
 	Obituary "%o tasted %k's boomstick."
 	Weapon.AmmoGive 12
@@ -66,7 +66,7 @@ actor KWDMrifleShotCount : Inventory
 	+INVENTORY.UNDROPPABLE
 }
 
-ACTOR KWDMrifle: KWDMweapon 1025
+ACTOR KWDMrifle: KWDMweapon 
 {
 	Obituary "%k opened fire on %o."
 	Weapon.AmmoGive 12
@@ -157,7 +157,7 @@ ACTOR KWDMgrenade: grenade
     }
 }
 
-ACTOR KWDMgrenadeLauncher: KWDMweapon 1026
+ACTOR KWDMgrenadeLauncher: KWDMweapon 
 {
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
@@ -192,7 +192,7 @@ ACTOR KWDMgrenadeLauncher: KWDMweapon 1026
 	}
 }
 
-ACTOR KWDMflare: KWDMweapon 1027
+ACTOR KWDMflare: KWDMweapon 
 {
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1

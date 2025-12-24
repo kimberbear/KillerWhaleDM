@@ -9,6 +9,11 @@ GameInfo
 
 clearEpisodes
 
+defaultmap
+{
+	lightmode=3
+}
+
 episode PROTO
 {
 	name = "Test map"
@@ -17,7 +22,7 @@ episode PROTO
 map EMIVITA "Emivita"
 {
 	sky1 = "SALTYSKY",0
-	lightmode=3
+	music = "music/viciousvenice.ogg"
 }
 
 map PROTO "Test map"
@@ -28,4 +33,5 @@ map PROTO "Test map"
 map 2FORT "2Fort"
 {
 	sky1 = "VOLCNSKY",0
+	music = "music/viciousvenice.ogg"
 }

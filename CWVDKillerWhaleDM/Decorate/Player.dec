@@ -7,6 +7,7 @@ actor KWDMplayer : PlayerPawn
 	Mass 100
 	Gravity 0.8
 	PainChance 255
+	Player.ColorRange 114, 124
 	States
 	{
 	Death.Extreme:
@@ -65,7 +66,8 @@ actor KWDMriflemanClass : KWDMplayer
 	Player.DisplayName "Rifleman"
 	Player.StartItem "KWDMrifle"
 	Player.StartItem "KWDMisSRifleman"
-
+	Player.ColorRange 197, 207				// fuck my stupid chungus life
+	
 	States
 	{
 	Spawn:

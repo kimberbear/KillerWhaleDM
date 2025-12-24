@@ -1,0 +1,57 @@
+actor Decoration 
+{
+	+SOLID
+	yScale 1.098
+}
+
+actor Oak1 : Decoration 10001
+{
+//$Category Decoration
+//$Title "Oak Tree 1"
+//$Sprite OAK1A0
+    Radius 32
+    Height 223
+    ProjectilePassHeight -16
+    +SOLID
+	States
+	{
+	Spawn:
+	OAK1 A -1
+	Stop
+	}
+}
+
+actor Oak2 : Decoration 10002
+{
+//$Category Decoration
+//$Title "Oak Tree 2"
+//$Sprite OAK2A0
+    Radius 32
+    Height 224
+    ProjectilePassHeight -16
+    +SOLID
+	States
+	{
+	Spawn:
+	OAK2 A -1
+	Stop
+	}
+}
+
+actor Oak3 : Decoration 10003
+{
+//$Category Decoration
+//$Title "Oak Tree 3"
+//$Sprite OAK3A0
+    Radius 32
+    Height 224
+    ProjectilePassHeight -16
+    +SOLID
+ 
+	States
+	{
+	Spawn:
+	OAK3 A -1
+	Stop
+	}
+}
