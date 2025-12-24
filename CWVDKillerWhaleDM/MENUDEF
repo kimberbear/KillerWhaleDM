@@ -59,6 +59,65 @@ OptionMenu "KWDMmultiplayerMenu"
 	Submenu "Player Setup",				"PlayerMenu"
 }
 
+//-------------------------------------------------------------------------------------------
+//
+// The player menu
+//
+//-------------------------------------------------------------------------------------------
+
+OptionValue "Gender"
+{
+	0, "Male"
+	1, "Female"
+	2, "Other"
+}
+
+OptionValue "Autoaim"
+{
+	0, "Never"
+	1, "Very low"
+	2, "Low"
+	3, "Medium"
+	4, "High"
+	5, "Very high"
+	6, "Always"
+}
+
+
+ListMenu "PlayerMenu"
+{
+	StaticTextCentered 160, 6, "$MNU_PLAYERSETUP"
+	Font "SmallFont"
+	Linespacing 14
+	Position 48, 36
+
+
+	PlayerNameBox "Name", 0, "Playerbox"
+	Selector "-", -16, -1
+	MouseWindow 0, 220
+	PlayerDisplay 220, 80, "20 00 00", "80 00 40", 1, "PlayerDisplay"
+	
+// 	// [TP] Zandronum does not store team in userinfo
+// 	// ValueText "Team", "Team"
+ 	ValueText "Color", "Color"
+	Linespacing 10
+	Slider "Red", "Red", 0, 255, 16
+	Slider "Green", "Green", 0, 255, 16
+	Linespacing 14
+	Slider "Blue", "Blue", 0, 255, 16
+	//ValueText "Autoaim", "Autoaim", "Autoaim"
+	//Slider "Handicap", "Handicap", 0, 200, 5 // [TP]
+	// [TP] This is moved to weapon setup
+	// ValueText "Switch on pickup", "Switch", "OffOn"
+
+	//TextItem "Weapon Setup", "w", "ZA_WeaponSetup" // [TP]
+	ValueText "Class", "Class"
+	ValueText "Skin", "Skin"
+	ValueText "Gender", "Gender", "Gender"
+	ValueText "Always Run", "AlwaysRun", "OnOff"
+	Class "PlayerMenu"
+}
+
 
 LISTMENU "MainMenu"
 {
