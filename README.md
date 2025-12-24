@@ -19,7 +19,7 @@ Don't worry as it's pretty easy to do and Doom II is not required to play.<br>
 3. Download Zandronum<br>
 4. Put the pk3 and "kwgame.wad" into the same directory as "zandronum.exe"<br>
 <br>
-From there, you can drag the pk3 onto zandronum to start the game.
+From there, you can drag the pk3 onto zandronum to start the game.<br>
 <br>
 ## Mapping
 Download the Ultimate Doom Builder configs and add them to the Configurations folder at your Ultimate Doom Builder installation.<br>
