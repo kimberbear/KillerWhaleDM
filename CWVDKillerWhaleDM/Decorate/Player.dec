@@ -57,6 +57,19 @@ actor KWDMshotgunnerClass : KWDMplayer
 	See:
 		SPOS ABCD 4
 		loop
+	Pain:
+		TNT1 A 0 A_Jump(128, "Pain2", "Pain3", "Pain4")
+		SPOS G 15 
+		Goto see
+	Pain2:	
+		SPOS X 15 	
+		Goto See
+	Pain3:	
+		SPOS Y 15 
+		Goto See
+	Pain4:	
+		SPOS Z 15 
+		Goto See
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
@@ -89,6 +102,19 @@ actor KWDMriflemanClass : KWDMplayer
 	See:
 		POSS ABCD 4
 		loop
+	Pain:
+		TNT1 A 0 A_Jump(128, "Pain2", "Pain3", "Pain4")
+		POSS G 15 
+		Goto see
+	Pain2:	
+		POSS X 15 	
+		Goto See
+	Pain3:	
+		POSS Y 15 
+		Goto See
+	Pain4:	
+		POSS Z 15 
+		Goto See
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
@@ -120,6 +146,19 @@ actor KWDMmurkymanClass : KWDMplayer
 	See:
 		MURK ABCD 4
 		loop
+	Pain:
+		TNT1 A 0 A_Jump(128, "Pain2", "Pain3", "Pain4")
+		MURK G 15 
+		Goto see
+	Pain2:	
+		MURK X 15 	
+		Goto See
+	Pain3:	
+		MURK Y 15 
+		Goto See
+	Pain4:	
+		MURK Z 15 
+		Goto See
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
@@ -150,6 +189,19 @@ actor KWDMgrenadierClass : KWDMplayer
 	See:
 		GREN ABCD 4
 		loop
+	Pain:
+		TNT1 A 0 A_Jump(128, "Pain2", "Pain3", "Pain4")
+		GREN G 15 
+		Goto see
+	Pain2:	
+		GREN X 15 	
+		Goto See
+	Pain3:	
+		GREN Y 15 
+		Goto See
+	Pain4:	
+		GREN Z 15 
+		Goto See
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
