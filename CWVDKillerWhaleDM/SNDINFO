@@ -54,7 +54,15 @@ misc/chat2 "Sounds/chatSound.wav"
 
 usefail "Sounds/usefail.ogg"
 
-menu/choose	"Sounds/Weapons/shotgunprimary.ogg"	
+menu/activate		"sounds/items/abonpickup.ogg"	
+menu/backup			"sounds/weapons/shotgunopenclose.ogg"	
+menu/prompt			"sounds/weapons/shotgunopenclose.ogg"	
+menu/cursor			"sounds/weapons/shotgunopenclose.ogg"		
+menu/change			"sounds/weapons/shotgunload.ogg"	
+menu/invalid		"sounds/weapons/shotgunopenclose.ogg"		
+menu/dismiss		"sounds/weapons/shotgunopenclose.ogg"	
+menu/choose			"sounds/weapons/shotgunmenu.ogg"	
+menu/clear			"sounds/weapons/unequip.ogg"
 
 hitsounds/hit "Sounds/hitsounds/hit.ogg"
 hitsounds/hit1 "Sounds/hitsounds/pipesound.ogg"
