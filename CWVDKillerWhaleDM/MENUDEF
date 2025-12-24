@@ -53,6 +53,7 @@ OptionMenu "OptionsMenu"
 
 OptionMenu "KWDMmultiplayerMenu"
 {
+	TITLE "MULTIPLAYER"
 	SubMenu	"Offline Skirmish",			"ZA_SkirmishMenu"
 	Submenu "Log in", 					"ZA_LoginMenu"
 	Submenu "Multiplayer Options",		"ZA_MultiplayerOptions" // [TP]
@@ -72,18 +73,6 @@ OptionValue "Gender"
 	2, "Other"
 }
 
-OptionValue "Autoaim"
-{
-	0, "Never"
-	1, "Very low"
-	2, "Low"
-	3, "Medium"
-	4, "High"
-	5, "Very high"
-	6, "Always"
-}
-
-
 ListMenu "PlayerMenu"
 {
 	StaticTextCentered 160, 6, "$MNU_PLAYERSETUP"
@@ -93,7 +82,7 @@ ListMenu "PlayerMenu"
 
 
 	PlayerNameBox "Name", 0, "Playerbox"
-	Selector "-", -16, -1
+	//Selector "-", -16, -1
 	MouseWindow 0, 220
 	PlayerDisplay 220, 80, "20 00 00", "80 00 40", 1, "PlayerDisplay"
 	

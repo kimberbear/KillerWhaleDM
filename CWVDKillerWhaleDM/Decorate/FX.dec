@@ -18,6 +18,7 @@ ACTOR FXBase : Actor
 
 ACTOR KWDMBlood : FXBase Replaces Blood
 {
+	scale 0.7
 	+FORCEXYBILLBOARD
 	States
 	{
@@ -44,7 +45,7 @@ ACTOR KWDMBloodSplatter : KWDMBlood Replaces BloodSplatter
 ACTOR KWDMBloodDroplet : FXBase
 {
     Gravity 0.6
-	Scale 0.8
+	Scale 0.4
 	-NOINTERACTION
 	-NOGRAVITY
 	States
@@ -61,7 +62,7 @@ ACTOR KWDMBloodDroplet : FXBase
 
 ACTOR KWDMBloodTrail : FXBase
 {
-	Scale 0.5
+	Scale 0.2
 	States
 	{
     Spawn:
@@ -70,35 +71,20 @@ ACTOR KWDMBloodTrail : FXBase
 	}
 }
 
-
-
-// this actor seems bugged
-actor KWDMgib
+actor KWDMgib : KWDMBloodDroplet
 {
-    Radius 4
-    Height 4
-    Mass 100
-    Gravity 1
-    BounceFactor 0.35
-	-NOGRAVITY
-    +BOUNCEONFLOORS
-    +NOINTERACTION
-	+NOTONAUTOMAP
-	+CLIENTSIDEONLY
-	+NONETID
-	+THRUACTORS
-	+NOTELEPORT
-	+DONTSPLASH
-
+	Scale 1
     States
     {
     Spawn:
-        BON1 A 4
-        Loop
-    Death:
-        TNT1 A 0
-        Stop
-    }
+        BON1 A 1 A_SpawnItemEX("KWDMBloodTrail", random(-1,1), 0, random(-1,1), 0, 0, 0, random(0,360))
+		TNT1 A 0 A_CheckFloor("Land")
+		Loop
+	Land:
+		TNT1 A 0 A_SpawnItemEX("KWDMBlood",0,0,0,0,0,0,random(0,360))
+		TNT1 A 5
+		Stop
+	}
 }
 
 actor KWDMexplosion : FXBase

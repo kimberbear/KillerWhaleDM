@@ -21,6 +21,15 @@ actor KWDMplayer : PlayerPawn
 			0,
 			SXF_NOCHECKPOSITION
 		)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"KWDMgib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(6,10),
+			0,
+			SXF_NOCHECKPOSITION
+		)
 		goto FullDeathExtreme
 	FullDeathExtreme:
 		TNT1 A 1
@@ -38,12 +47,16 @@ actor KWDMshotgunnerClass : KWDMplayer
 	Player.DisplayName "Shotgunner"
 	Player.StartItem "KWDMShotgun"
 	Player.StartItem "KWDMisShotgunner"
+	Player.ColorRange 179, 191
 
 	States
 	{
 	Spawn:
 		SPOS D -1 
 		Loop
+	See:
+		SPOS ABCD 4
+		loop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
@@ -73,6 +86,9 @@ actor KWDMriflemanClass : KWDMplayer
 	Spawn:
 		POSS D -1 
 		Loop
+	See:
+		POSS ABCD 4
+		loop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
@@ -101,6 +117,9 @@ actor KWDMmurkymanClass : KWDMplayer
 	Spawn:
 		MURK D -1 
 		Loop
+	See:
+		MURK ABCD 4
+		loop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
@@ -128,6 +147,9 @@ actor KWDMgrenadierClass : KWDMplayer
 	Spawn:
 		GREN D -1 
 		Loop
+	See:
+		GREN ABCD 4
+		loop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
