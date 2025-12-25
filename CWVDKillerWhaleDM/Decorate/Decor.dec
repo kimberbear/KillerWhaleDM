@@ -4,7 +4,7 @@ actor Decoration
 	yScale 1.098
 }
 
-actor Oak1 : Decoration 10001
+actor Oak1 : Decoration 16125
 {
 //$Category Decoration
 //$Title "Oak Tree 1"
@@ -21,7 +21,7 @@ actor Oak1 : Decoration 10001
 	}
 }
 
-actor Oak2 : Decoration 10002
+actor Oak2 : Decoration 16126
 {
 //$Category Decoration
 //$Title "Oak Tree 2"
@@ -38,7 +38,7 @@ actor Oak2 : Decoration 10002
 	}
 }
 
-actor Oak3 : Decoration 10003
+actor Oak3 : Decoration 16127
 {
 //$Category Decoration
 //$Title "Oak Tree 3"

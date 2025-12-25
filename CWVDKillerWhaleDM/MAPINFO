@@ -1,3 +1,5 @@
+// zandro does not support doom editor numbers so it is omitted from here
+
 GameInfo
 {
 	PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass","KWDMgunslingerClass"

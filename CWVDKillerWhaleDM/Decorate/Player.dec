@@ -11,7 +11,7 @@ actor KWDMplayer : PlayerPawn
 	States
 	{
 	Death.Extreme:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		TNT1 AAAAA 0 A_SpawnItemEx(
 			"KWDMBlood",
 			0, 0, 16,
@@ -71,7 +71,7 @@ actor KWDMshotgunnerClass : KWDMplayer
 		SPOS Z 15 
 		Goto See
 	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
 	FullDeath:
 		SPOS L -1
@@ -116,7 +116,7 @@ actor KWDMriflemanClass : KWDMplayer
 		POSS Z 15 
 		Goto See
 	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
 	FullDeath:
 		POSS L -1
@@ -160,7 +160,7 @@ actor KWDMmurkymanClass : KWDMplayer
 		MURK Z 15 
 		Goto See
 	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
 	FullDeath:
 		MURK L -1
@@ -203,7 +203,7 @@ actor KWDMgrenadierClass : KWDMplayer
 		GREN Z 15 
 		Goto See
 	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
 	FullDeath:
 		GREN L -1
@@ -229,7 +229,7 @@ actor KWDMgunslingerClass : KWDMplayer
 		KWIP A -1 
 		Loop
 	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDMdeathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
 		goto FullDeath
 	FullDeath:
 		SPOS L -1
