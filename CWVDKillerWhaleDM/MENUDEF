@@ -1,3 +1,9 @@
+DefaultListMenu
+{
+	Font "BigFont", "Gold"
+	LineSpacing 15
+}
+
 OptionMenu "KWDMoptions"
 {
 	TITLE "KWDM Options"

@@ -4,6 +4,14 @@ GameInfo
 	//PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass"
 	TitleMusic = "SAILOR"
 	QuitMessages="Do you really think I'd ever allow those who cross me to live?"
+	dimcolor = "black"
+	dimamount = 0.5
+	menufontcolor_title = "Gold"
+	menufontcolor_label = "white" 
+	menufontcolor_highlight = "Gold"
+	menufontcolor_selection = "Gold"
+	NoRandomPlayerClass = false
+	ForceSpawnEventScripts = true
 	ForceDamageEventScripts = true
 }
 
