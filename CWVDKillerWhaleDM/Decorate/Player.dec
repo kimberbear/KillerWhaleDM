@@ -247,14 +247,24 @@ actor KWDMstanClass : KWDMplayer
 	Player.DisplayName "Stanley Steel Press"
 	Player.StartItem "KWDM_stanRevolver"
 	Height 75
+	Health 500
 	States
 	{
 	Spawn:
 		STAF A -1 
 		Loop
 	See:
-		STAF BCDEFD 4
+		STAF BCDEFD 3
 		loop
+	Missile:
+		STAN HIJ 4
+		goto see
+	Melee:
+		STAN HIJ 4
+		goto see
+	Pain:
+		STAN R 4
+		goto see
 	Death:
 		SPOS L 0 ACS_NamedExecuteAlways("stanDied",0)
 		STAM ABCDEFGHIJKLM 4

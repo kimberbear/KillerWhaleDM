@@ -7,8 +7,9 @@ script "stanPickup" (void)
 {
 	int pNum = PlayerNumber();
 	//SetPlayerClass(pNum,"KWDMstan",true);
-	MorphActor(pNum, "KWDMstanClass", "", 6300, 0, "", "");
-    SetActorProperty(0, APROP_Health, 200);
+	MorphActor(0, "KWDMstanClass", "", 6300, 0, "", "");
+	SetActorState(0, "Spawn");
+    SetActorProperty(0, APROP_Health, 500);
 	ACS_NamedExecuteAlways("stanTransformed",0);
 	BossActive = true;
 	GiveInventory("KWDM_stanRevolver",1);
@@ -16,16 +17,44 @@ script "stanPickup" (void)
 
 script "stanTransformed" (void)
 {
-	SetFont("BIGFONT");
-	HudMessage(s:"STANLEY ARRIVES AT THE SCENE!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+	//SetFont("BIGFONT");
+	//HudMessage(s:"STANLEY ARRIVES AT THE SCENE!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+        SetFont("BIGFONT");
+        HudMessage(
+            s:"STANLEY ARRIVES AT THE SCENE!";
+            HUDMSG_PLAIN,
+            501,            
+            CR_GOLD,
+            0.5, 0.3,
+            5.0
+        );
+    }
 	SetMusic("music/stanfight_ingame.ogg");
 	AmbientSound("voice/stanNotice",127);
 }
 
 script "stanDied" (void)
 {
-	SetFont("BIGFONT");
-	HudMessage(s:"HIS CASE IS CLOSED!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+	//SetFont("BIGFONT");
+	//HudMessage(s:"HIS CASE IS CLOSED!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+        SetFont("BIGFONT");
+        HudMessage(
+            s:"HIS CASE IS CLOSED!";
+            HUDMSG_PLAIN,
+            501,            
+            CR_GOLD,
+            0.5, 0.3,
+            5.0
+        );
+    }
 	ACS_NamedExecuteAlways("resetMusic",0);
 	BossActive = false;	// just in case
 }
