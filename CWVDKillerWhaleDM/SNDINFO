@@ -34,6 +34,26 @@ $playeralias    player		male    *usefail    usefail
 $playeralias    player		female  *usefail    usefail
 $playeralias    player  	other   *usefail    usefail
 
+voice/stanNotice1	"sounds/bosses/stan/stan_notice_01.ogg"
+voice/stanNotice2	"sounds/bosses/stan/stan_notice_02.ogg"
+voice/stanNotice3	"sounds/bosses/stan/stan_notice_03.ogg"
+
+$random voice/stanNotice
+{
+	voice/stanNotice1
+	voice/stanNotice2
+	voice/stanNotice3
+}
+
+weapons/revolverfire1	"sounds/bosses/stan/stanrevshot1.ogg"
+weapons/revolverfire2	"sounds/bosses/stan/stanrevshot2.ogg"
+
+$random weapons/revolverfire
+{
+	weapons/revolverfire1
+	weapons/revolverfire2
+}
+
 //-----------------------------------------------------
 // enviroment
 //-----------------------------------------------------
@@ -53,6 +73,9 @@ misc/chat "Sounds/chatSound.wav"
 misc/chat2 "Sounds/chatSound.wav"
 
 usefail "Sounds/usefail.ogg"
+
+misc/hole "sounds/hole.ogg"
+misc/tada "sounds/tada.ogg"
 
 menu/activate		"sounds/items/abonpickup.ogg"	
 menu/backup			"sounds/weapons/shotgunopenclose.ogg"	

@@ -29,6 +29,12 @@ episode PROTO
 	name = "Test map"
 }
 
+map LAVA "Lava [Early blockout]"
+{
+	sky1 = "DASKY25",0
+	music = "music/dave_ingame.ogg"
+}
+
 map EMIVITA "Emivita"
 {
 	sky1 = "SALTYSKY",0

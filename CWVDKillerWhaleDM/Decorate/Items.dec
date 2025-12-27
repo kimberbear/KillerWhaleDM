@@ -135,3 +135,23 @@ actor KWDM_skullOfPowerPickup : CustomInventory 17002
         Stop
     }
 }
+
+actor KWDM_stanTransformationPickup : CustomInventory 17003
+{
+//$Category Powerup
+//$Title "Stanley Transformation Pickup"
+//$Sprite QUADC0
+    +INVENTORY.NEVERRESPAWN
+    +INVENTORY.AUTOACTIVATE   // auto-use when picked up
+	+INVENTORY.ALWAYSPICKUP
+    States
+    {
+    Spawn:
+        QUAD ABCDEFGH 4 bright
+        Loop
+
+    Pickup:
+        TNT1 A 0 ACS_NamedExecuteAlways("stanPickup")
+        Stop
+    }
+}

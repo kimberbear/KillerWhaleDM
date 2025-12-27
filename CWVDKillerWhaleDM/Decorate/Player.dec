@@ -240,3 +240,25 @@ actor KWDMgunslingerClass : KWDMplayer
 	// 	goto spawn
 	}
 }
+
+// Stanley Steel Press
+actor KWDMstanClass : KWDMplayer
+{
+	Player.DisplayName "Stanley Steel Press"
+	Player.StartItem "KWDM_stanRevolver"
+	Height 75
+	States
+	{
+	Spawn:
+		STAF A -1 
+		Loop
+	See:
+		STAF BCDEFD 4
+		loop
+	Death:
+		SPOS L 0 ACS_NamedExecuteAlways("stanDied",0)
+		STAM ABCDEFGHIJKLM 4
+		STAM M -1
+		Loop
+	}
+}
