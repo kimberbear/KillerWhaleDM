@@ -147,7 +147,7 @@ actor KWDM_stanTransformationPickup : CustomInventory 17003
     States
     {
     Spawn:
-        QUAD ABCDEFGH 4 bright
+        SPIK A 4 bright
         Loop
 
     Pickup:
