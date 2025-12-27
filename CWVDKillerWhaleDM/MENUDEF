@@ -22,13 +22,15 @@ OptionValue HitSounds
 {
 	0, "None"
 	1, "Quake"
-	2, "Metal Pipe"
+	2, "Click"
+	3, "Metal Pipe"
 }
 
 OptionValue KillSounds
 {
 	0, "None"
-	1, "Metal Pipe"
+	1, "Bell"
+	2, "Metal Pipe"
 }
 
 OptionMenu "OptionsMenu"
