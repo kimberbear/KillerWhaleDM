@@ -300,6 +300,7 @@ actor KWDM_stanRevolver : KWDMweapon
 		REVV A 1 A_Lower
 		Loop
 	Fire:
+		REVV E 1
 		REVV A 0 A_Light2
 		REVV A 0 A_Quake(3,5,0,5)
 		REVV B 1 BRIGHT A_FireBullets(2,2,1,50,"KWDMbulletPuff")
