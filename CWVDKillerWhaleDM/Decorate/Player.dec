@@ -5,9 +5,10 @@ actor KWDMplayer : PlayerPawn
 	Radius 20
 	Height 65
 	Mass 100
-	Gravity 0.8
+	Gravity 1.0
 	PainChance 255
 	Player.ColorRange 114, 124
+	player.jumpz 10
 	States
 	{
 	Death.Extreme:
@@ -244,6 +245,7 @@ actor KWDMgunslingerClass : KWDMplayer
 // Stanley Steel Press
 actor KWDMstanClass : KWDMplayer
 {
+	+NOSKIN
 	Player.DisplayName "Stanley Steel Press"
 	Player.StartItem "KWDM_stanRevolver"
 	Height 75

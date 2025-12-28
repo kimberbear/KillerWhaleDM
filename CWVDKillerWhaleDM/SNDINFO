@@ -13,6 +13,34 @@ weapons/flarefire "Sounds/Weapons/flaregunfire.ogg"
 weapons/flareload "Sounds/Weapons/flaregunload.ogg"
 weapons/1887fire "Sounds/Weapons/1887fire.wav"
 whale/flaregunexplode "Sounds/flareexplode.ogg"
+weapons/grenadeload "Sounds/Weapons/shotgunthump.ogg"
+weapons/dynamitebounce "Sounds/Weapons/dynamitebounce.ogg"
+
+
+explode1	"Sounds/explode1.ogg"
+explode2	"Sounds/explode2.ogg"
+explode3	"Sounds/explode3.ogg"
+explode4	"Sounds/explode4.ogg"
+explode5	"Sounds/explode5.ogg"
+explode6	"Sounds/explode6.ogg"
+explode7	"Sounds/explode7.ogg"
+explode8	"Sounds/explode8.ogg"
+explode9	"Sounds/explode9.ogg"
+explode10	"Sounds/explode10.ogg"
+
+$random explosion
+{
+	explode1
+	explode2
+	explode3
+	explode4
+	explode5
+	explode6
+	explode7
+	explode8
+	explode9
+	explode10
+}
 
 //-----------------------------------------------------
 // items

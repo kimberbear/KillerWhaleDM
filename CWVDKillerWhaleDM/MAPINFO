@@ -2,7 +2,7 @@
 
 GameInfo
 {
-	PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass","KWDMgunslingerClass"
+	PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass"//,"KWDMgunslingerClass"
 	//PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass"
 	TitleMusic = "SAILOR"
 	QuitMessages="Do you really think I'd ever allow those who cross me to live?"
