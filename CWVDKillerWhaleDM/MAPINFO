@@ -15,6 +15,7 @@ GameInfo
 	NoRandomPlayerClass = false
 	ForceSpawnEventScripts = true
 	ForceDamageEventScripts = true
+	MenuBackButton = "M_BACK"
 }
 
 clearEpisodes

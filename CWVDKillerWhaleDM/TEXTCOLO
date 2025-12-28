@@ -1,0 +1,16 @@
+WYNPINK
+{
+	#000000	 #ff5277	0 10
+	#4b1d52  #ff5277	11 200
+	#ff5277  #FFFFFF	201 256
+Console:
+	#4b1d52  #ff5277    0 127
+	#4b1d52  #ff5277  128 256
+Flat:
+	#ff5277
+}
+
+WYNHEAL
+{
+	#FFFFFF	 #221765
+}
