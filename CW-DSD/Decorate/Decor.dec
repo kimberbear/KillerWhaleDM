@@ -55,3 +55,22 @@ actor Oak3 : Decoration 16127
 	Stop
 	}
 }
+
+actor JOHN : Decoration 16420
+{
+//$Category Decoration
+//$Title "John Egbert"
+//$Sprite JOHN
+    Radius 32
+    Height 64
+    ProjectilePassHeight -16
+	scale 0.5
+    +SOLID
+ 
+	States
+	{
+	Spawn:
+	JOHN A -1
+	Stop
+	}
+}
