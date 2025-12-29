@@ -3,7 +3,7 @@ actor KWDMplayer : PlayerPawn
 	Speed 0.9
 	Health 100
 	Radius 20
-	Height 65
+	Height 60
 	Mass 100
 	Gravity 1.0
 	PainChance 255
@@ -248,7 +248,7 @@ actor KWDMstanClass : KWDMplayer
 	+NOSKIN
 	Player.DisplayName "Stanley Steel Press"
 	Player.StartItem "KWDM_stanRevolver"
-	Height 75
+	Height 64
 	Health 500
 	States
 	{
