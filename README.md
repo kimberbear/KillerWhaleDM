@@ -1,13 +1,19 @@
-# KillerWhaleDM
+# Captain Wayne: Deep Sea Deathmatch
 A Zandronum compatible pk3 based upon Captain Wayne: Vacation Desperation by Ciaran Games<br>
+
+## Please note
+THIS IS A FAN-MADE PROJECT AND IS NOT AFFILIATED WITH OR ENDORSED BY CIARAN GAMES<br>
+If you like this game... Go show your support by buying a pirate ship!<br>
+...or well, you can buy the game on Steam too.<br>
+captain-wayne.com<br>
+<br>
+This Zandronum mod is very early in development.<br>
+Many things are likely to change and it won't be surprise if things stop working after updates.<br>
+
 ## Features implemented
 * Multiple playable Killer Whales as selectable classes
 * Powerups allowing temporary transformation into boss characters
 * Fast paced Deathmatch gameplay inspired by Quake III Arena
-
-## Please note
-This Zandronum mod is very early in development.<br>
-Many things are likely to change and it won't be surprise if things stop working after updates.<br>
 
 ## Features planned
 * More Killer Whales (including original ones not included in the game!)
