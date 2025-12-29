@@ -119,7 +119,7 @@ ListMenu "PlayerMenu"
 LISTMENU "MainMenu"
 {
 	StaticPatch 94, 2, "M_DOOM"
-	Position 97, 72
+	Position 97, 102
 	TextItem "Multiplayer", "m", "KWDMmultiplayerMenu"
 	TextItem "Options","o","OptionsMenu"
 	TextItem "Quit Game", "q", "QuitMenu"

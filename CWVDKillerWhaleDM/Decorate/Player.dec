@@ -138,7 +138,7 @@ actor KWDMmurkymanClass : KWDMplayer
 	Player.DisplayName "Murkyman"
 	Player.StartItem "KWDMflare"
 	Player.StartItem "KWDMisMurkyman"
-
+	Player.ColorRange 114, 122
 	States
 	{
 	Spawn:
