@@ -1,4 +1,6 @@
 # Captain Wayne: Deep Sea Deathmatch
+> formerly CWVD: Killer Whale Deathmatch
+
 A Zandronum compatible pk3 based upon Captain Wayne: Vacation Desperation by Ciaran Games<br>
 
 ## Please note
