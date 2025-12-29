@@ -124,7 +124,7 @@ Actor FlareProjectile
     States
     {
     Spawn:
-        FLAR A 1 BRIGHT //A_SpawnItem("WynSmokeTrail") //this was causing lag as it's super buggy and removed now
+        FLAR A 2 BRIGHT A_SpawnItem("KWDM_dustCloud") 
         Loop
 
     Death:
@@ -152,10 +152,27 @@ ACTOR KWDMgrenade: grenade
     States
     {
     Spawn:
-        WDNY ABCDEFGH 4 BRIGHT A_CheckFloor("Land")
+		// what i do here should be a fucking crime
+		// THIS IS OUTRAGEOUS
+        WDNY A 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY A 0 A_CheckFloor("Land")
+        WDNY B 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY B 0 A_CheckFloor("Land")
+        WDNY C 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY C 0 A_CheckFloor("Land")
+        WDNY D 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY D 0 A_CheckFloor("Land")
+        WDNY E 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY E 0 A_CheckFloor("Land")
+        WDNY F 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY F 0 A_CheckFloor("Land")
+        WDNY G 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY G 0 A_CheckFloor("Land")
+        WDNY H 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+		WDNY H 0 A_CheckFloor("Land")
         Loop
 	Land:
-		WDNY IJK 4 BRIGHT
+		WDNY IJK 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 	
 		loop
     Death:
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")

@@ -101,3 +101,16 @@ actor KWDMsmallExplosion : KWDMexplosion
 {
 	Scale 0.5
 }
+
+actor KWDM_dustCloud : FXBase
+{
+	alpha 0.5
+	renderStyle translucent
+	scale 0.5
+	States
+	{
+	Spawn:
+		DUST AAAAA 5 A_fadeout(0.1)
+		Stop
+	}
+}

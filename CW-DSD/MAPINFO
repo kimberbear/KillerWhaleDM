@@ -36,11 +36,13 @@ map LAVA "Lava [Early blockout]"
 	music = "music/dave_ingame.ogg"
 }
 
-map EMIVITA "Emivita"
-{
-	sky1 = "SALTYSKY",0
-	music = "music/viciousvenice.ogg"
-}
+//TOO BROKEN!
+
+// map EMIVITA "Emivita"
+// {
+// 	sky1 = "SALTYSKY",0
+// 	music = "music/viciousvenice.ogg"
+// }
 
 map PROTO "Test map"
 {
