@@ -1,0 +1,36 @@
+[IntroStrings]
+"this is the conksuckiest map i've ever seen"
+
+[RareRoamingStrings]
+"afflecks saclifice, i mean -crifice, would have to sufflice. aw fluck it"
+"bro be a stained-glass saint, up on a cross gettin hella christ-plagiarous"
+
+[FragStrings]
+"(droppin it like) (a thanksgiving turkey)"
+"did you break your leg on a puppy or some shit"
+
+[KilledStrings]
+"why are you grilling me on this shit"
+"scratch that"
+
+
+[RoamingStrings]
+"s'alright being chill i guess you know how it goes"
+
+[LosingRoamingStrings]
+"well shit"
+
+[EnragedStrings]
+"im not even actually mad i just... i dunno"
+"oh who am i kidding i cant stay mad at that face"
+
+[DemoralizedStrings]
+"well shit"
+"dude what are you doing"
+
+[WinStrings]
+"ha ha so lame"
+
+[LoseStrings]
+"i guess ill bone up on the faq for a while"
+"time to block you now but lets do this again ok"

@@ -6,7 +6,7 @@
 	anticipation = -1
 	reactiontime = 0
 	perception = 0
-	color = "12 12 12"
+	color = "77 77 77"
 	//gender = "male"
 	//skin = "big fat doomguy"
 	class = "random"
@@ -18,14 +18,14 @@
 }
 
 {
-	name = "ceevee the eleventh"
+	name = "ceevie"
 	accuracy = 1
 	intellect = 2
 	evade = 1
 	anticipation = 2
 	reactiontime = 1
 	perception = 1
-	color = "1d 00 16"
+	color = "5d 40 56"
 	//gender = "male"
 	//skin = "big fat doomguy"
 	class = "random"
@@ -35,8 +35,9 @@
 	script = "dfultbot"
 	chatlump = "botchats/ceevee.txt"
 }
+
 {
-	name = "ectoBiologist"
+	name = "june"
 	accuracy = 3
 	intellect = 4
 	evade = 1
@@ -52,4 +53,42 @@
 	revealed = true
 	script = "dfultbot"
 	chatlump = "botchats/june.txt"
+}
+
+{
+	name = "rockie"
+	accuracy = 2
+	intellect = 3
+	evade = 4
+	anticipation = 2
+	reactiontime = 2
+	perception = 2
+	color = "79 c4 e6"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0
+	revealed = true
+	script = "dfultbot"
+	//chatlump = "botchats/rockman.txt"
+}
+
+{
+	name = "dave"
+	accuracy = 2
+	intellect = 3
+	evade = 4
+	anticipation = 2
+	reactiontime = 2
+	perception = 2
+	color = "e0 07 07"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0
+	revealed = true
+	script = "dfultbot"
+	//chatlump = "botchats/dave.txt"
 }

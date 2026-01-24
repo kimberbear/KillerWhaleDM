@@ -1,0 +1,36 @@
+// not much chatter for this one... expand later.
+
+[IntroStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+[RareRoamingStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+
+[FragStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+
+[KilledStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+[RoamingStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+[LosingRoamingStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+
+[EnragedStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+
+[DemoralizedStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+
+[WinStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
+
+[LoseStrings]
+"HEY DINGUS THIS IS MEANT TO BE HIDDEN"
