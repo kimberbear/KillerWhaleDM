@@ -11,7 +11,7 @@
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 75
+	chatfrequency = 50
 	revealed = true
 	script = "dfultbot"
 	chatlump = "botchats/murph.txt"
@@ -30,7 +30,7 @@
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 75
+	chatfrequency = 40
 	revealed = true
 	script = "dfultbot"
 	chatlump = "botchats/ceevee.txt"
@@ -49,7 +49,7 @@
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 75
+	chatfrequency = 60
 	revealed = true
 	script = "dfultbot"
 	chatlump = "botchats/june.txt"
@@ -87,7 +87,7 @@
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 0
+	chatfrequency = 60
 	revealed = true
 	script = "dfultbot"
 	//chatlump = "botchats/dave.txt"
