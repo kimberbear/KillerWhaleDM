@@ -147,3 +147,15 @@ actor CWDM_dustCloud : FXBase
 		Stop
 	}
 }
+
+actor CWDM_telefog : TeleportFog replaces TeleportFog
+{
+	RenderStyle "Add"
+	Alpha 0.75
+	States
+	{
+	Spawn:
+		TLPT ABCDEFGHIJKLM 2 Bright
+		stop
+	}
+}
