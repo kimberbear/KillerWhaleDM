@@ -2,17 +2,24 @@
 #include "zcommon.acs"
 
 bool BossActive = false;
+int bossType;
+int bossTextY = 0.2;
+int bossDuration = 1048576;
+
+//-----------------------------------------------------
+// STANLEY
+//-----------------------------------------------------
 
 script "stanPickup" (void)
 {
 	int pNum = PlayerNumber();
-	//SetPlayerClass(pNum,"KWDMstan",true);
-	MorphActor(0, "KWDMstanClass", "", 3150, 0, "", "");
+	MorphActor(0, "CWDM_stanClass", "", bossDuration, 0, "", "");
 	SetActorState(0, "Spawn");
-    SetActorProperty(0, APROP_Health, 500);
+    //SetActorProperty(0, APROP_Health, 500);
 	ACS_NamedExecuteAlways("stanTransformed",0);
 	BossActive = true;
-	GiveInventory("KWDM_stanRevolver",1);
+	bossType = 1;
+	GiveInventory("CWDM_stanRevolver",1);
 }
 
 script "stanTransformed" (void)
@@ -29,7 +36,7 @@ script "stanTransformed" (void)
             HUDMSG_PLAIN,
             501,            
             CR_GOLD,
-            0.5, 0.3,
+            0.5, bossTextY,
             5.0
         );
     }
@@ -51,7 +58,7 @@ script "stanDied" (void)
             HUDMSG_PLAIN,
             501,            
             CR_GOLD,
-            0.5, 0.3,
+            0.5, bossTextY,
             5.0
         );
     }
@@ -59,19 +66,174 @@ script "stanDied" (void)
 	BossActive = false;	// just in case
 }
 
-script "checkStanExists" OPEN
+//-----------------------------------------------------
+// EARL
+//-----------------------------------------------------
+
+script "earlPickup" (void)
+{
+	int pNum = PlayerNumber();
+	//SetPlayerClass(pNum,"KWDMstan",true);
+	MorphActor(0, "CWDM_EARLClass", "", bossDuration, 0, "", "");
+	SetActorState(0, "Spawn");
+    //SetActorProperty(0, APROP_Health, 500);
+	ACS_NamedExecuteAlways("EARLTransformed",0);
+	BossActive = true;
+	bossType = 2;
+	GiveInventory("CWDM_EARLgun",1);
+}
+
+script "EARLTransformed" (void)
+{
+	//SetFont("BIGFONT");
+	//HudMessage(s:"STANLEY ARRIVES AT THE SCENE!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+        SetFont("BIGFONT");
+        HudMessage(
+            s:"EARL.";
+            HUDMSG_PLAIN,
+            501,            
+            CR_RED,
+            0.5, bossTextY,
+            5.0
+        );
+    }
+	SetMusic("music/earlsong.ogg");
+	//AmbientSound("voice/stanNotice",127);
+}
+
+script "earlDied" (void)
+{
+	//SetFont("BIGFONT");
+	//HudMessage(s:"HIS CASE IS CLOSED!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+        SetFont("BIGFONT");
+        HudMessage(
+            s:"HE'S GONE.";
+            HUDMSG_PLAIN,
+            501,            
+            CR_RED,
+            0.5, bossTextY,
+            5.0
+        );
+    }
+	ACS_NamedExecuteAlways("resetMusic",0);
+	BossActive = false;	// just in case
+}
+
+//-----------------------------------------------------
+// smasher
+//-----------------------------------------------------
+
+script "smasherPickup" (void)
+{
+	int pNum = PlayerNumber();
+	//SetPlayerClass(pNum,"KWDMstan",true);
+	MorphActor(0, "CWDM_smasherClass", "", bossDuration, 0, "", "");
+	SetActorState(0, "Spawn");
+    //SetActorProperty(0, APROP_Health, 500);
+	ACS_NamedExecuteAlways("smasherTransformed",0);
+	BossActive = true;
+	bossType = 3;
+	GiveInventory("CWDM_smasherWeapon",1);
+}
+
+script "smasherTransformed" (void)
+{
+	//SetFont("BIGFONT");
+	//HudMessage(s:"STANLEY ARRIVES AT THE SCENE!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+        SetFont("BIGFONT");
+        HudMessage(
+            s:"HERE BE THE SUNKEN SMASHER!";
+            HUDMSG_PLAIN,
+            501,            
+            CR_SAPPHIRE,
+            0.5, bossTextY,
+            5.0
+        );
+    }
+	SetMusic("music/earlsong.ogg");
+	//AmbientSound("voice/stanNotice",127);
+}
+
+script "smasherDied" (void)
+{
+	//SetFont("BIGFONT");
+	//HudMessage(s:"HIS CASE IS CLOSED!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+        SetFont("BIGFONT");
+        HudMessage(
+            s:"THE SMASHER SANK!";
+            HUDMSG_PLAIN,
+            501,            
+            CR_SAPPHIRE,
+            0.5, bossTextY,
+            5.0
+        );
+    }
+	ACS_NamedExecuteAlways("resetMusic",0);
+	BossActive = false;	// just in case
+}
+
+//-----------------------------------------------------
+// disconnect/unmorph protection
+// prolly sucks ass but it works 
+//-----------------------------------------------------
+
+script "checkBossExists" OPEN
 {
 	while(true)
 	{
 		Delay(35);
 		if (BossActive)
 		{
-            int count = ThingCountName("KWDMstanClass", 0);
-            if (count == 0)
-            {
-                BossActive = false;
-				ACS_NamedExecuteAlways("stanDied", 0);
-            }
+			ACS_NamedExecuteAlways("clearBoss",0);
         }
+	}
+}
+
+int count;
+
+script "clearBoss" (void)
+{
+	switch(bossType)
+	{
+		case 1:
+			count = ThingCountName("CWDM_stanClass", 0);
+			if (count == 0)
+			{
+				BossActive = false;
+				ACS_NamedExecuteAlways("stanDied", 0);
+			}
+			break;
+		case 2:
+			count = ThingCountName("CWDM_EARLClass", 0);
+			if (count == 0)
+			{
+				BossActive = false;
+				ACS_NamedExecuteAlways("earlDied", 0);
+			}
+			break;
+		case 3:
+			count = ThingCountName("CWDM_smasherClass", 0);
+			if (count == 0)
+			{
+				BossActive = false;
+				ACS_NamedExecuteAlways("smasherDied", 0);
+			}
+			break;
 	}
 }

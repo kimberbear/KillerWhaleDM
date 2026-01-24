@@ -1,4 +1,4 @@
-actor KWDM_healthBonus : Health 15300
+actor CWDM_healthBonus : Health 15300
 {
 //$Category Health and Armor
 //$Title "Health Bonus"
@@ -16,7 +16,7 @@ actor KWDM_healthBonus : Health 15300
 }
 
 
-actor KWDM_medikit : Health 15302
+actor CWDM_medikit : Health 15302
 {
 //$Category Health and Armor
 //$Title "Medikit"
@@ -33,7 +33,7 @@ actor KWDM_medikit : Health 15302
 	}
 }
 
-actor KWDM_mediumArmor : BasicArmorBonus  15306
+actor CWDM_mediumArmor : BasicArmorBonus  15306
 {
 //$Category Health and Armor
 //$Title "Armor"
@@ -54,27 +54,27 @@ actor KWDM_mediumArmor : BasicArmorBonus  15306
 }
 
 
-actor KWDM_smallHealthBonus : Health
+actor CWDM_smallHealthBonus : Health
 {
     Inventory.Amount 25 // heals 25 HP
 	Inventory.MaxAmount 200
 }
 
-actor KWDM_smallArmorBonus : BasicArmorBonus
+actor CWDM_smallArmorBonus : BasicArmorBonus
 {
     Armor.SaveAmount 25
 	Armor.SavePercent 75
     Armor.MaxSaveAmount 200
 }
 
-actor KWDM_deathPack : CustomInventory
+actor CWDM_deathPack : CustomInventory
 {
 	Inventory.PickupSound "ammoget"
     Inventory.PickupMessage "+25 HP +25 AP"
     Inventory.Icon "BPAKA0"
     +INVENTORY.AUTOACTIVATE   // auto-use when picked up
 	+INVENTORY.ALWAYSPICKUP
-    +INVENTORY.NEVERRESPAWN   // optional: DM/Survival preference
+    +INVENTORY.NEVERRESPAWN   
 	radius 20
 
     States
@@ -83,8 +83,8 @@ actor KWDM_deathPack : CustomInventory
 		MEDI a -1
 		stop
     Pickup:
-        TNT1 A 0 A_GiveInventory("KWDM_smallHealthBonus", 1) // give health
-        TNT1 A 0 A_GiveInventory("KWDM_smallArmorBonus", 1)  // give armor
+        TNT1 A 0 A_GiveInventory("CWDM_smallHealthBonus", 1) // give health
+        TNT1 A 0 A_GiveInventory("CWDM_smallArmorBonus", 1)  // give armor
         Stop
     }
 }
@@ -94,9 +94,9 @@ actor QuadDamage : Powerup
     Inventory.Icon "QUADC0"
 }
 
-actor KWDM_skullOfPower : PowerupGiver
+actor CWDM_skullOfPower : PowerupGiver
 {
-    Powerup.Type "QuadDamage"   // must match the actor *above*
+    Powerup.Type "QuadDamage"   
     Powerup.Duration 1050
     Powerup.Color "Gold", 0.25
 
@@ -112,7 +112,7 @@ actor KWDM_skullOfPower : PowerupGiver
     }
 }
 
-actor KWDM_skullOfPowerPickup : CustomInventory 17002
+actor CWDM_skullOfPowerPickup : CustomInventory 17002
 {
 //$Category Powerup
 //$Title "Quad Damage"
@@ -131,19 +131,25 @@ actor KWDM_skullOfPowerPickup : CustomInventory 17002
         Loop
 
     Pickup:
-        TNT1 A 0 A_GiveInventory("KWDM_skullOfPower", 1)
+        TNT1 A 0 A_GiveInventory("CWDM_skullOfPower", 1)
         Stop
     }
 }
 
-actor KWDM_stanTransformationPickup : CustomInventory 17003
+actor CWDM_bossPickup : CustomInventory
 {
-//$Category Powerup
-//$Title "Stanley Transformation Pickup"
-//$Sprite QUADC0
     +INVENTORY.NEVERRESPAWN
     +INVENTORY.AUTOACTIVATE   // auto-use when picked up
 	+INVENTORY.ALWAYSPICKUP
+	scale 2.0
+	radius 20
+}
+
+actor CWDM_stanBossPickup : CWDM_bossPickup 17003
+{
+//$Category Powerup
+//$Title "Stanley Boss Pickup"
+//$Sprite SPIKA0
     States
     {
     Spawn:
@@ -152,6 +158,69 @@ actor KWDM_stanTransformationPickup : CustomInventory 17003
 
     Pickup:
         TNT1 A 0 ACS_NamedExecuteAlways("stanPickup")
+        Stop
+    }
+}
+
+actor CWDM_EARLBossPickup : CWDM_bossPickup 17005
+{
+//$Category Powerup
+//$Title "EARL Boss Pickup"
+//$Sprite ERPKA0
+    States
+    {
+    Spawn:
+        ERPK A 4 bright
+        Loop
+
+    Pickup:
+        TNT1 A 0 ACS_NamedExecuteAlways("earlPickup")
+        Stop
+    }
+}
+
+actor CWDM_smasherBossPickup : CWDM_bossPickup 17004
+{
+//$Category Powerup
+//$Title "Sunken Smasher Boss Pickup"
+//$Sprite SMPKA0
+    States
+    {
+    Spawn:
+        SMPK A 4 bright
+        Loop
+
+    Pickup:
+        TNT1 A 0 ACS_NamedExecuteAlways("smasherPickup")
+        Stop
+    }
+}
+
+
+actor CWDM_randomBossPickup : CWDM_bossPickup 17006
+{
+//$Category Powerup
+//$Title "Random Boss Pickup"
+//$Sprite ERPKA0
+    States
+    {
+    Spawn:
+		SPIK A 4 BRIGHT
+        ERPK A 4 BRIGHT
+		SMPK A 4 BRIGHT
+        Loop
+
+    Pickup:
+        TNT1 A 0 A_Jump(256 , "StanPickup", "EARLPickup", "SmasherPickup")
+        stop
+	StanPickup:
+        TNT1 A 0 ACS_NamedExecuteAlways("stanPickup")
+        Stop
+	EARLPickup:
+        TNT1 A 0 ACS_NamedExecuteAlways("earlPickup")
+        Stop
+	SmasherPickup:
+        TNT1 A 0 ACS_NamedExecuteAlways("smasherPickup")
         Stop
     }
 }

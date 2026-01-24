@@ -1,0 +1,47 @@
+[IntroStrings]
+"not sure what to expect for this one."
+"alright, here goes."
+"hi to everyone else too!"
+"ok, here i go."
+
+[RareRoamingStrings]
+"also, i somehow didn't even remember dave chappelle being in this movie."
+"can we hear more about the snakes and whatnot? it was a pretty cool story."
+"did you know nicolas cage was almost going to play superman one time?"
+"see, a meteor blew up my neighborhood."
+"mcconaughey!!!!!!!!"
+
+[FragStrings]
+"try using your brain numbnuts."
+"ha ha, just messin' with ya. pchoooooooo!"
+
+[KilledStrings]
+"i can no longer tell my ass apart from a big orange earth vegetable!"
+"(stop that! keep your hands to yourself.)"
+
+[RoamingStrings]
+"so what was the deal with the meteor?"
+"i love nic cage."
+"bluh bluh bluuuuuhhhhh."
+
+[LosingRoamingStrings]
+"ok, well, if you want to turn our squad into a fucking joke, then that's your business."
+"i am making such a fucking mess in here."
+"hey, can you hold on? i'm getting trolled again."
+"wuh-oh."
+
+[EnragedStrings]
+"please take your psycho-babblery elsewhere, miss!"
+"ok, what words would you use, miss wordypants mcsmartybluh."
+
+[DemoralizedStrings]
+"it seems like you have me at a disadvantage then."
+"i dunno what i did that would account for that."
+"i know *I* wasn't laughing, were you?"
+
+[WinStrings]
+"i have started to really like you guys!"
+"thank god!"
+
+[LoseStrings]
+"that was pointless!"

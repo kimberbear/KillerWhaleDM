@@ -1,54 +1,15 @@
-actor KWDMplayer : PlayerPawn 
-{
-	Speed 0.9
-	Health 100
-	Radius 20
-	Height 60
-	Mass 100
-	Gravity 1.0
-	PainChance 255
-	Player.ColorRange 114, 124
-	player.jumpz 10
-	States
-	{
-	Death.Extreme:
-		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMBlood",
-			0, 0, 16,
-			Random(-2,2),
-			Random(-2,2),
-			Random(2,4),
-			0,
-			SXF_NOCHECKPOSITION
-		)
-		TNT1 AAAAA 0 A_SpawnItemEx(
-			"KWDMgib",
-			0, 0, 16,
-			Random(-2,2),
-			Random(-2,2),
-			Random(6,10),
-			0,
-			SXF_NOCHECKPOSITION
-		)
-		goto FullDeathExtreme
-	FullDeathExtreme:
-		TNT1 A 1
-		loop
-	}
-}
-
-actor KWDMisShotgunner : ClassToken
+actor CWDM_isShotgunner : ClassToken
 {
 }
 
 
-actor KWDMshotgunnerClass : KWDMplayer
+actor CWDM_shotgunnerClass : CWDM_player
 {
 	Player.DisplayName "Shotgunner"
-	Player.StartItem "KWDMShotgun"
-	Player.StartItem "KWDMisShotgunner"
+	Player.StartItem "CWDM_Shotgun"
+	Player.StartItem "CWDM_isShotgunner"
 	Player.ColorRange 179, 191
+	Player.Portrait "SGPORTR8"
 
 	States
 	{
@@ -71,12 +32,6 @@ actor KWDMshotgunnerClass : KWDMplayer
 	Pain4:	
 		SPOS Z 15 
 		Goto See
-	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		goto FullDeath
-	FullDeath:
-		SPOS L -1
-		Loop
 	Melee:
 		SPOS E 4
 		SPOS F 4 BRIGHT
@@ -84,15 +39,15 @@ actor KWDMshotgunnerClass : KWDMplayer
 	}
 }
 
-actor KWDMisSRifleman : ClassToken
+actor CWDM_isSRifleman : ClassToken
 {
 }
 
-actor KWDMriflemanClass : KWDMplayer
+actor CWDM_riflemanClass : CWDM_player
 {
 	Player.DisplayName "Rifleman"
-	Player.StartItem "KWDMrifle"
-	Player.StartItem "KWDMisSRifleman"
+	Player.StartItem "CWDM_rifle"
+	Player.StartItem "CWDM_isSRifleman"
 	Player.ColorRange 197, 207				// fuck my stupid chungus life
 	
 	States
@@ -116,12 +71,6 @@ actor KWDMriflemanClass : KWDMplayer
 	Pain4:	
 		POSS Z 15 
 		Goto See
-	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		goto FullDeath
-	FullDeath:
-		POSS L -1
-		loop
 	Melee:
 		POSS E 4
 		POSS F 4 BRIGHT
@@ -129,15 +78,15 @@ actor KWDMriflemanClass : KWDMplayer
 	}
 }
 
-actor KWDMisMurkyman : ClassToken
+actor CWDM_isMurkyman : ClassToken
 {
 }
 
-actor KWDMmurkymanClass : KWDMplayer
+actor CWDM_murkymanClass : CWDM_player
 {
 	Player.DisplayName "Murkyman"
-	Player.StartItem "KWDMflare"
-	Player.StartItem "KWDMisMurkyman"
+	Player.StartItem "CWDM_flare"
+	Player.StartItem "CWDM_isMurkyman"
 	Player.ColorRange 114, 122
 	States
 	{
@@ -148,7 +97,7 @@ actor KWDMmurkymanClass : KWDMplayer
 		MURK ABCD 4
 		loop
 	Pain:
-		TNT1 A 0 A_Jump(128, "Pain2", "Pain3", "Pain4")
+		TNT1 A 0 //A_Jump(128, "Pain2", "Pain3", "Pain4")
 		MURK G 15 
 		Goto see
 	Pain2:	
@@ -160,27 +109,21 @@ actor KWDMmurkymanClass : KWDMplayer
 	Pain4:	
 		MURK Z 15 
 		Goto See
-	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		goto FullDeath
-	FullDeath:
-		MURK L -1
-		loop
 	Melee:
 		MURK EF 4
 		goto spawn
 	}
 }
 
-actor KWDMisGrenadier : ClassToken
+actor CWDM_isGrenadier : ClassToken
 {
 }
 
-actor KWDMgrenadierClass : KWDMplayer
+actor CWDM_grenadierClass : CWDM_player
 {
 	Player.DisplayName "Grenadier"
-	Player.StartItem "KWDMgrenadeLauncher"
-	Player.StartItem "KWDMisGrenadier"
+	Player.StartItem "CWDM_grenadeLauncher"
+	Player.StartItem "CWDM_isGrenadier"
 	
 	States
 	{
@@ -203,23 +146,17 @@ actor KWDMgrenadierClass : KWDMplayer
 	Pain4:	
 		GREN Z 15 
 		Goto See
-	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		goto FullDeath
-	FullDeath:
-		GREN L -1
-		loop
 	Melee:
 		GREN EF 4
 		goto spawn
 	}
 }
 
-actor KWDMisGunslinger : ClassToken
+actor CWDM_isGunslinger : ClassToken
 {
 }
 
-actor KWDMgunslingerClass : KWDMplayer
+actor CWDM_gunslingerClass : CWDM_player
 {
 	Player.DisplayName "Gunslinger"
 	Player.StartItem "KWDMdual1887"
@@ -229,12 +166,6 @@ actor KWDMgunslingerClass : KWDMplayer
 	Spawn:
 		KWIP A -1 
 		Loop
-	Death:
-		TNT1 A 0 A_SpawnItemEx("KWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
-		goto FullDeath
-	FullDeath:
-		SPOS L -1
-		Loop
 	// Melee:
 	// 	SPOS E 4
 	// 	SPOS F 4 BRIGHT
@@ -242,14 +173,18 @@ actor KWDMgunslingerClass : KWDMplayer
 	}
 }
 
-// Stanley Steel Press
-actor KWDMstanClass : KWDMplayer
+actor CWDM_bossClass : CWDM_player
 {
 	+NOSKIN
+	//Health 500
+}
+
+// Stanley Steel Press
+actor CWDM_stanClass : CWDM_bossClass
+{
 	Player.DisplayName "Stanley Steel Press"
-	Player.StartItem "KWDM_stanRevolver"
 	Height 64
-	Health 500
+	Player.ViewHeight 48.0
 	States
 	{
 	Spawn:
@@ -259,10 +194,12 @@ actor KWDMstanClass : KWDMplayer
 		STAF BCDEFD 3
 		loop
 	Missile:
-		STAN HIJ 4
+		STAN H 6 BRIGHT
+		STAN IJ 6
 		goto see
 	Melee:
-		STAN HIJ 4
+		STAN H 6 BRIGHT
+		STAN IJ 6
 		goto see
 	Pain:
 		STAN R 4
@@ -271,6 +208,68 @@ actor KWDMstanClass : KWDMplayer
 		SPOS L 0 ACS_NamedExecuteAlways("stanDied",0)
 		STAM ABCDEFGHIJKLM 4
 		STAM M -1
+		Loop
+	}
+}
+
+actor CWDM_smasherClass : CWDM_bossClass
+{
+	Player.DisplayName "Sunken Smasher"
+	Height 72.0
+	Player.ViewHeight 64.0
+	Speed 0.8
+	States
+	{
+	Spawn:
+		SMAS A -1 
+		Loop
+	See:
+		SMAS BCDEFG 8
+		loop
+	Missile:
+		SMAS A 1
+		goto see
+	Melee:
+		SMAS A 1
+		goto see
+	Pain:
+		SMAS A -1 
+		goto see
+	Death:
+		SPOS L 0 ACS_NamedExecuteAlways("smasherDied",0)
+		STAM ABCDEFGHIJKLM 4
+		STAM M -1
+		Loop
+	}
+}
+
+actor CWDM_EARLClass : CWDM_bossClass
+{
+	Player.DisplayName "EARL"
+	Height 72.0
+	Speed 0.6
+	Player.ViewHeight 64.0
+	States
+	{
+	Spawn:
+		EARL A -1 
+		Loop
+	See:
+		EARL BC 8
+		loop
+	Missile:
+		EARL E 4
+		EARL FG 4 BRIGHT
+		goto see
+	Melee:
+		EARL E 4
+		EARL FG 4 BRIGHT
+		goto see
+	Death:
+		EARL A 0 ACS_NamedExecuteAlways("earlDied",0)
+		goto FullDeath
+	FullDeath:
+		EARL HI 4
 		Loop
 	}
 }

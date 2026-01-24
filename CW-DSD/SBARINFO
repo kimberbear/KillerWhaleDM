@@ -4,16 +4,22 @@ Height 0;
 Statusbar normal, fullscreenoffsets
 {
 	//Health and Icon
-	DrawImage "HLTHICON", -56 + center, -19;
-	//DrawString SMALLFONT, WHITE, "HEALTH:",50, -30;
-	DrawNumber 3, BIGFONT, untranslated, Health, drawshadow, -60 + center, -18;
+	//DrawImage "HLTHICON", -56 + center, -19;
+
+	DrawImage "VALBG", 48, -48;
+	DrawNumber 3, DIALFONT, untranslated, Health, alignment(right),91,-46;
+	DrawString SMALLFONT, untranslated, "/200",91, -42,0,alignment(left);
+	
+	DrawBar "KWHPICON", "KWHPBACK", health, vertical, 36, -58;
+	
+	//DrawString SMALLFONT, untranslated, playerclass, 91, -48,0,alignment(left);
 	
 	//Armor and Icon
-	DrawImage "MORAICON", 64 + center, -19;
-	//DrawString SMALLFONT, WHITE, "ARMOR:",110, -30;
-	DrawNumber 3, BIGFONT, untranslated, Armor, drawshadow, 60 + center, -18;
+	DrawImage "VALBG", 35, -81;
+	DrawImage "MORAICON", 36 , -80;
+	DrawNumber 3, DIALFONT, untranslated, Armor, alignment(left), 56, -79;
 	
-	DrawString SMALLFONT, WHITE, "FRAGS:",48, -30;
-	DrawNumber 3, SMALLFONT, WHITE, Frags, 48, -18;
+	//DrawString SMALLFONT, WHITE, "FRAGS:",48, -30;
+	//DrawNumber 3, SMALLFONT, WHITE, Frags, 48, -18;
 
 }

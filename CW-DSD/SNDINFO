@@ -15,6 +15,7 @@ weapons/1887fire "Sounds/Weapons/1887fire.wav"
 whale/flaregunexplode "Sounds/flareexplode.ogg"
 weapons/grenadeload "Sounds/Weapons/shotgunthump.ogg"
 weapons/dynamitebounce "Sounds/Weapons/dynamitebounce.ogg"
+weapons/dynamitetoss "Sounds/Weapons/dynamitetoss.ogg"
 
 
 explode1	"Sounds/explode1.ogg"

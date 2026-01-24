@@ -1,9 +1,4 @@
-ACTOR KWDMammo : Ammo 
-{
-
-}
-
-ACTOR KWDMshell : KWDMammo 
+ACTOR CWDM_shell : CWDM_ammo 
 {
 //$Category Ammo
 //$Title "Shells"
@@ -21,7 +16,7 @@ ACTOR KWDMshell : KWDMammo
 	}
 }
 
-ACTOR KWDMbullet : KWDMammo 
+ACTOR CWDM_bullet : CWDM_ammo 
 {
 //$Category Ammo
 //$Title "Bullets"

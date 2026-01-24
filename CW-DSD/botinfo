@@ -1,0 +1,55 @@
+{
+	name = "marph"
+	accuracy = 0
+	intellect = 0
+	evade = 0
+	anticipation = -1
+	reactiontime = 0
+	perception = 0
+	color = "12 12 12"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 75
+	revealed = true
+	script = "dfultbot"
+	chatlump = "botchats/murph.txt"
+}
+
+{
+	name = "ceevee the eleventh"
+	accuracy = 1
+	intellect = 2
+	evade = 1
+	anticipation = 2
+	reactiontime = 1
+	perception = 1
+	color = "1d 00 16"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 75
+	revealed = true
+	script = "dfultbot"
+	chatlump = "botchats/ceevee.txt"
+}
+{
+	name = "ectoBiologist"
+	accuracy = 3
+	intellect = 4
+	evade = 1
+	anticipation = 3
+	reactiontime = 4
+	perception = 1
+	color = "07 15 cd"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 75
+	revealed = true
+	script = "dfultbot"
+	chatlump = "botchats/june.txt"
+}

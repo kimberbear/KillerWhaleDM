@@ -1,0 +1,34 @@
+// not much chatter for this one... expand later.
+
+[IntroStrings]
+"sup"
+
+[RareRoamingStrings]
+"lemme hear ya say one more time"
+
+[FragStrings]
+"record this shit"
+"bwl"
+
+[KilledStrings]
+"damn"
+"rip"
+
+[RoamingStrings]
+"where are yall"
+
+[LosingRoamingStrings]
+"oh no"
+
+[EnragedStrings]
+"damn you bastard"
+"mothafucka"
+
+[DemoralizedStrings]
+"fuck"
+
+[WinStrings]
+"yooo"
+
+[LoseStrings]
+"that stinks"

@@ -2,7 +2,7 @@
 
 GameInfo
 {
-	PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass","KWDMmurkymanClass","KWDMgrenadierClass"//,"KWDMgunslingerClass"
+	PlayerClasses = "CWDM_shotgunnerClass","CWDM_riflemanClass","CWDM_murkymanClass","CWDM_grenadierClass"//,"KWDMgunslingerClass"
 	//PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass"
 	TitleMusic = "SAILOR"
 	QuitMessages="Do you really think I'd ever allow those who cross me to live?"
@@ -16,6 +16,7 @@ GameInfo
 	ForceSpawnEventScripts = true
 	ForceDamageEventScripts = true
 	MenuBackButton = "M_BACK"
+	IntermissionMusic = "SAILOR"
 }
 
 clearEpisodes
@@ -53,4 +54,10 @@ map 2FORT "2Fort"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/viciousvenice.ogg"
+}
+
+map HANGAR "Hangar"
+{
+	sky1 = "VOLCNSKY",0
+	music = "music/factory_ingame.ogg"
 }

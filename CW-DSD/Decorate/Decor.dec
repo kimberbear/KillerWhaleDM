@@ -74,3 +74,60 @@ actor JOHN : Decoration 16420
 	Stop
 	}
 }
+
+actor boomBarrel : Decoration 16128
+{
+//$Category Decoration
+//$Title "Explosive Barrel"
+//$Sprite BAR1A0
+    Radius 16
+    Height 30
+    ProjectilePassHeight -16
+	//scale 0.5
+    +SOLID
+ 
+	States
+	{
+	Spawn:
+	BAR1 A -1
+	Stop
+	}
+}
+
+actor teslaTower : Decoration 16129
+{
+//$Category Decoration
+//$Title "Tesla Tower"
+//$Sprite SDHKA0
+
+    Radius 16
+    Height 90
+    +SOLID
+ 
+	States
+	{
+	Spawn:
+	SDHK A -1
+	Stop
+	}
+
+}
+
+actor teslaTowerSmall : Decoration 16130
+{
+//$Category Decoration
+//$Title "Small Tesla Tower"
+//$Sprite SDHSA0
+
+    Radius 16
+    Height 90
+    +SOLID
+ 
+	States
+	{
+	Spawn:
+	SDHS A -1
+	Stop
+	}
+
+}

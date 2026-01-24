@@ -1,31 +1,4 @@
-ACTOR KWDMbulletPuff
-{
-  +NOBLOCKMAP
-  +NOGRAVITY
-  +ALLOWPARTICLES
-  +RANDOMIZE
-  RenderStyle Add
-  Scale 0.2
-  States
-  {
-  Spawn:
-    HITS ABCDEFG 2 Bright
-	Stop
-  }
-}
-
-ACTOR KWDMweapon : Weapon 
-{
-	Weapon.BobRangeX 0.5
-	Weapon.BobRangeY 0.5
-	Weapon.BobSpeed 2
-	Weapon.BobStyle Alpha
-	Weapon.SelectionOrder 350
-	Inventory.PickupSound "misc/usgpickup"
-	+AMMO_OPTIONAL
-}
-
-ACTOR KWDMShotgun: KWDMweapon 
+ACTOR CWDM_Shotgun: CWDM_weapon 
 {
 	Obituary "%o tasted %k's boomstick."
 	Weapon.AmmoGive 12
@@ -52,21 +25,21 @@ ACTOR KWDMShotgun: KWDMweapon
 	Fire:
 		SHGN B 0 A_Light2
 		SHGN B 0 A_Quake(2,5,0,5)
-		SHGN B 1 BRIGHT A_FireBullets(10,6,8,8,"KWDMbulletPuff")
+		SHGN B 1 BRIGHT A_FireBullets(10,6,8,8,"CWDM_bulletPuff",FBF_NORANDOM)
 		SHGN B 0 A_Light0
 		SHGN CCCDDA 4
 		Goto Ready
 	}
 }
 
-actor KWDMrifleShotCount : Inventory
+actor CWDM_rifleShotCount : Inventory
 {
 	Inventory.MaxAmount 24
 	Inventory.InterHubAmount 0
 	+INVENTORY.UNDROPPABLE
 }
 
-ACTOR KWDMrifle: KWDMweapon 
+ACTOR CWDM_rifle: CWDM_weapon 
 {
 	Obituary "%k opened fire on %o."
 	Weapon.AmmoGive 12
@@ -91,17 +64,17 @@ ACTOR KWDMrifle: KWDMweapon
 		RFLE A 1 A_Lower
 		Loop
 	Fire:
-		RFLE A 0 A_JumpIfInventory("KWDMrifleShotCount",24,"Reload")
-		RFLE A 0 A_GiveInventory("KWDMrifleShotCount", 1)
+		RFLE A 0 A_JumpIfInventory("CWDM_rifleShotCount",24,"Reload")
+		RFLE A 0 A_GiveInventory("CWDM_rifleShotCount", 1)
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
-		RFLE B 1 BRIGHT A_FireBullets(2,2,1,15,"KWDMbulletPuff")
+		RFLE B 1 BRIGHT A_FireBullets(2,2,1,15,"CWDM_bulletPuff",FBF_NORANDOM )
 		RFLE B 0 A_Light0
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
 		Goto Ready
 	Reload:
-		RFLE A 0 A_TakeInventory("KWDMrifleShotCount",24)
+		RFLE A 0 A_TakeInventory("CWDM_rifleShotCount",24)
 
 		RFLE ADEFGHI 2
 		TNT1 A 0 A_PlaySound("weapons/weaponopen")
@@ -114,35 +87,35 @@ ACTOR KWDMrifle: KWDMweapon
 
 Actor FlareProjectile
 {
-    Damage 20
+    Damage 35
     Radius 8
     Height 8
     Speed 70
     Projectile
-    Obituary "%o was killed by a flare."
+    Obituary "%o was toasted by a flare."
 
     States
     {
     Spawn:
-        FLAR A 2 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        FLAR A 2 BRIGHT A_SpawnItem("CWDM_dustCloud") 
         Loop
 
     Death:
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
-        TNT1 A 0 A_SpawnItem("KWDMsmallExplosion") //this was causing lag as it's super buggy and removed now
+        TNT1 A 0 A_SpawnItem("CWDM_smallExplosion") //this was causing lag as it's super buggy and removed now
         TNT1 A 25 A_PlaySound("whale/flaregunexplode", CHAN_5)
         Stop
     }
 }
 
-ACTOR KWDMgrenade: grenade
+ACTOR CWDM_brewGrenade: grenade
 {
 	//Health 5
 	Radius 12
 	Height 12
-	Scale 0.75
+	Scale 0.5
 	//BounceType "Hexen"
     Obituary "%o tasted a Boom Brew's explosive flavour!"
 	BounceSound "weapons/dynamitebounce"
@@ -154,38 +127,38 @@ ACTOR KWDMgrenade: grenade
     Spawn:
 		// what i do here should be a fucking crime
 		// THIS IS OUTRAGEOUS
-        WDNY A 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY A 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY A 0 A_CheckFloor("Land")
-        WDNY B 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY B 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY B 0 A_CheckFloor("Land")
-        WDNY C 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY C 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY C 0 A_CheckFloor("Land")
-        WDNY D 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY D 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY D 0 A_CheckFloor("Land")
-        WDNY E 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY E 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY E 0 A_CheckFloor("Land")
-        WDNY F 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY F 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY F 0 A_CheckFloor("Land")
-        WDNY G 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY G 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY G 0 A_CheckFloor("Land")
-        WDNY H 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 
+        WDNY H 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 
 		WDNY H 0 A_CheckFloor("Land")
         Loop
 	Land:
-		WDNY IJK 4 BRIGHT A_SpawnItem("KWDM_dustCloud") 	
+		WDNY IJK 3 BRIGHT A_SpawnItem("CWDM_dustCloud") 	
 		loop
     Death:
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
 		TNT1 A 0 A_Explode
-        TNT1 A 0 A_SpawnItem("KWDMsmallExplosion")
+        TNT1 A 0 A_SpawnItem("CWDM_smallExplosion")
         TNT1 A 25 A_PlaySound("explosion", CHAN_5)
         Stop
     }
 }
 
-ACTOR KWDMgrenadeLauncher: KWDMweapon 
+ACTOR CWDM_grenadeLauncher: CWDM_weapon 
 {
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
@@ -213,7 +186,7 @@ ACTOR KWDMgrenadeLauncher: KWDMweapon
 		GGUN B 0 A_Light2
 		GGUN B 0 A_Quake(2,5,0,5)
 		FLAR B 0 A_PlayWeaponSound("weapons/grenadefire")
-		GGUN B 1 a_firecustommissile("KWDMgrenade")
+		GGUN B 1 a_firecustommissile("CWDM_brewGrenade")
 		GGUN B 0 A_Light0
 		GGUN BBCCA 3
 		GGUN IDEF 3
@@ -223,7 +196,7 @@ ACTOR KWDMgrenadeLauncher: KWDMweapon
 	}
 }
 
-ACTOR KWDMflare: KWDMweapon 
+ACTOR CWDM_flare: CWDM_weapon 
 {
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
@@ -260,14 +233,14 @@ ACTOR KWDMflare: KWDMweapon
 	}
 }
 
-actor KWDM1887firedOnce : Inventory
+actor CWDM_1887firedOnce : Inventory
 {
 	Inventory.MaxAmount 1
 	Inventory.InterHubAmount 0
 	+INVENTORY.UNDROPPABLE
 }
 
-actor KWDMdual1887: KWDMweapon
+actor CWDM_dual1887: CWDM_weapon
 {
 	AttackSound "weapons/1887fire"
 	Tag "Dual 1887s"
@@ -286,24 +259,24 @@ actor KWDMdual1887: KWDMweapon
 		DWLA A 1 A_Lower
 		Loop
 	Fire:
-		DWLA A 0 A_JumpIfInventory("KWDM1887firedOnce",1,"FireRight")
+		DWLA A 0 A_JumpIfInventory("CWDM_1887firedOnce",1,"FireRight")
 		DWLA A 1
 		Goto FireLeft
 	FireLeft:
-		DWLA A 0 A_GiveInventory("KWDM1887firedOnce", 1)
+		DWLA A 0 A_GiveInventory("CWDM_1887firedOnce", 1)
 		DWLA A 0 A_Light2
 		DWLA A 0 A_Quake(2,5,0,5)
-		DWLL A 2 BRIGHT A_FireBullets(4,4,5,10,"KWDMbulletPuff")
+		DWLL A 2 BRIGHT A_FireBullets(4,4,5,10,"CWDM_bulletPuff")
 		DWLL B 0 A_Light0
 		DWLL B 4
 		DWLL DEDE 2
 		DWLL BC 4
 		goto Ready
 	FireRight:
-		DWLA A 0 A_TakeInventory("KWDM1887firedOnce", 1)
+		DWLA A 0 A_TakeInventory("CWDM_1887firedOnce", 1)
 		DWLA A 0 A_Light2
 		DWLA A 0 A_Quake(2,5,0,5)
-		DWLR A 2 BRIGHT A_FireBullets(4,4,5,10,"KWDMbulletPuff")
+		DWLR A 2 BRIGHT A_FireBullets(4,4,5,10,"CWDM_bulletPuff")
 		DWLR A 0 A_Light0
 		DWLR B 4
 		DWLR DEDE 2
@@ -312,7 +285,7 @@ actor KWDMdual1887: KWDMweapon
 	}
 }
 
-actor KWDM_stanRevolver : KWDMweapon
+actor CWDM_stanRevolver : CWDM_weapon
 {
 	AttackSound "weapons/revolverfire"
 	Tag "Revolver"
@@ -334,10 +307,132 @@ actor KWDM_stanRevolver : KWDMweapon
 		REVV E 4
 		REVV A 0 A_Light2
 		REVV A 0 A_Quake(3,5,0,5)
-		REVV B 1 BRIGHT A_FireBullets(2,2,2,50,"KWDMbulletPuff")
+		REVV B 1 BRIGHT A_FireBullets(2,2,2,50,"CWDM_bulletPuff",FBF_NORANDOM)
 		REVV C 0 A_Light0
-		REVV CD 8
-		REVV D 0 A_Refire
+		REVV CDDCF 2
+		REVV F 0 A_Refire
+		goto ready
+	AltFire:
+		SBBF DEFG 2
+		TNT1 A 4
+		goto BrewHeld
+	BrewHeld:
+		TNT1 A 1
+		TNT1 A 1 a_refire("BrewHeld")
+		goto BrewThrow
+	BrewThrow:
+		TNT1 A 0 a_playsound("weapons/dynamitetoss")
+		TNT1 A 0 a_firecustommissile("CWDM_brewGrenade")
+		SBBF ABC 1
+		TNT1 A 4
+		REVV FA 2
+		goto ready
+	}
+}
+
+actor CWDM_EARLgun : CWDM_weapon
+{
+	//AttackSound "weapons/revolverfire"
+	Tag "Flame gun"
+	States
+	{
+	Spawn:
+		BLHJ A -1
+		Stop
+	Ready:
+		BLHJ A 1 A_WeaponReady
+		Loop
+	Select:
+		BLHJ A 1 A_Raise
+		Loop
+	Deselect:
+		BLHJ A 1 A_Lower
+		Loop
+	Fire:
+		BLHJ A 4
+		BLHJ A 0 A_Light2
+		BLHJ A 0 A_Quake(3,5,0,5)
+		BLHJ A 1 BRIGHT //A_FireBullets(2,2,2,50,"KWDMbulletPuff")
+		BLHJ A 0 A_Light0
+		BLHJ AA 8
+		BLHJ A 0 A_Refire
+		goto ready
+	}
+}
+
+actor CWDM_smasherPunchProjectile 
+{
+    Damage 100
+    Radius 32
+    Height 32
+    Speed 100
+    Projectile
+	Obituary "%o was pummeled into a fine paste."
+	States
+	{
+	Spawn:
+		TNT1 A 2
+		stop
+	}
+}
+
+actor CWDM_smasherPunchOnce : Inventory
+{
+	Inventory.MaxAmount 1
+	Inventory.InterHubAmount 0
+	+INVENTORY.UNDROPPABLE
+}
+
+actor CWDM_smasherWeapon : CWDM_weapon
+{
+	//AttackSound "weapons/revolverfire"
+	Tag "Fists"
+	States
+	{
+	Spawn:
+		SSMW A -1
+		Stop
+	Ready:
+		SSMW A 1 A_WeaponReady
+		Loop
+	Select:
+		SSMW A 1 A_Raise
+		Loop
+	Deselect:
+		SSMW A 1 A_Lower
+		Loop
+	AltFire:
+		TNT1 A 0
+		goto Running
+	Running:
+		SSMW B 2 A_ChangeVelocity(2,0,0,CVF_RELATIVE)
+		SSMW A 2 A_ChangeVelocity(2,0,0,CVF_RELATIVE)
+		SSMW C 2 A_ChangeVelocity(2,0,0,CVF_RELATIVE)
+		SSMW A 2 A_ChangeVelocity(2,0,0,CVF_RELATIVE)
+		FIST A 0 A_Refire("Running")
+		goto ready
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("CWDM_smasherPunchOnce",1,"PunchRight")
+		goto PunchLeft
+	PunchRight:
+		TNT1 A 0 A_GiveInventory("CWDM_smasherPunchOnce", 1)
+		TNT1 A 4
+		SSMW DE 2
+		TNT1 A 0 a_playsound("weapons/dynamitetoss")
+		TNT1 A 2
+		SSMW F 2 a_firecustommissile("CWDM_smasherPunchProjectile")
+		SSMW G 6
+		SSMW C 4
+		goto ready
+	PunchLeft:
+		TNT1 A 0 A_TakeInventory("CWDM_smasherPunchOnce", 1)
+		TNT1 A 4
+		SSML AB 2
+		TNT1 A 0 a_playsound("weapons/dynamitetoss")
+		TNT1 A 2
+		SSML C 2 a_firecustommissile("CWDM_smasherPunchProjectile")
+		SSML D 6
+		SSML B 4
 		goto ready
 	}
 }

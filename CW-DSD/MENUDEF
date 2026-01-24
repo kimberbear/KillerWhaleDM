@@ -33,7 +33,7 @@ OptionValue KillSounds
 	2, "Metal Pipe"
 }
 
-OptionMenu "OptionsMenu"
+OptionMenu "CWDM_OptionsMenu"
 {
 	Submenu "KWDM Options","KWDMoptions"
 	StaticText " "
@@ -43,15 +43,12 @@ OptionMenu "OptionsMenu"
 	Submenu "Mouse options",			"MouseOptions"
 	Submenu "Joystick options",			"JoystickOptions"
 	StaticText " "
-	Submenu "Player Setup",				"PlayerMenu"
-	Submenu "Gameplay Options",			"GameplayOptions"
-	Submenu "Compatibility Options",	"CompatibilityOptions"
-	Submenu "Automap Options",			"AutomapOptions"
-	Submenu "HUD Options",				"HUDOptions"
-	Submenu "Miscellaneous Options",	"MiscOptions"
+	Submenu "Player Setup",				"CWDM_PlayerMenu"
 	Submenu "Sound Options",			"SoundOptions"
 	Submenu "Display Options",			"VideoOptions"
 	Submenu "Set video mode",			"VideoModeMenu"
+	StaticText " "
+	Submenu "Legacy Options",			"OptionsMenu"
 	StaticText " "
 	SafeCommand "Reset to defaults",	"reset2defaults"
 	SafeCommand	"Reset to last saved",	"reset2saved"
@@ -65,7 +62,7 @@ OptionMenu "KWDMmultiplayerMenu"
 	SubMenu	"Offline Skirmish",			"ZA_SkirmishMenu"
 	Submenu "Log in", 					"ZA_LoginMenu"
 	SubMenu "Override Player Colours",	"KWDM_PlayerColours"
-	Submenu "Player Setup",				"PlayerMenu"
+	Submenu "Player Setup",				"CWDM_PlayerMenu"
 	StaticText	" "
 	Submenu "All Multiplayer Options",	"ZA_MultiplayerOptions" // [TP]
 
@@ -84,7 +81,7 @@ OptionValue "Gender"
 	2, "Other"
 }
 
-ListMenu "PlayerMenu"
+ListMenu "CWDM_PlayerMenu"
 {
 	StaticTextCentered 160, 6, "$MNU_PLAYERSETUP"
 	Font "SmallFont"
@@ -138,8 +135,8 @@ OptionMenu KWDM_PlayerColours
 LISTMENU "MainMenu"
 {
 	StaticPatch 94, 2, "M_DOOM"
-	Position 97, 102
+	Position 97, 152
 	TextItem 	"Multiplayer", 	"m", 	"KWDMmultiplayerMenu"
-	TextItem 	"Options",		"o",	"OptionsMenu"
+	TextItem 	"Options",		"o",	"CWDM_OptionsMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 }

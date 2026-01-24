@@ -1,0 +1,32 @@
+// not much chatter for this one... expand later.
+
+
+[IntroStrings]
+"why is the sewer count back"
+
+[RareRoamingStrings]
+"this is like simpsons doom!"
+
+[FragStrings]
+"protoshitpost"
+
+[KilledStrings]
+"he's waiting till i go to sleep"
+
+[RoamingStrings]
+"the fuck?"
+
+[LosingRoamingStrings]
+"oh no"
+
+[EnragedStrings]
+"YOU'RE A FUCKING MOUSE!"
+
+[DemoralizedStrings]
+"oh great"
+
+[WinStrings]
+"how'd i do?"
+
+[LoseStrings]
+"how'd i do?"
