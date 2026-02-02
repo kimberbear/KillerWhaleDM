@@ -139,4 +139,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Multiplayer", 	"m", 	"KWDMmultiplayerMenu"
 	TextItem 	"Options",		"o",	"CWDM_OptionsMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
+	Position 0, 0
+	Font "SmallFont", "White"
+	StaticText 64, 200, "JANKY ALPHA VER. 02.02.26"
 }

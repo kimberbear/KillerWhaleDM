@@ -10,7 +10,8 @@ Statusbar normal, fullscreenoffsets
 	DrawNumber 3, DIALFONT, untranslated, Health, alignment(right),91,-46;
 	DrawString SMALLFONT, untranslated, "/200",91, -42,0,alignment(left);
 	
-	DrawBar "KWHPICON", "KWHPBACK", health, vertical, 36, -58;
+	//DrawBar "KWHP_0", "KWHPBACK", health, vertical, 36, -58;
+	DrawImage translatable "KWHP_COL", 36, -58;
 	
 	//DrawString SMALLFONT, untranslated, playerclass, 91, -48,0,alignment(left);
 	

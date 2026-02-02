@@ -16,7 +16,8 @@ GameInfo
 	ForceSpawnEventScripts = true
 	ForceDamageEventScripts = true
 	MenuBackButton = "M_BACK"
-	IntermissionMusic = "SAILOR"
+	IntermissionMusic = "MUSINTER"
+	infopage = "HELP"
 }
 
 clearEpisodes
@@ -24,6 +25,7 @@ clearEpisodes
 defaultmap
 {
 	lightmode=3
+	//aircontrol = 0.5
 }
 
 episode PROTO
@@ -31,7 +33,7 @@ episode PROTO
 	name = "Test map"
 }
 
-map LAVA "Lava [Early blockout]"
+map DM_LAVA "(DM) Lava [Early blockout]"
 {
 	sky1 = "DASKY25",0
 	music = "music/dave_ingame.ogg"
@@ -45,19 +47,25 @@ map LAVA "Lava [Early blockout]"
 // 	music = "music/viciousvenice.ogg"
 // }
 
-map PROTO "Test map"
-{
-	sky1 = "VOLCNSKY",0
-}
+// map PROTO "Test map"
+// {
+// 	sky1 = "VOLCNSKY",0
+// }
 
-map 2FORT "2Fort"
+map CTF2FORT "(CTF) 2Fort"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/viciousvenice.ogg"
 }
 
-map HANGAR "Hangar"
+map DM_HANGA "(DM) Hangar"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/factory_ingame.ogg"
 }
+
+// map CTF_VEGA "CTF Vegabond"
+// {
+// 	sky1 = "VOLCNSKY",0
+// 	music = "music/factory_ingame.ogg"
+// }

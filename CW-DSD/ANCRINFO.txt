@@ -1,0 +1,18 @@
+{
+	name = 				"CW:DSD Default"
+	three = 			"alert/countdown"
+	two =				"alert/countdown"
+	one =				"alert/countdown"
+	fight = 			"alert/roundstart"
+	bluescores = 		"alert/score"
+	blueflagtaken = 	"alert/end"
+	blueflagreturned = 	"alert/returned"
+	blueflagdropped = 	"alert/end"
+	redscores = 		"alert/score"
+	redflagtaken = 	"alert/end"
+	redflagreturned = 	"alert/returned"
+	redflagdropped = 	"alert/end"
+	tag	= 				"alert/score"
+	votepassed	= 		"alert/end"
+	votefailed	= 		"alert/end"
+}

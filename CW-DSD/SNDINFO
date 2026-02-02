@@ -122,3 +122,14 @@ hitsound3 			"Sounds/hitsounds/pipesound.ogg"
 
 killsound1 			"Sounds/killsounds/kill5.ogg"
 killsound2 			"Sounds/hitsounds/pipesound.ogg"
+
+//-----------------------------------------------------
+// announcer
+//-----------------------------------------------------
+
+alert/countdown		"Sounds/Alerts/wavecountdown.ogg"
+alert/roundstart	"Sounds/Alerts/wavestart.ogg"
+alert/score			"Sounds/Alerts/score.ogg"
+alert/gottheflag	"Sounds/Alerts/objective.ogg"
+alert/returned		"Sounds/Alerts/return.ogg"
+alert/end			"Sounds/Alerts/waveend.ogg"

@@ -27,10 +27,10 @@ Script "HitProcess" (int type, int arg1, int arg2) EVENT
 
 		SetActivator(0, AAPTR_DAMAGE_SOURCE);
 		int plr = PlayerNumber();
-// 		if((plr == -1) || (plr == killednum))
-// 		{
-// 			terminate;
-// 		}
+		if((plr == -1) || (plr == killednum))
+		{
+			terminate;
+		}
 
 		if (markForDeath == 0)
 		{
