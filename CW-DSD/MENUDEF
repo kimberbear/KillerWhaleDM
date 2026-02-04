@@ -16,6 +16,9 @@ OptionMenu "KWDMoptions"
 	StaticText ""
 	Option "Killsound type","cl_KillSound", "KillSounds"
 	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
+	
+	StaticText ""
+	Slider	"Custom FOV",	"cl_customFOV", 50, 120, 1
 }
 
 OptionValue HitSounds

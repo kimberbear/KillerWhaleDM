@@ -1,0 +1,14 @@
+#library "Core.acs"
+#include "zcommon.acs"
+
+
+
+script "PlayerSpawned" ENTER
+{
+	while (true) {
+		int newFOV = GetCVAR("cl_customFOV");
+		str command = StrParam(s:"fov ", d:newFOV);
+		ConsoleCommand(command);
+		delay(1);
+	}
+}
