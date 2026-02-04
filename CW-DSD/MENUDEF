@@ -42,7 +42,10 @@ OptionMenu "CWDM_OptionsMenu"
 	SubMenu "Override Player Colours",	"KWDM_PlayerColours"
 	StaticText " "
 	Submenu "Multiplayer Options",		"ZA_MultiplayerOptions" // [TP]
-	StaticText " " // [TP]
+	StaticText " "
+	Submenu "Video mode",				"VideoModeMenu"
+	SubMenu "Audio options",			"CWDM_SoundOptions"
+	StaticText " "
 	Submenu "Customize Controls",		"CustomizeControls"
 	Submenu "Mouse options",			"MouseOptions"
 	StaticText " "
@@ -153,4 +156,47 @@ LISTMENU "MainMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
 	StaticText 64, 200, "JANKY ALPHA VER. 04.02.26"
+}
+
+OptionMenu CWDM_SoundOptions
+{
+	Title "SOUND OPTIONS"
+	Slider "Sounds volume",		"snd_sfxvolume", 0, 1, 0.05
+	Slider "Menu volume",		"snd_menuvolume", 0, 1, 0.05
+	Slider "Music volume",		"snd_musicvolume", 0, 1, 0.05
+	Slider "Announcer volume",	"snd_announcervolume", 0, 1, 0.05 // [TP]
+	//Option "Announcer",			"cl_announcer", "ZA_Announcers" // [TP]
+	//Option "MIDI device",		"snd_mididevice", "MidiDevices"
+	StaticText " "
+	Option "Underwater reverb",	"snd_waterreverb", "OnOff"
+	Slider "Underwater cutoff",	"snd_waterlp", 0, 2000, 50, 0
+	Option "Randomize pitches",	"snd_pitched", "OnOff"
+	Slider "Sound channels",	"snd_channels", 8, 256, 8, 0
+	Option "Play connect sound", "cl_connectsound", "YesNo" // [TP]
+	Option "Multiple announcer sounds", "cl_allowmultipleannouncersounds", "YesNo" // [TP]
+	//Option "Lock music",		"snd_lockmusic", "YesNo" // [AK]
+	StaticText " "
+	Command "Restart sound",	"snd_reset"
+	StaticText " "
+	IfOption(Windows)
+	{
+		Option "Output system",		"snd_output", "SoundOutputsWindows"
+	}
+	IfOption(Unix)
+	{
+		Option "Output system",		"snd_output", "SoundOutputsUnix"
+	}
+	IfOption(Mac)
+	{
+		Option "Output system",		"snd_output", "SoundOutputsMac"
+	}
+	//Option "Output format",		"snd_output_format", "OutputFormats"
+	Option "Speaker mode",		"snd_speakermode", "SpeakerModes"
+	//Option "Resampler",			"snd_resampler", "Resamplers"
+	//Option "HRTF filter",		"snd_hrtf", "OnOff"
+
+	StaticText " "
+	Submenu "Advanced options",			"AdvSoundOptions"
+	//Submenu "Module replayer options",	"ModReplayerOptions"
+	Submenu "Voice chat options",		"ZA_VoiceChatOptions" // [AK]
 }
