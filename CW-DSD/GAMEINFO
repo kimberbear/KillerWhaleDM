@@ -1,4 +1,4 @@
 STARTUPTITLE = "Captain Wayne : Deep Sea Deathmatch"
-STARTUPCOLORS = "ffffff", "252e62"
+STARTUPCOLORS = "ffffff", "502d54"
 IWAD = "kwgame.wad"
 STARTUPTYPE = "Hexen"
