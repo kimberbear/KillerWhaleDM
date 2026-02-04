@@ -33,7 +33,7 @@ episode PROTO
 	name = "Test map"
 }
 
-map DM_LAVA "(DM) Lava [Early blockout]"
+map DM1 "(DM) Lava [Early blockout]"
 {
 	sky1 = "DASKY25",0
 	music = "music/dave_ingame.ogg"
@@ -52,13 +52,13 @@ map DM_LAVA "(DM) Lava [Early blockout]"
 // 	sky1 = "VOLCNSKY",0
 // }
 
-map CTF2FORT "(CTF) 2Fort"
+map CTF1 "(CTF) 2Fort"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/viciousvenice.ogg"
 }
 
-map DM_HANGA "(DM) Hangar"
+map DM2 "(DM) Hangar"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/factory_ingame.ogg"

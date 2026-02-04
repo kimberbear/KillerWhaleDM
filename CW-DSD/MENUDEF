@@ -36,17 +36,12 @@ OptionValue KillSounds
 OptionMenu "CWDM_OptionsMenu"
 {
 	Submenu "KWDM Options","KWDMoptions"
+	SubMenu "Override Player Colours",	"KWDM_PlayerColours"
 	StaticText " "
 	Submenu "Multiplayer Options",		"ZA_MultiplayerOptions" // [TP]
 	StaticText " " // [TP]
 	Submenu "Customize Controls",		"CustomizeControls"
 	Submenu "Mouse options",			"MouseOptions"
-	Submenu "Joystick options",			"JoystickOptions"
-	StaticText " "
-	Submenu "Player Setup",				"CWDM_PlayerMenu"
-	Submenu "Sound Options",			"SoundOptions"
-	Submenu "Display Options",			"VideoOptions"
-	Submenu "Set video mode",			"VideoModeMenu"
 	StaticText " "
 	Submenu "Legacy Options",			"OptionsMenu"
 	StaticText " "
@@ -58,14 +53,27 @@ OptionMenu "CWDM_OptionsMenu"
 
 OptionMenu "KWDMmultiplayerMenu"
 {
-	TITLE "MULTIPLAYER"
-	SubMenu	"Offline Skirmish",			"ZA_SkirmishMenu"
-	Submenu "Log in", 					"ZA_LoginMenu"
-	SubMenu "Override Player Colours",	"KWDM_PlayerColours"
-	Submenu "Player Setup",				"CWDM_PlayerMenu"
-	StaticText	" "
-	Submenu "All Multiplayer Options",	"ZA_MultiplayerOptions" // [TP]
 
+	Title "MULTIPLAYER"
+
+	SubMenu		"Offline Skirmish",			"ZA_SkirmishMenu"
+	SubMenu		"Player Setup",				"CWDM_PlayerMenu"
+	SubMenu		"Log in",					"ZA_LoginMenu"
+	SubMenu 	"Override Player Colours",	"KWDM_PlayerColours"
+	StaticText	" "
+	SubMenu		"Server Administration",	"ZA_ServerSetupMenu"
+	StaticText	" "
+	Command		"Spectate",					"menu_spectate"
+	Command		"Switch teams",				"menu_changeteam"
+	Command		"Disconnect",				"menu_disconnect"
+	StaticText	" "
+	SubMenu		"Call a vote",				"ZA_CallVote"
+	SubMenu		"Ignore a player",			"ZA_IgnoreMenu"
+	StaticText	" "
+	StaticText	"Passwords", 1
+	TextField	"Connect To Server",		"cl_password"
+	TextField	"Join Game",				"cl_joinpassword"
+	StaticText 	" "
 }
 
 //-------------------------------------------------------------------------------------------
@@ -141,5 +149,5 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 200, "JANKY ALPHA VER. 02.02.26"
+	StaticText 64, 200, "JANKY ALPHA VER. 04.02.26"
 }

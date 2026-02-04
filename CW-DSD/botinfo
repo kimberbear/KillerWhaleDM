@@ -1,3 +1,5 @@
+clearbots
+
 {
 	name = "marph"
 	accuracy = 0
@@ -91,4 +93,42 @@
 	revealed = true
 	script = "dfultbot"
 	//chatlump = "botchats/dave.txt"
+}
+
+{
+	name = "brad"
+	accuracy = 3
+	intellect = 4
+	evade = 1
+	anticipation = 3
+	reactiontime = 4
+	perception = 1
+	color = "00 40 4d"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0	//set to 60 once chatter implemented
+	revealed = true
+	script = "dfultbot"
+	chatlump = "botchats/brad.txt"
+}
+
+{
+	name = "janet"
+	accuracy = 3
+	intellect = 4
+	evade = 1
+	anticipation = 3
+	reactiontime = 4
+	perception = 1
+	color = "ff 53 ad"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0	//set to 60 once chatter implemented
+	revealed = true
+	script = "dfultbot"
+	chatlump = "botchats/janet.txt"
 }
