@@ -108,10 +108,10 @@ clearbots
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 0	//set to 60 once chatter implemented
+	chatfrequency = 0	
 	revealed = true
 	script = "dfultbot"
-	chatlump = "botchats/brad.txt"
+	//chatlump = "botchats/brad.txt"
 }
 
 {
@@ -127,8 +127,8 @@ clearbots
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 0	//set to 60 once chatter implemented
+	chatfrequency = 0	
 	revealed = true
 	script = "dfultbot"
-	chatlump = "botchats/janet.txt"
+	//chatlump = "botchats/janet.txt"
 }
