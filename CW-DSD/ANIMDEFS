@@ -1,1 +1,44 @@
 Warp2 texture WYNWA1 1
+
+Warp2 texture ALERT 1
+
+Warp2 texture LAVA1 1
+
+texture BCHWA1
+	pic BCHWA1 rand 5 12
+	pic BCHWA2 rand 5 12
+	pic BCHWA3 rand 5 12
+	pic BCHWA4 rand 5 12
+	pic BCHWA5 rand 5 12
+
+texture WAFALL1
+	pic WAFALL1 rand 5 7
+	pic WAFALL2 rand 5 7
+	pic WAFALL3 rand 5 7
+	
+texture LAFALL1
+	pic LAFALL1 rand 5 7
+	pic LAFALL2 rand 5 7
+	pic LAFALL3 rand 5 7	
+	
+texture WINEFL1
+	pic WINEFL1 rand 5 7
+	pic WINEFL2 rand 5 7
+	pic WINEFL3 rand 5 7
+
+texture ACFALL1
+	pic ACFALL1 rand 5 7
+	pic ACFALL2 rand 5 7
+	pic ACFALL3 rand 5 7
+
+texture WAMIST1
+	pic WAMIST1 tics 3 
+	pic WAMIST2 tics 3 
+	pic WAMIST3 tics 3 
+	pic WAMIST4 tics 3
+	
+texture WINEMST1
+	pic WINEMST1 tics 3 
+	pic WINEMST2 tics 3 
+	pic WINEMST3 tics 3 
+	pic WINEMST4 tics 3 

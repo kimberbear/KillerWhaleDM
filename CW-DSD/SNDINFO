@@ -105,6 +105,7 @@ usefail "Sounds/usefail.ogg"
 
 misc/hole "sounds/hole.ogg"
 misc/tada "sounds/tada.ogg"
+misc/sillylaunch "sounds/sillylaunch.ogg"
 
 menu/activate		"sounds/items/abonpickup.ogg"	
 menu/backup			"sounds/weapons/shotgunopenclose.ogg"	

@@ -52,7 +52,7 @@ map DM1 "Lava"
 // 	sky1 = "VOLCNSKY",0
 // }
 
-map CTF1 "2Fort"
+map CTF1 "Killer Clamyon"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/viciousvenice.ogg"
