@@ -36,6 +36,9 @@ Hopefully a launcher of some kind will eventually be provided with releases.<br>
 <br>
 It is especially important to copy "kwgame.wad" into the same directory as "zandronum.exe" as it is your stand in for Doom II.<br>
 Zandronum won't be able to start without it. If Zandronum asks for the directory to Doom II, you haven't placed "kwgame.wad" into the same directory as "zandronum.exe"<br>
+<br>
+If you have issues, please try opening your .pk3/.zip, and ensure all the game files are not in a single folder inside the zip. This will prevent Zandronum and UDB from opening up CW:DSD.<br>
+You won't have to worry about this when a release is made, as the .pk3 will be provided prebuilt alongside a launcher!<br>
 
 ## Mapping
 Download the Ultimate Doom Builder configs and add them to the Configurations folder at your Ultimate Doom Builder installation.<br>
