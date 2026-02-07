@@ -60,6 +60,8 @@ ACTOR CWDM_weapon : Weapon
 	Weapon.SwayStyle "HorizontalOnly"
 	Weapon.ViewSwaySpeed 2.5
 	Weapon.Kickback 150
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.UNTOSSABLE
 }
 
 Actor Token  : Inventory
