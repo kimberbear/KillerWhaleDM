@@ -20,6 +20,7 @@ script "stanPickup" (void)
 	BossActive = true;
 	bossType = 1;
 	GiveInventory("CWDM_stanRevolver",1);
+	GiveInventory("CWDM_hugeArmor",1);
 }
 
 script "stanTransformed" (void)
@@ -81,6 +82,7 @@ script "earlPickup" (void)
 	BossActive = true;
 	bossType = 2;
 	GiveInventory("CWDM_EARLgun",1);
+	GiveInventory("CWDM_hugeArmor",1);
 }
 
 script "EARLTransformed" (void)
@@ -142,6 +144,7 @@ script "smasherPickup" (void)
 	BossActive = true;
 	bossType = 3;
 	GiveInventory("CWDM_smasherWeapon",1);
+	GiveInventory("CWDM_hugeArmor",1);
 }
 
 script "smasherTransformed" (void)

@@ -1,0 +1,22 @@
+[default]
+
+LANGUAGE = "english";
+
+HEALBON = "Snacked on a shrimp! +2 HP";
+HEALMED = "Drank some fish blood! +50 HP";
+HEALBIG = "Chowed down a bloody bucket of chum! +100 HP";
+HEALHUGE = "Sipped godly octo blood! +200 HP";
+
+ARMSMALL = "A sip of booze! +2 AP";
+ARMMED = "A can of booze! +50 AP";
+ARMLARGE = "A Mug of booze! +100 AP";
+ARMHUGE = "A bottle of booze! +200 AP";
+
+DEATHPAK = "Fragtastically fried fish! +25 HP & AP";
+
+OBSHGUN = "%o tasted %k's boomstick.";
+OBRIFLE = "%k opened fire on %o.";
+OBFLARE = "%o was toasted by a flare.";
+OBBREW = "%o tasted a Boom Brew's explosive flavour!";
+OBSTAN = "%o was taken away for a long, long time.";
+OBSMASH = "%o was pummeled into a fine paste.";

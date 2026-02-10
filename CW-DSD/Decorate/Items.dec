@@ -4,7 +4,7 @@ actor CWDM_healthBonus : Health 15300
 //$Title "Health Bonus"
 //$Sprite BON1A0
 	Inventory.PickupSound "items/eat"
-	Inventory.PickupMessage "Snacked on a shrimp! +2 HP !"
+	Inventory.PickupMessage "$HEALBON"
     Inventory.Amount 2 
 	Inventory.MaxAmount 200
 	States
@@ -15,16 +15,32 @@ actor CWDM_healthBonus : Health 15300
 	}
 }
 
-
-actor CWDM_medikit : Health 15302
+actor CWDM_mediumHealth : Health 15301
 {
 //$Category Health and Armor
-//$Title "Medikit"
-//$Sprite MEDIA0
+//$Title "Health medium"
+//$Sprite STIMA0
 	Inventory.Amount 50
 	Inventory.MaxAmount 200
 	Inventory.PickupSound "items/eat"
-	Inventory.PickupMessage "Chowed down a bloody bucket of chum! +50 HP !"
+	Inventory.PickupMessage "$HEALMED"
+	States
+	{
+	spawn:
+		STIM a -1
+		stop
+	}
+}
+
+actor CWDM_bigHealth : Health 15302
+{
+//$Category Health and Armor
+//$Title "Health large"
+//$Sprite MEDIA0
+	Inventory.Amount 100
+	Inventory.MaxAmount 200
+	Inventory.PickupSound "items/eat"
+	Inventory.PickupMessage "$HEALBIG"
 	States
 	{
 	spawn:
@@ -33,14 +49,69 @@ actor CWDM_medikit : Health 15302
 	}
 }
 
-actor CWDM_mediumArmor : BasicArmorBonus  15306
+actor CWDM_hugeHealth : Health 15303
 {
 //$Category Health and Armor
-//$Title "Armor"
+//$Title "Health huge"
+//$Sprite SOULA0
+	Inventory.Amount 200
+	Inventory.MaxAmount 200
+	Inventory.PickupSound "items/eat"
+	Inventory.PickupMessage "$HEALHUGE"
+	States
+	{
+	spawn:
+		SOUL a -1
+		stop
+	}
+}
+
+actor CWDM_armorBonus : BasicArmorBonus 15304
+{
+//$Category Health and Armor
+//$Title "Armor Bonus"
+//$Sprite BON2A0
+    Armor.SaveAmount 2
+	Armor.SavePercent 75
+    Armor.MaxSaveAmount 200
+	Inventory.PickupSound "items/eat"
+	Inventory.PickupMessage "$ARMSMALL"
+	States
+	{
+	spawn:
+		BON2 a -1
+		loop
+	}
+}
+
+actor CWDM_mediumArmor : BasicArmorBonus  15305
+{
+//$Category Health and Armor
+//$Title "Armor medium"
+//$Sprite ARM3A0
+	+INVENTORY.AUTOACTIVATE
+	Inventory.PickupSound "items/armor1"
+	Inventory.PickupMessage "$ARMMED"
+	Armor.SavePercent 75
+	Armor.MaxSaveAmount 200
+	Armor.SaveAmount 50
+
+	States
+	{
+	spawn:
+		ARM3 a -1
+		loop
+	}
+}
+
+actor CWDM_largeArmor : BasicArmorBonus  15306
+{
+//$Category Health and Armor
+//$Title "Armor large"
 //$Sprite ARM1A0
 	+INVENTORY.AUTOACTIVATE
 	Inventory.PickupSound "items/armor1"
-	Inventory.PickupMessage "Booze! +100 AP"
+	Inventory.PickupMessage "$ARMLARGE"
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
 	Armor.SaveAmount 100
@@ -49,6 +120,26 @@ actor CWDM_mediumArmor : BasicArmorBonus  15306
 	{
 	spawn:
 		ARM1 ab 4
+		loop
+	}
+}
+
+actor CWDM_hugeArmor : BasicArmorBonus  15307
+{
+//$Category Health and Armor
+//$Title "Armor huge"
+//$Sprite ARM2A0
+	+INVENTORY.AUTOACTIVATE
+	Inventory.PickupSound "items/armor1"
+	Inventory.PickupMessage "$ARMHUGE"
+	Armor.SavePercent 75
+	Armor.MaxSaveAmount 200
+	Armor.SaveAmount 200
+
+	States
+	{
+	spawn:
+		ARM2 a -1
 		loop
 	}
 }
@@ -67,10 +158,11 @@ actor CWDM_smallArmorBonus : BasicArmorBonus
     Armor.MaxSaveAmount 200
 }
 
+
 actor CWDM_deathPack : CustomInventory
 {
 	Inventory.PickupSound "ammoget"
-    Inventory.PickupMessage "+25 HP +25 AP"
+    Inventory.PickupMessage "$DEATHPAK"
     Inventory.Icon "BPAKA0"
     +INVENTORY.AUTOACTIVATE   // auto-use when picked up
 	+INVENTORY.ALWAYSPICKUP
@@ -165,7 +257,7 @@ actor CWDM_stanBossPickup : CWDM_bossPickup 17003
 actor CWDM_EARLBossPickup : CWDM_bossPickup 17005
 {
 //$Category Powerup
-//$Title "EARL Boss Pickup"
+//$Title "EARL Boss Pickup (non-functional)"
 //$Sprite ERPKA0
     States
     {
@@ -182,7 +274,7 @@ actor CWDM_EARLBossPickup : CWDM_bossPickup 17005
 actor CWDM_smasherBossPickup : CWDM_bossPickup 17004
 {
 //$Category Powerup
-//$Title "Sunken Smasher Boss Pickup"
+//$Title "Sunken Smasher Boss Pickup (mostly functional)"
 //$Sprite SMPKA0
     States
     {

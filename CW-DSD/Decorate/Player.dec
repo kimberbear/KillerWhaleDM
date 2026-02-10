@@ -217,7 +217,8 @@ actor CWDM_smasherClass : CWDM_bossClass
 	Player.DisplayName "Sunken Smasher"
 	Height 72.0
 	Player.ViewHeight 64.0
-	Speed 0.8
+	Speed 0.75
+	player.jumpz 0
 	States
 	{
 	Spawn:
@@ -230,7 +231,7 @@ actor CWDM_smasherClass : CWDM_bossClass
 		SMAS A 1
 		goto see
 	Melee:
-		SMAS A 1
+		SMAS NNO 4
 		goto see
 	Pain:
 		SMAS A -1 

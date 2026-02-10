@@ -4,6 +4,12 @@ DefaultListMenu
 	LineSpacing 15
 }
 
+OptionValue "YesNo"
+{
+	0, "No"
+	1, "Yes"
+}
+
 OptionMenu "KWDMoptions"
 {
 	TITLE "KWDM Options"
@@ -43,7 +49,9 @@ OptionMenu "CWDM_OptionsMenu"
 	StaticText " "
 	Submenu "Multiplayer Options",		"ZA_MultiplayerOptions" // [TP]
 	StaticText " "
-	Submenu "Video mode",				"VideoModeMenu"
+	Submenu "HUD Options",				"HUDOptions"
+	Submenu "Display Options",			"VideoOptions"
+	Submenu "Set video mode",			"VideoModeMenu"
 	SubMenu "Audio options",			"CWDM_SoundOptions"
 	StaticText " "
 	Submenu "Customize Controls",		"CustomizeControls"
@@ -155,7 +163,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 200, "JANKY ALPHA VER. 07.02.26"
+	StaticText 64, 200, "JANKY ALPHA VER. 10.02.26"
 }
 
 OptionMenu CWDM_SoundOptions
