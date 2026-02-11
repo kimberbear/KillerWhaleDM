@@ -58,22 +58,41 @@ clearbots
 }
 
 {
-	name = "rockie"
-	accuracy = 2
-	intellect = 3
-	evade = 4
-	anticipation = 2
-	reactiontime = 2
-	perception = 2
-	color = "79 c4 e6"
+	name = "jade"
+	accuracy = 3
+	intellect = 4
+	evade = 1
+	anticipation = 3
+	reactiontime = 4
+	perception = 1
+	color = "4a c9 25"
 	//gender = "male"
 	//skin = "big fat doomguy"
 	class = "random"
 	railcolor = blue
-	chatfrequency = 0
+	chatfrequency = 0	
 	revealed = true
 	script = "dfultbot"
-	//chatlump = "botchats/rockman.txt"
+	//chatlump = "botchats/janet.txt"
+}
+
+{
+	name = "rose"
+	accuracy = 3
+	intellect = 4
+	evade = 1
+	anticipation = 3
+	reactiontime = 4
+	perception = 1
+	color = "b5 36 da"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0	
+	revealed = true
+	script = "dfultbot"
+	//chatlump = "botchats/janet.txt"
 }
 
 {
@@ -93,6 +112,25 @@ clearbots
 	revealed = true
 	script = "dfultbot"
 	//chatlump = "botchats/dave.txt"
+}
+
+{
+	name = "rockie"
+	accuracy = 2
+	intellect = 3
+	evade = 4
+	anticipation = 2
+	reactiontime = 2
+	perception = 2
+	color = "79 c4 e6"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0
+	revealed = true
+	script = "dfultbot"
+	//chatlump = "botchats/rockman.txt"
 }
 
 {
@@ -123,6 +161,25 @@ clearbots
 	reactiontime = 4
 	perception = 1
 	color = "ff 53 ad"
+	//gender = "male"
+	//skin = "big fat doomguy"
+	class = "random"
+	railcolor = blue
+	chatfrequency = 0	
+	revealed = true
+	script = "dfultbot"
+	//chatlump = "botchats/janet.txt"
+}
+
+{
+	name = "matt"
+	accuracy = 4
+	intellect = 4
+	evade = 4
+	anticipation = 4
+	reactiontime = 4
+	perception = 4
+	color = "fd 79 26"
 	//gender = "male"
 	//skin = "big fat doomguy"
 	class = "random"
