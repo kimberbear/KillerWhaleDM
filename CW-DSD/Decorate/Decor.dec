@@ -162,3 +162,42 @@ actor CWDM_Rifleman : Decoration 16132
 	loop
 	}
 }
+
+actor CWDM_WaterGeyser : Decoration 16133
+{
+//$Category Decoration
+//$Title "Water Geyser"
+//$Sprite WAGYA0
+
+    Radius 16
+    Height 90
+    -SOLID
+ 
+	States
+	{
+	Spawn:
+	WAGY ABC 2
+	loop
+	}
+
+}
+
+actor CWDM_PalmTree : Decoration 16134
+{
+//$Category Decoration
+//$Title "Palm Tree"
+//$Sprite TRE1A0
+
+    Radius 32
+    Height 223
+    ProjectilePassHeight -16
+    +SOLID
+ 
+	States
+	{
+	Spawn:
+	TRE1 A -1
+	stop
+	}
+
+}

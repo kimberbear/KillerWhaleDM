@@ -52,6 +52,11 @@ items/armor1 "Sounds/arm1pickup.ogg"
 ammoget "Sounds/ammoget.ogg"
 powerup "Sounds/powerup.ogg"
 
+items/abonpickup "sounds/items/abonpickup.ogg"
+items/arm1pickup "sounds/items/arm1pickup.ogg"
+items/arm2pickup "sounds/items/arm2pickup.ogg"
+items/arm3pickup "sounds/items/arm3pickup.ogg"
+
 //-----------------------------------------------------
 // player
 //-----------------------------------------------------

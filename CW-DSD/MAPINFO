@@ -33,11 +33,7 @@ episode PROTO
 	name = "Test map"
 }
 
-map DM1 "Lava"
-{
-	sky1 = "DASKY25",0
-	music = "music/dave_ingame.ogg"
-}
+
 
 //TOO BROKEN!
 
@@ -58,14 +54,25 @@ map CTF1 "Killer Clamyon"
 	music = "music/viciousvenice.ogg"
 }
 
-map DM2 "Hangar"
+map CTF2 "Vegabond"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/factory_ingame.ogg"
 }
 
-map CTF2 "Vegabond"
+map DM1 "Lava"
+{
+	sky1 = "DASKY25",0
+	music = "music/dave_ingame.ogg"
+}
+
+map DM2 "Hangar"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/factory_ingame.ogg"
+}
+map DM3 "Clash of the Equatorial"
+{
+	sky1 = "DASKY25",0
+	music = "music/burning_ingame.ogg"
 }

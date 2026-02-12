@@ -74,7 +74,7 @@ actor CWDM_armorBonus : BasicArmorBonus 15304
     Armor.SaveAmount 2
 	Armor.SavePercent 75
     Armor.MaxSaveAmount 200
-	Inventory.PickupSound "items/eat"
+	Inventory.PickupSound "items/abonpickup"
 	Inventory.PickupMessage "$ARMSMALL"
 	States
 	{
@@ -90,7 +90,7 @@ actor CWDM_mediumArmor : BasicArmorBonus  15305
 //$Title "Armor medium"
 //$Sprite ARM3A0
 	+INVENTORY.AUTOACTIVATE
-	Inventory.PickupSound "items/armor1"
+	Inventory.PickupSound "items/arm3pickup"
 	Inventory.PickupMessage "$ARMMED"
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
@@ -110,7 +110,7 @@ actor CWDM_largeArmor : BasicArmorBonus  15306
 //$Title "Armor large"
 //$Sprite ARM1A0
 	+INVENTORY.AUTOACTIVATE
-	Inventory.PickupSound "items/armor1"
+	Inventory.PickupSound "items/arm1pickup"
 	Inventory.PickupMessage "$ARMLARGE"
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
@@ -130,7 +130,7 @@ actor CWDM_hugeArmor : BasicArmorBonus  15307
 //$Title "Armor huge"
 //$Sprite ARM2A0
 	+INVENTORY.AUTOACTIVATE
-	Inventory.PickupSound "items/armor1"
+	Inventory.PickupSound "items/arm2pickup"
 	Inventory.PickupMessage "$ARMHUGE"
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
