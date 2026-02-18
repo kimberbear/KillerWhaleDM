@@ -50,7 +50,7 @@ The Ultimate Doom Builder configs are far from perfect, so be sure to check back
 <br>
 If you make a custom map, you are welcome to share it with the community and if it is deemed to be of a high enough standard, it may be included with the game and you will be credited appropriately!<br>
 <br>
-You can add additional files via: command line arguments to the Zandronum executable; dragging the additonal files alongside the game files; using the launcher to add addtiional command line arguments.<br>
+You can add additional files via: command line arguments to the Zandronum executable; dragging the additonal files alongside the game files onto the Zandronum executable; using the launcher to add addtiional command line arguments before starting the game.<br>
 The launcher will eventually load additional archives automatically and this part of the read me will get updated to reflect that.<br>
 
 ## Feel free to contribute or leave feedback!
