@@ -163,7 +163,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 200, "JANKY ALPHA VER. 12.02.26"
+	StaticText 64, 200, "JANKY ALPHA VER. 18.02.26"
 }
 
 OptionMenu CWDM_SoundOptions

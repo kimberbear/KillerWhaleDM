@@ -110,7 +110,7 @@ actor CWDM_gib : CWDM_BloodDroplet
     States
     {
     Spawn:
-        BON1 A 1 A_SpawnItemEX("CWDM_BloodTrail", random(-1,1), 0, random(-1,1), 0, 0, 0, random(0,360))
+        TNT1 A 1 A_SpawnItemEX("CWDM_BloodTrail", random(-1,1), 0, random(-1,1), 0, 0, 0, random(0,360))
 		TNT1 A 0 A_CheckFloor("Land")
 		Loop
 	Land:
