@@ -10,6 +10,7 @@ int bossDuration = 1048576;
 // STANLEY
 //-----------------------------------------------------
 
+/*
 script "stanPickup" (void)
 {
 	int pNum = PlayerNumber();
@@ -22,7 +23,26 @@ script "stanPickup" (void)
 	GiveInventory("CWDM_stanRevolver",1);
 	GiveInventory("CWDM_hugeArmor",1);
 }
+*/
 
+script "stanPickup" (void)
+{
+    MorphActor(0, "CWDM_stanClass", "", bossDuration, 0, "", "");
+
+    Delay(2);
+
+    GiveInventory("CWDM_stanRevolver", 1);
+    GiveInventory("CWDM_hugeArmor", 1);
+
+    SetWeapon("CWDM_stanRevolver");
+
+    ACS_NamedExecuteAlways("stanTransformed", 0);
+
+    BossActive = true;
+    bossType = 1;
+}
+
+/*
 script "stanTransformed" (void)
 {
 	//SetFont("BIGFONT");
@@ -44,6 +64,23 @@ script "stanTransformed" (void)
 	SetMusic("music/stanfight_ingame.ogg");
 	AmbientSound("voice/stanNotice",127);
 }
+*/
+
+script "stanTransformed" (void)
+{
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+
+        SetFont("BIGFONT");
+        HudMessage(l:"STANSTRT";
+                   HUDMSG_PLAIN, 501, CR_GOLD, 0.5, bossTextY, 5.0);
+
+        SetMusic("music/stanfight_ingame.ogg");
+        LocalAmbientSound("voice/stanNotice", 127);
+    }
+}
 
 script "stanDied" (void)
 {
@@ -55,7 +92,7 @@ script "stanDied" (void)
         SetActivatorToPlayer(i);
         SetFont("BIGFONT");
         HudMessage(
-            s:"HIS CASE IS CLOSED!";
+            l:"STANDEAD";
             HUDMSG_PLAIN,
             501,            
             CR_GOLD,
@@ -135,38 +172,39 @@ script "earlDied" (void)
 
 script "smasherPickup" (void)
 {
-	int pNum = PlayerNumber();
-	//SetPlayerClass(pNum,"KWDMstan",true);
 	MorphActor(0, "CWDM_smasherClass", "", bossDuration, 0, "", "");
-	SetActorState(0, "Spawn");
-    //SetActorProperty(0, APROP_Health, 500);
-	ACS_NamedExecuteAlways("smasherTransformed",0);
-	BossActive = true;
-	bossType = 3;
+    
+	Delay(2);
+
 	GiveInventory("CWDM_smasherWeapon",1);
 	GiveInventory("CWDM_hugeArmor",1);
+	
+	SetWeapon("CWDM_smasherWeapon");
+	
+	ACS_NamedExecuteAlways("smasherTransformed",0);
+
+	BossActive = true;
+	bossType = 3;
 }
 
 script "smasherTransformed" (void)
 {
-	//SetFont("BIGFONT");
-	//HudMessage(s:"STANLEY ARRIVES AT THE SCENE!"; HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.3, 5.0);
     int i;
     for (i = 0; i < PlayerCount(); i++)
     {
         SetActivatorToPlayer(i);
         SetFont("BIGFONT");
         HudMessage(
-            s:"HERE BE THE SUNKEN SMASHER!";
+            l:"SMASSTRT";
             HUDMSG_PLAIN,
             501,            
             CR_SAPPHIRE,
             0.5, bossTextY,
             5.0
         );
+		SetMusic("music/earlsong.ogg");
+		//AmbientSound("voice/stanNotice",127);
     }
-	SetMusic("music/earlsong.ogg");
-	//AmbientSound("voice/stanNotice",127);
 }
 
 script "smasherDied" (void)
@@ -179,7 +217,7 @@ script "smasherDied" (void)
         SetActivatorToPlayer(i);
         SetFont("BIGFONT");
         HudMessage(
-            s:"THE SMASHER SANK!";
+            l:"SMASDEAD";
             HUDMSG_PLAIN,
             501,            
             CR_SAPPHIRE,

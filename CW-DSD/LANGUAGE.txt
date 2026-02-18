@@ -2,6 +2,8 @@
 
 LANGUAGE = "english";
 
+//Items
+
 HEALBON = "Snacked on a shrimp! +2 HP";
 HEALMED = "Drank some fish blood! +50 HP";
 HEALBIG = "Chowed down a bloody bucket of chum! +100 HP";
@@ -14,9 +16,19 @@ ARMHUGE = "A bottle of booze! +200 AP";
 
 DEATHPAK = "Fragtastically fried fish! +25 HP & AP";
 
+//Obituaries
+
 OBSHGUN = "%o tasted %k's boomstick.";
 OBRIFLE = "%k opened fire on %o.";
 OBFLARE = "%o was toasted by a flare.";
 OBBREW = "%o tasted a Boom Brew's explosive flavour!";
 OBSTAN = "%o was taken away for a long, long time.";
 OBSMASH = "%o was pummeled into a fine paste.";
+
+//Bosses
+
+STANSTRT = "STANLEY ARRIVES AT THE SCENE!";
+STANDEAD = "HIS CASE IS CLOSED!";
+
+SMASSTRT = "HERE BE THE SUNKEN SMASHER!";
+SMASDEAD = "THE SMASHER SANK!";
