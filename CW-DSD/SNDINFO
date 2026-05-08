@@ -65,6 +65,9 @@ items/arm3pickup "sounds/items/arm3pickup.ogg"
 // player
 //-----------------------------------------------------
 
+misc/jump "Sounds/jump.ogg"
+misc/land "Sounds/land.ogg"
+
 whale/pain1 "Sounds/whales/whalepain1.ogg"
 whale/pain2 "Sounds/whales/whalepain2.ogg"
 whale/pain3 "Sounds/whales/whalepain3.ogg"
@@ -78,33 +81,36 @@ $random whale/pain
 	whale/pain4
 }
 
-$playersound 	CWDM_player 		male 	*land 		whale/pain
-$playersound 	CWDM_player 		female 	*land 		whale/pain
-$playersound 	CWDM_player 		other 	*land 		whale/pain
+whale/die1 "Sounds/whales/whaledie1.ogg"
+whale/die2 "Sounds/whales/whaledie2.ogg"
 
-$playersound 	CWDM_player 		male 	*grunt 		whale/pain
-$playersound 	CWDM_player 		female 	*grunt 		whale/pain
-$playersound 	CWDM_player 		other 	*grunt 		whale/pain
+$random whale/die
+{
+	whale/die1 
+	whale/die2 
+}
 
-$playersound 	CWDM_player 		male 	*pain100 		whale/pain
-$playersound 	CWDM_player 		female 	*pain100 		whale/pain
-$playersound 	CWDM_player 		other 	*pain100 		whale/pain
+whale/laugh1 "Sounds/whales/whalelaugh1.ogg"
+whale/laugh2 "Sounds/whales/whalelaugh2.ogg"
 
-$playersound 	CWDM_player 		male 	*pain75 		whale/pain
-$playersound 	CWDM_player 		female 	*pain75 		whale/pain
-$playersound 	CWDM_player 		other 	*pain75 		whale/pain
+$random whale/laugh
+{
+	whale/laugh1
+	whale/laugh2
+}
 
-$playersound 	CWDM_player 		male 	*pain50 		whale/pain
-$playersound 	CWDM_player 		female 	*pain50 		whale/pain
-$playersound 	CWDM_player 		other 	*pain50 		whale/pain
-
-$playersound 	CWDM_player 		male 	*pain25 		whale/pain
-$playersound 	CWDM_player 		female 	*pain25 		whale/pain
-$playersound 	CWDM_player 		other 	*pain25 		whale/pain
-
-$playeralias    CWDM_player			male    *usefail    usefail
-$playeralias    CWDM_player			female  *usefail    usefail
-$playeralias    CWDM_player  		other   *usefail    usefail
+$playeralias 	"whale" 		male 	*jump 		misc/jump
+$playeralias 	"whale" 		male 	*land 		misc/land
+$playeralias 	"whale" 		male 	*grunt 		whale/pain
+$playeralias 	"whale" 		male 	*pain100 	whale/pain
+$playeralias 	"whale" 		male 	*pain75 	whale/pain
+$playeralias 	"whale" 		male 	*pain50 	whale/pain
+$playeralias 	"whale" 		male 	*pain25 	whale/pain
+$playeralias    "whale"			male   	*usefail    usefail
+$playeralias    "whale"			male    	*death		whale/die
+$playeralias    "whale"			male    	*xdeath		*death	
+$playeralias    "whale"			male    	*wimpydeath		*death	
+$playeralias    "whale"			male    	*taunt		whale/laugh
 
 voice/stanNotice1	"sounds/bosses/stan/stan_notice_01.ogg"
 voice/stanNotice2	"sounds/bosses/stan/stan_notice_02.ogg"

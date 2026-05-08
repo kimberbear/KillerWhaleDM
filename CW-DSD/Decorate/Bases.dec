@@ -10,6 +10,7 @@ actor CWDM_player : PlayerPawn
 	Player.ColorRange 114, 124
 	player.jumpz 10
 	DropItem "CWDM_deathPack"
+	Player.SoundClass "whale"
 	+DONTGIB
 	States
 	{
