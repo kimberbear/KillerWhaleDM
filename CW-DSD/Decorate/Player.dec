@@ -36,6 +36,39 @@ actor CWDM_shotgunnerClass : CWDM_player
 		SPOS E 4
 		SPOS F 4 BRIGHT
 		goto spawn
+	Death:
+		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_Blood",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(2,4),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_gib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(6,10),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 A 0 ThrustThingZ(0,20,0,0)
+		SPOS K 8
+		goto DeathKeel
+	FullDeath:
+		goto death
+	Death.extreme:
+		goto death
+	DeathKeel:
+		SPOS K 1 A_CheckFloor("DeathLanded")
+		loop
+	DeathLanded:
+		SPOS L -1
+		stop
 	}
 }
 
@@ -75,6 +108,39 @@ actor CWDM_riflemanClass : CWDM_player
 		POSS E 4
 		POSS F 4 BRIGHT
 		goto spawn
+	Death:
+		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_Blood",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(2,4),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_gib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(6,10),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 A 0 ThrustThingZ(0,20,0,0)
+		POSS K 8
+		goto DeathKeel
+	FullDeath:
+		goto death
+	Death.extreme:
+		goto death
+	DeathKeel:
+		POSS K 1 A_CheckFloor("DeathLanded")
+		loop
+	DeathLanded:
+		POSS L -1
+		stop
 	}
 }
 
@@ -112,6 +178,39 @@ actor CWDM_murkymanClass : CWDM_player
 	Melee:
 		MURK EF 4
 		goto spawn
+	Death:
+		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_Blood",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(2,4),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_gib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(6,10),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 A 0 ThrustThingZ(0,20,0,0)
+		MURK K 8
+		goto DeathKeel
+	FullDeath:
+		goto death
+	Death.extreme:
+		goto death
+	DeathKeel:
+		MURK K 1 A_CheckFloor("DeathLanded")
+		loop
+	DeathLanded:
+		MURK L -1
+		stop
 	}
 }
 
@@ -149,6 +248,39 @@ actor CWDM_grenadierClass : CWDM_player
 	Melee:
 		GREN EF 4
 		goto spawn
+	Death:
+		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_Blood",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(2,4),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_gib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(6,10),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 A 0 ThrustThingZ(0,20,0,0)
+		GREN K 8
+		goto DeathKeel
+	FullDeath:
+		goto death
+	Death.extreme:
+		goto death
+	DeathKeel:
+		GREN K 1 A_CheckFloor("DeathLanded")
+		loop
+	DeathLanded:
+		GREN L -1
+		stop
 	}
 }
 
@@ -237,10 +369,38 @@ actor CWDM_smasherClass : CWDM_bossClass
 		SMAS A -1 
 		goto see
 	Death:
-		SPOS L 0 ACS_NamedExecuteAlways("smasherDied",0)
-		STAM ABCDEFGHIJKLM 4
-		STAM M -1
-		Loop
+		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_Blood",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(2,4),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 AAAAA 0 A_SpawnItemEx(
+			"CWDM_gib",
+			0, 0, 16,
+			Random(-2,2),
+			Random(-2,2),
+			Random(6,10),
+			0,
+			SXF_NOCHECKPOSITION
+		)
+		TNT1 A 0 ThrustThingZ(0,20,0,0)
+		SMAS P 8
+		goto DeathKeel
+	FullDeath:
+		goto death
+	Death.extreme:
+		goto death
+	DeathKeel:
+		SMAS P 1 A_CheckFloor("DeathLanded")
+		loop
+	DeathLanded:
+		SMAS Q -1
+		stop
 	}
 }
 

@@ -24,7 +24,7 @@ OptionMenu "KWDMoptions"
 	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
 	
 	StaticText ""
-	Slider	"Custom FOV",	"cl_customFOV", 50, 120, 1
+	//Slider	"Custom FOV",	"cl_customFOV", 50, 120, 1
 }
 
 OptionValue HitSounds
@@ -163,7 +163,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 200, "JANKY ALPHA VER. 18.02.26"
+	StaticText 64, 200, "JANKY ALPHA VER. 08.05.26"
 }
 
 OptionMenu CWDM_SoundOptions

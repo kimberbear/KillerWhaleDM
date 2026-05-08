@@ -17,6 +17,7 @@ weapons/grenadeload "Sounds/Weapons/shotgunthump.ogg"
 weapons/dynamitebounce "Sounds/Weapons/dynamitebounce.ogg"
 weapons/dynamitetoss "Sounds/Weapons/dynamitetoss.ogg"
 
+hit "Sounds/hit.ogg"
 
 explode1	"Sounds/explode1.ogg"
 explode2	"Sounds/explode2.ogg"
@@ -29,7 +30,7 @@ explode8	"Sounds/explode8.ogg"
 explode9	"Sounds/explode9.ogg"
 explode10	"Sounds/explode10.ogg"
 
-$random explosion
+$random misc/explode
 {
 	explode1
 	explode2
@@ -42,6 +43,9 @@ $random explosion
 	explode9
 	explode10
 }
+
+$rolloff misc/explode 200 4000
+$limit misc/explode 6
 
 //-----------------------------------------------------
 // items
@@ -61,12 +65,46 @@ items/arm3pickup "sounds/items/arm3pickup.ogg"
 // player
 //-----------------------------------------------------
 
-$playersound 	player 		male 	*land blank
-$playersound 	player 		female 	*land blank
-$playersound 	player 		other 	*land blank
-$playeralias    player		male    *usefail    usefail
-$playeralias    player		female  *usefail    usefail
-$playeralias    player  	other   *usefail    usefail
+whale/pain1 "Sounds/whales/whalepain1.ogg"
+whale/pain2 "Sounds/whales/whalepain2.ogg"
+whale/pain3 "Sounds/whales/whalepain3.ogg"
+whale/pain4 "Sounds/whales/whalepain4.ogg"
+
+$random whale/pain
+{
+	whale/pain1
+	whale/pain2
+	whale/pain3
+	whale/pain4
+}
+
+$playersound 	CWDM_player 		male 	*land 		whale/pain
+$playersound 	CWDM_player 		female 	*land 		whale/pain
+$playersound 	CWDM_player 		other 	*land 		whale/pain
+
+$playersound 	CWDM_player 		male 	*grunt 		whale/pain
+$playersound 	CWDM_player 		female 	*grunt 		whale/pain
+$playersound 	CWDM_player 		other 	*grunt 		whale/pain
+
+$playersound 	CWDM_player 		male 	*pain100 		whale/pain
+$playersound 	CWDM_player 		female 	*pain100 		whale/pain
+$playersound 	CWDM_player 		other 	*pain100 		whale/pain
+
+$playersound 	CWDM_player 		male 	*pain75 		whale/pain
+$playersound 	CWDM_player 		female 	*pain75 		whale/pain
+$playersound 	CWDM_player 		other 	*pain75 		whale/pain
+
+$playersound 	CWDM_player 		male 	*pain50 		whale/pain
+$playersound 	CWDM_player 		female 	*pain50 		whale/pain
+$playersound 	CWDM_player 		other 	*pain50 		whale/pain
+
+$playersound 	CWDM_player 		male 	*pain25 		whale/pain
+$playersound 	CWDM_player 		female 	*pain25 		whale/pain
+$playersound 	CWDM_player 		other 	*pain25 		whale/pain
+
+$playeralias    CWDM_player			male    *usefail    usefail
+$playeralias    CWDM_player			female  *usefail    usefail
+$playeralias    CWDM_player  		other   *usefail    usefail
 
 voice/stanNotice1	"sounds/bosses/stan/stan_notice_01.ogg"
 voice/stanNotice2	"sounds/bosses/stan/stan_notice_02.ogg"

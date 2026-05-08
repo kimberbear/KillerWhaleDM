@@ -33,7 +33,9 @@ episode PROTO
 	name = "Test map"
 }
 
-
+map MAP01 "Don't pick me!"
+{
+}
 
 //TOO BROKEN!
 

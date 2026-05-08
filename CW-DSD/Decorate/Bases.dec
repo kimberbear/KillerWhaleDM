@@ -33,12 +33,19 @@ actor CWDM_player : PlayerPawn
 			0,
 			SXF_NOCHECKPOSITION
 		)
-		TNT1 A -1
-		stop
+		TNT1 A 0 ThrustThingZ(0,20,0,0)
+		SPOS K 8
+		goto DeathKeel
 	FullDeath:
 		goto death
 	Death.extreme:
 		goto death
+	DeathKeel:
+		SPOS K 1 A_CheckFloor("DeathLanded")
+		loop
+	DeathLanded:
+		SPOS L -1
+		stop
 	}
 }
 
@@ -49,7 +56,7 @@ ACTOR CWDM_ammo : Ammo
 
 ACTOR CWDM_weapon : Weapon 
 {
-	Weapon.BobRangeX 0.25
+	Weapon.BobRangeX 0.7
 	Weapon.BobRangeY 0.5
 	Weapon.BobSpeed 2
 	Weapon.BobStyle InverseSmooth
