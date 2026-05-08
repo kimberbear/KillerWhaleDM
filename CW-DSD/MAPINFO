@@ -78,3 +78,9 @@ map DM3 "Clash of the Equatorial"
 	sky1 = "DASKY25",0
 	music = "music/burning_ingame.ogg"
 }
+
+map DM4 "Quaint Home"
+{
+	sky1 = "VOLCNSKY",0
+	music = "music/well_ingame.ogg"
+}
