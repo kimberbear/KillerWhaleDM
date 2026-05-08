@@ -20,7 +20,7 @@ Statusbar normal, fullscreenoffsets
 	DrawImage "MORAICON", 36 , -80;
 	DrawNumber 3, DIALFONT, untranslated, Armor, alignment(left), 56, -79;
 	
-	//DrawString SMALLFONT, WHITE, "FRAGS:",48, -30;
-	//DrawNumber 3, SMALLFONT, WHITE, Frags, 48, -18;
+	DrawString SMALLFONT, WHITE, "FRAGS:",48, -18;
+	DrawNumber 3, SMALLFONT, WHITE, Frags, 64, -18;
 
 }
