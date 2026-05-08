@@ -4,17 +4,17 @@ LANGUAGE = "english";
 
 //Items
 
-HEALBON = "Snacked on a shrimp! +2 HP";
-HEALMED = "Drank some fish blood! +50 HP";
-HEALBIG = "Chowed down a bloody bucket of chum! +100 HP";
-HEALHUGE = "Sipped godly octo blood! +200 HP";
+HEALBON = "\c[White]Snacked on a shrimp! \c[gold]+2 HP";
+HEALMED = "\c[White]Drank some fish blood! \c[gold]+50 HP";
+HEALBIG = "\c[White]Chowed down a bloody bucket of chum! \c[gold]+100 HP";
+HEALHUGE = "\c[White]Sipped godly octo blood! \c[gold]+200 HP";
 
-ARMSMALL = "A sip of booze! +2 AP";
-ARMMED = "A can of booze! +50 AP";
-ARMLARGE = "A Mug of booze! +100 AP";
-ARMHUGE = "A bottle of booze! +200 AP";
+ARMSMALL = "\c[White]A sip of booze! \c[gold]+2 AP";
+ARMMED = "\c[White]A can of booze! \c[gold]+50 AP";
+ARMLARGE = "\c[White]A Mug of booze! \c[gold]+100 AP";
+ARMHUGE = "\c[White]A bottle of booze! \c[gold]+200 AP";
 
-DEATHPAK = "Fragtastically fried fish! +25 HP & AP";
+DEATHPAK = "\c[White]Fragtastically fried fish! \c[gold]+25 HP +25 AP";
 
 //Obituaries
 

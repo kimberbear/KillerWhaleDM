@@ -161,7 +161,7 @@ actor CWDM_smallArmorBonus : BasicArmorBonus
 
 actor CWDM_deathPack : CustomInventory
 {
-	Inventory.PickupSound "ammoget"
+	Inventory.PickupSound "items/eat"
     Inventory.PickupMessage "$DEATHPAK"
     Inventory.Icon "BPAKA0"
     +INVENTORY.AUTOACTIVATE   // auto-use when picked up
@@ -172,8 +172,8 @@ actor CWDM_deathPack : CustomInventory
     States
     {
 	spawn:
-		MEDI a -1
-		stop
+		FFIH A -1
+		loop
     Pickup:
         TNT1 A 0 A_GiveInventory("CWDM_smallHealthBonus", 1) // give health
         TNT1 A 0 A_GiveInventory("CWDM_smallArmorBonus", 1)  // give armor
