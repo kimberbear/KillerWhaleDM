@@ -1,8 +1,12 @@
-base doom;
-Height 0;
+Resolution 320,240;
 
-Statusbar normal, fullscreenoffsets
+StatusBar normal, fullscreenoffsets, forcescaled
 {
+	IfSpectator
+	{
+	}
+	ELSE
+	{
 	//Health and Icon
 	//DrawImage "HLTHICON", -56 + center, -19;
 
@@ -22,5 +26,5 @@ Statusbar normal, fullscreenoffsets
 	
 	DrawString SMALLFONT, WHITE, "FRAGS:",48, -18;
 	DrawNumber 3, SMALLFONT, WHITE, Frags, 64, -18;
-
+	}
 }
