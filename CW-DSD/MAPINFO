@@ -25,7 +25,10 @@ clearEpisodes
 defaultmap
 {
 	lightmode=3
-	//aircontrol = 0.5
+	AirControl=0.2
+	AllowJump
+	AllowCrouch
+	AllowFreelook
 }
 
 episode PROTO
@@ -50,16 +53,10 @@ map MAP01 "Don't pick me!"
 // 	sky1 = "VOLCNSKY",0
 // }
 
-map CTF1 "Killer Clamyon"
+map CTF2 "Killer Clamyon"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/viciousvenice.ogg"
-}
-
-map CTF2 "Vegabond"
-{
-	sky1 = "VOLCNSKY",0
-	music = "music/factory_ingame.ogg"
 }
 
 map DM1 "Lava"
@@ -83,4 +80,10 @@ map DM4 "Quaint Home"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/well_ingame.ogg"
+}
+
+map DM5 "Goof"
+{
+	sky1 = "VOLCNSKY",0
+	music = "music/anchor_ingame.ogg"
 }

@@ -42,27 +42,105 @@ OptionValue KillSounds
 	2, "Metal Pipe"
 }
 
+optionMenu "CWDM_ExperienceMenu"
+{
+	TITLE "Experience"
+	
+	Option "Death camera",				"r_deathcamera", "OnOff"
+	StaticText ""
+	
+    StaticText "Hit sounds"
+	Option "Sound type","cl_HitSound", "HitSounds"
+	Slider	"Hitsound Volume",	"cl_HitsoundVolume", 0, 100, 1
+	StaticText ""
+	
+	StaticText "Kill sounds"
+	Option "Killsound type","cl_KillSound", "KillSounds"
+	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
+	StaticText ""
+	
+	StaticText "Player colours"
+	Option		"Override player colors",	"cl_overrideplayercolors",	"KWDM_OverridePlayerColors"
+	ColorPicker	"Ally color",			"cl_allycolor"
+	ColorPicker	"Enemy color",			"cl_enemycolor"
+}
+
 OptionMenu "CWDM_OptionsMenu"
 {
-	Submenu "KWDM Options","KWDMoptions"
-	SubMenu "Override Player Colours",	"KWDM_PlayerColours"
+	Title "Options"
+	Submenu "Experience","CWDM_ExperienceMenu"
 	StaticText " "
-	Submenu "Multiplayer Options",		"ZA_MultiplayerOptions" // [TP]
+	Submenu "Multiplayer Options",		"CWDM_MultiplayerOptions" 
 	StaticText " "
-	Submenu "HUD Options",				"HUDOptions"
-	Submenu "Display Options",			"VideoOptions"
-	Submenu "Set video mode",			"VideoModeMenu"
-	SubMenu "Audio options",			"CWDM_SoundOptions"
+	Submenu "Display",			"CWDM_DisplayMenu"
+	Submenu "HUD",				"HUDOptions"
+	SubMenu "Audio",			"CWDM_SoundOptions"
 	StaticText " "
-	Submenu "Customize Controls",		"CustomizeControls"
-	Submenu "Mouse options",			"MouseOptions"
-	StaticText " "
-	Submenu "Legacy Options",			"OptionsMenu"
+	Submenu "Controls",		"CustomizeControls"
+	Submenu "Mouse",			"MouseOptions"
 	StaticText " "
 	SafeCommand "Reset to defaults",	"reset2defaults"
 	SafeCommand	"Reset to last saved",	"reset2saved"
+	StaticText " "
+	StaticText "Only if you know what you're doing!"
+	Submenu "Legacy Options",			"OptionsMenu"
 	Command "Go to console",			"menuconsole"
 	
+}
+
+OptionMenu "CWDM_DisplayMenu"
+{
+	Title "Display options"
+	Submenu "OpenGL Options", 			"OpenGLOptions"
+	SubMenu "Resolution & Mode", "VideoModeMenu"
+	Option "Vertical Sync",				"vid_vsync", "OnOff"
+	StaticText " "
+	Slider "FOV",						"fov",							75.0, 120.0, 0.1, 1
+	StaticText " "
+	Slider "Screen size",				"screenblocks", 3.0, 12.0, 1.0, 0
+	StaticText " "
+	Slider "Gamma correction",			"Gamma",						0.75, 3.0, 0.05, 2
+	Slider "Brightness",				"vid_brightness",				-0.8,0.8, 0.05
+	Slider "Contrast",					"vid_contrast",	   				0.1, 3.0, 0.1
+}
+
+OptionMenu CWDM_MultiplayerOptions
+{
+	Title "MULTIPLAYER OPTIONS"
+
+	SubMenu		"Log in",			"ZA_LoginMenu"
+	StaticText	" "
+	SubMenu		"Network Options",		"ZA_NetworkOptions"
+	Submenu		"Server settings",		"ZA_ServerSetupMenu"
+	StaticText	" "
+
+	// [AK] cl_autologin only exists where credential storage is available.
+	IfOption( ZaAuthStorage )
+	{
+		Option	"Auto-login",			"cl_autologin",			"YesNo"
+	}
+
+	Option		"Start as spectator",		"cl_startasspectator",		"YesNo"
+	TextField	"Server password",		"cl_password"
+	TextField	"Server join password",		"cl_joinpassword"
+	Option		"Reset frags at join",		"cl_dontrestorefrags",		"YesNo"
+	Option		"Hide country",			"cl_hidecountry",		"YesNo"
+	Option		"Respawn using attack key",	"cl_respawnonfire",		"YesNo"
+	Option		"Intermission auto-ready",	"cl_autoready",			"YesNo"
+	StaticText	" "
+	Option		"Skins",			"cl_skins",			"ZA_AllowSkins"
+	Option		"Taunts",			"cl_taunts",			"OnOff"
+	Option		"Icons",			"cl_icons",			"OnOff"
+	StaticText	" "
+	Option		"Show ally icon",		"cl_showallyicon",		"ZA_ShowIcons",			"cl_icons"
+	Option		"Show enemy icon",		"cl_showenemyicon",		"ZA_ShowIcons",			"cl_icons"
+	Option		"Identify player level",	"cl_identifytarget",		"ZA_IdentifyTargetLevels"
+	Option		"Identify monster level",	"cl_identifymonsters",		"ZA_IdentifyMonsterLevels"
+	Option		"Show spawn spots",		"cl_showspawns",		"YesNo"
+	Option		"Free chasecam",		"cl_freechase",			"YesNo"
+	Option		"Teleport to spied player",	"cl_telespy",			"YesNo"
+	Option		"Spectator mode",		"cl_spectatormode",		"ZA_SpectatorMode"
+	Slider		"Spectator move speed",		"cl_spectatormove",		0.1, 5.0, 0.1
 }
 
 OptionMenu "KWDMmultiplayerMenu"
@@ -163,7 +241,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 200, "JANKY ALPHA VER. 08.05.26"
+	StaticText 64, 200, "JANKY ALPHA VER. 09.05.26"
 }
 
 OptionMenu CWDM_SoundOptions
