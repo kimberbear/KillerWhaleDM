@@ -8,6 +8,8 @@ actor CWDM_healthBonus : Health 15300
     Inventory.Amount 2 
 	Inventory.MaxAmount 200
     Inventory.RespawnTics  200 
+    Radius 24
+    Height 24
 	States
 	{
 	spawn:
@@ -25,6 +27,8 @@ actor CWDM_mediumHealth : Health 15301
 	Inventory.MaxAmount 200
 	Inventory.PickupSound "items/eat"
 	Inventory.PickupMessage "$HEALMED"
+    Radius 24
+    Height 24
 	States
 	{
 	spawn:
@@ -42,6 +46,8 @@ actor CWDM_bigHealth : Health 15302
 	Inventory.MaxAmount 200
 	Inventory.PickupSound "items/eat"
 	Inventory.PickupMessage "$HEALBIG"
+    Radius 24
+    Height 24
 	States
 	{
 	spawn:
@@ -59,6 +65,8 @@ actor CWDM_hugeHealth : Health 15303
 	Inventory.MaxAmount 200
 	Inventory.PickupSound "items/eat"
 	Inventory.PickupMessage "$HEALHUGE"
+    Radius 32
+    Height 32
 	States
 	{
 	spawn:
@@ -77,7 +85,9 @@ actor CWDM_armorBonus : BasicArmorBonus 15304
     Armor.MaxSaveAmount 200
 	Inventory.PickupSound "items/abonpickup"
 	Inventory.PickupMessage "$ARMSMALL"
-    Inventory.RespawnTics  200 
+    Inventory.RespawnTics  200
+    Radius 24
+    Height 24
 	States
 	{
 	spawn:
@@ -97,7 +107,8 @@ actor CWDM_mediumArmor : BasicArmorBonus  15305
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
 	Armor.SaveAmount 50
-
+    Radius 24
+    Height 24
 	States
 	{
 	spawn:
@@ -117,7 +128,8 @@ actor CWDM_largeArmor : BasicArmorBonus  15306
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
 	Armor.SaveAmount 100
-
+    Radius 24
+    Height 24
 	States
 	{
 	spawn:
@@ -137,7 +149,8 @@ actor CWDM_hugeArmor : BasicArmorBonus  15307
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
 	Armor.SaveAmount 200
-
+    Radius 32
+    Height 32
 	States
 	{
 	spawn:
@@ -217,7 +230,8 @@ actor CWDM_skullOfPowerPickup : CustomInventory 17002
     Inventory.PickupMessage "Quad Damage!"
     Inventory.RespawnTics  2100 
 	scale 2
-
+    Radius 64
+    Height 64
     States
     {
     Spawn:

@@ -53,6 +53,13 @@ map MAP01 "Don't pick me!"
 // 	sky1 = "VOLCNSKY",0
 // }
 
+map CTF1 "Training day"
+{
+	sky1 = "DASKY25",0
+	music = "music/anchor_ingame.ogg"
+	OutsideFog = b05b44
+}
+
 map CTF2 "Killer Clamyon"
 {
 	sky1 = "VOLCNSKY",0
