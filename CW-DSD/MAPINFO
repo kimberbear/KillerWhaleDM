@@ -66,6 +66,12 @@ map CTF2 "Killer Clamyon"
 	music = "music/viciousvenice.ogg"
 }
 
+map CTF3 "Crossroads"
+{
+	sky1 = "VOLCNSKY",0
+	music = "music/anchor_ingame.ogg"
+}
+
 map DM1 "Lava"
 {
 	sky1 = "DASKY25",0

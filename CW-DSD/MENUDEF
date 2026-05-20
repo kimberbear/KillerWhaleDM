@@ -65,14 +65,32 @@ optionMenu "CWDM_ExperienceMenu"
 	ColorPicker	"Enemy color",			"cl_enemycolor"
 }
 
+OptionValue Renderers
+{
+	0.0, "Software"
+	1.0, "OpenGL"
+}
+
+OptionMenu "CWDM_noobtrap"
+{
+	TITLE "Please set these!"
+	StaticText "Set this to 10 or else the hud disappears!"
+	Slider "Screen size",				"screenblocks", 3.0, 12.0, 1.0, 0
+	StaticText " "
+	StaticText "Set this to OpenGL for the best experience!"
+	Option "Renderer",			"vid_renderer", "Renderers"
+}
+
 OptionMenu "CWDM_OptionsMenu"
 {
 	Title "Options"
-	Submenu "Experience","CWDM_ExperienceMenu"
+	StaticText "[V] New players! Go here! [V]"
+	Submenu "KEY SETTINGS!",	"CWDM_noobtrap"
 	StaticText " "
 	Submenu "Multiplayer Options",		"CWDM_MultiplayerOptions" 
 	StaticText " "
-	Submenu "Display",			"CWDM_DisplayMenu"
+	Submenu "Experience","CWDM_ExperienceMenu"
+	Submenu "Display & Video",			"CWDM_DisplayMenu"
 	Submenu "HUD",				"HUDOptions"
 	SubMenu "Audio",			"CWDM_SoundOptions"
 	StaticText " "
@@ -90,9 +108,9 @@ OptionMenu "CWDM_OptionsMenu"
 
 OptionMenu "CWDM_DisplayMenu"
 {
-	Title "Display options"
+	Title "Display & Video options"
 	Submenu "OpenGL Options", 			"OpenGLOptions"
-	SubMenu "Resolution & Mode", "VideoModeMenu"
+	SubMenu "Resolution & Mode", 		"VideoModeMenu"
 	Option "Vertical Sync",				"vid_vsync", "OnOff"
 	StaticText " "
 	Slider "FOV",						"fov",							75.0, 120.0, 0.1, 1
@@ -149,7 +167,6 @@ OptionMenu "KWDMmultiplayerMenu"
 	Title "MULTIPLAYER"
 
 	SubMenu		"Offline Skirmish",			"ZA_SkirmishMenu"
-	SubMenu		"Player Setup",				"CWDM_PlayerMenu"
 	SubMenu		"Log in",					"ZA_LoginMenu"
 	SubMenu 	"Override Player Colours",	"KWDM_PlayerColours"
 	StaticText	" "
@@ -236,12 +253,13 @@ LISTMENU "MainMenu"
 {
 	StaticPatch 94, 2, "M_DOOM"
 	Position 97, 152
+	TextItem	"Player Setup",	"p",	"CWDM_PlayerMenu"
 	TextItem 	"Multiplayer", 	"m", 	"KWDMmultiplayerMenu"
 	TextItem 	"Options",		"o",	"CWDM_OptionsMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 200, "JANKY ALPHA VER. 09.05.26"
+	StaticText 64, 210, "JANKY ALPHA VER. 20.05.26"
 }
 
 OptionMenu CWDM_SoundOptions

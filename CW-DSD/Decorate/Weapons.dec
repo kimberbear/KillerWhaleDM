@@ -4,6 +4,8 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
 	Weapon.SlotNumber 2
+	Weapon.KickBack 0
+
 	Xscale 0.5
 	Yscale 0.5
 	AttackSound "weapons/shotgunfire"
@@ -25,7 +27,7 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 	Fire:
 		SHGN B 0 A_Light2
 		SHGN B 0 A_Quake(2,5,0,5)
-		SHGN B 1 BRIGHT A_FireBullets(10,6,8,10,"CWDM_bulletPuff",FBF_NORANDOM)
+		SHGN B 1 BRIGHT A_FireBullets(8,6,8,18,"CWDM_bulletPuff",FBF_NORANDOM)
 		SHGN B 0 A_Light0
 		SHGN CCCDDA 4
 		Goto Ready
@@ -45,6 +47,7 @@ ACTOR CWDM_rifle: CWDM_weapon
 	Weapon.AmmoGive 12
 	Weapon.AmmoUse 1
 	Weapon.SlotNumber 2
+	Weapon.KickBack 0
 	Xscale 0.5
 	Yscale 0.5
 	AttackSound "weapons/riflefire"
@@ -68,7 +71,7 @@ ACTOR CWDM_rifle: CWDM_weapon
 		RFLE A 0 A_GiveInventory("CWDM_rifleShotCount", 1)
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
-		RFLE B 1 BRIGHT A_FireBullets(2,2,1,20,"CWDM_bulletPuff",FBF_NORANDOM )
+		RFLE B 1 BRIGHT A_FireBullets(2,2,1,22,"CWDM_bulletPuff",FBF_NORANDOM )
 		RFLE B 0 A_Light0
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
@@ -87,7 +90,7 @@ ACTOR CWDM_rifle: CWDM_weapon
 
 Actor FlareProjectile
 {
-    Damage 35
+    Damage 20
     Radius 8
     Height 8
     Speed 70
@@ -151,7 +154,7 @@ ACTOR CWDM_brewGrenade: grenade
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
-		TNT1 A 0 A_Explode
+		TNT1 A 0 A_Explode(35)
         TNT1 A 0 A_SpawnItem("CWDM_smallExplosion")
 		TNT1 A 25 A_PlaySound("misc/explode", CHAN_AUTO)
         //TNT1 A 25 A_PlaySound("explosion", CHAN_5)
