@@ -5,7 +5,13 @@ GameInfo
 	PlayerClasses = "CWDM_shotgunnerClass","CWDM_riflemanClass","CWDM_murkymanClass","CWDM_grenadierClass"//,"KWDMgunslingerClass"
 	//PlayerClasses = "KWDMshotgunnerClass","KWDMriflemanClass"
 	TitleMusic = "SAILOR"
-	QuitMessages="Do you really think I'd ever allow those who cross me to live?"
+	QuitMessages=
+	"Do you really think I'd ever allow those who cross me to live?",
+	"Tch. Dumbass.",
+	"Are you gonna come quietly, or will I have to use force?",
+	"How the fuck are you alive!? What *are* you?",
+	"WUDDYAHMEAN?",
+	"At this rate, I'm almost sad to see our little game end so soon."
 	dimcolor = "black"
 	dimamount = 0.5
 	menufontcolor_title = "Gold"
