@@ -51,6 +51,8 @@ $limit misc/explode 6
 // items
 //-----------------------------------------------------
 
+items/respawn "sounds/items/itemspawn.ogg"
+
 items/eat "Sounds/yom.ogg"
 items/armor1 "Sounds/arm1pickup.ogg"
 ammoget "Sounds/ammoget.ogg"
@@ -102,10 +104,7 @@ $random whale/laugh
 $playeralias 	"whale" 		male 	*jump 		misc/jump
 $playeralias 	"whale" 		male 	*land 		misc/land
 $playeralias 	"whale" 		male 	*grunt 		whale/pain
-$playeralias 	"whale" 		male 	*pain100 	whale/pain
-$playeralias 	"whale" 		male 	*pain75 	whale/pain
-$playeralias 	"whale" 		male 	*pain50 	whale/pain
-$playeralias 	"whale" 		male 	*pain25 	whale/pain
+$playeralias 	"whale" 		male 	*pain100	 	whale/pain
 $playeralias    "whale"			male   	*usefail    usefail
 $playeralias    "whale"			male    	*death		whale/die
 $playeralias    "whale"			male    	*xdeath		*death	

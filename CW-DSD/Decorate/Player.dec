@@ -180,7 +180,9 @@ actor CWDM_murkymanClass : CWDM_player
 		MURK Z 15 
 		Goto See
 	Melee:
-		MURK EFE 4
+		MURK E 4
+		MURK F 4 BRIGHT
+		MURK E 4
 		goto spawn
 	Death:
 		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)
@@ -251,7 +253,9 @@ actor CWDM_grenadierClass : CWDM_player
 		GREN Z 15 
 		Goto See
 	Melee:
-		GREN EFE 4
+		GREN E 4
+		GREN F 4 BRIGHT
+		GREN E 4
 		goto spawn
 	Death:
 		TNT1 A 0 A_SpawnItemEx("CWDM_deathPack", 0, 0, 16, 0, 0, 5, 0, SXF_NOCHECKPOSITION)

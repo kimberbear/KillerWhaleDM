@@ -78,7 +78,7 @@ script "stanTransformed" (void)
                    HUDMSG_PLAIN, 501, CR_GOLD, 0.5, bossTextY, 5.0);
 
         SetMusic("music/stanfight_ingame.ogg");
-        LocalAmbientSound("voice/stanNotice", 127);
+        //LocalAmbientSound("voice/stanNotice", 127);
     }
 }
 

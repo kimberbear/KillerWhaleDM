@@ -13,6 +13,7 @@ actor CWDM_healthBonus : Health 15300
 	States
 	{
 	spawn:
+		
 		BON1 a -1
 		loop
 	}
@@ -258,6 +259,7 @@ actor CWDM_stanBossPickup : CWDM_bossPickup 17003
 //$Category Powerup
 //$Title "Stanley Boss Pickup"
 //$Sprite SPIKA0
+	Inventory.Pickupsound "voice/stanNotice"
     States
     {
     Spawn:

@@ -45,21 +45,23 @@ OptionValue KillSounds
 optionMenu "CWDM_ExperienceMenu"
 {
 	TITLE "Experience"
-	
+	Option		"Free chasecam",		"cl_freechase",			"YesNo"
 	Option "Death camera",				"r_deathcamera", "OnOff"
 	StaticText ""
 	
-    StaticText "Hit sounds"
+    StaticText "Hit sounds",1
 	Option "Sound type","cl_HitSound", "HitSounds"
 	Slider	"Hitsound Volume",	"cl_HitsoundVolume", 0, 100, 1
 	StaticText ""
 	
-	StaticText "Kill sounds"
+	StaticText "Kill sounds",1
 	Option "Killsound type","cl_KillSound", "KillSounds"
 	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
 	StaticText ""
 	
-	StaticText "Player colours"
+	StaticText "Players",1
+	Option		"Show ally icon",		"cl_showallyicon",		"ZA_ShowIcons",			"cl_icons"
+	Option		"Show enemy icon",		"cl_showenemyicon",		"ZA_ShowIcons",			"cl_icons"
 	Option		"Override player colors",	"cl_overrideplayercolors",	"KWDM_OverridePlayerColors"
 	ColorPicker	"Ally color",			"cl_allycolor"
 	ColorPicker	"Enemy color",			"cl_enemycolor"
@@ -74,17 +76,22 @@ OptionValue Renderers
 OptionMenu "CWDM_noobtrap"
 {
 	TITLE "Please set these!"
-	StaticText "Set this to 10 or else the hud disappears!"
+	StaticText "Set this to 10 or else the hud disappears!",1
 	Slider "Screen size",				"screenblocks", 3.0, 12.0, 1.0, 0
 	StaticText " "
-	StaticText "Set this to OpenGL for the best experience!"
+	StaticText "Set this to OpenGL for the best experience!",1
 	Option "Renderer",			"vid_renderer", "Renderers"
+	StaticText " "
+	StaticText "Set this to Classic Style!",1
+	StaticText "That way you can see your rank and the spread.",1
+	Option "Fullscreen HUD",			"cl_stfullscreenhud", "ZA_FullscreenHUD"
+	
 }
 
 OptionMenu "CWDM_OptionsMenu"
 {
 	Title "Options"
-	StaticText "[V] New players! Go here! [V]"
+	StaticText "[V] New players! Go here! [V]",1
 	Submenu "KEY SETTINGS!",	"CWDM_noobtrap"
 	StaticText " "
 	Submenu "Multiplayer Options",		"CWDM_MultiplayerOptions" 
@@ -100,7 +107,8 @@ OptionMenu "CWDM_OptionsMenu"
 	SafeCommand "Reset to defaults",	"reset2defaults"
 	SafeCommand	"Reset to last saved",	"reset2saved"
 	StaticText " "
-	StaticText "Only if you know what you're doing!"
+	StaticText "Only if you know" ,1
+	StaticText "what you're doing!",1
 	Submenu "Legacy Options",			"OptionsMenu"
 	Command "Go to console",			"menuconsole"
 	
@@ -253,13 +261,13 @@ LISTMENU "MainMenu"
 {
 	StaticPatch 94, 2, "M_DOOM"
 	Position 97, 152
-	TextItem	"Player Setup",	"p",	"CWDM_PlayerMenu"
 	TextItem 	"Multiplayer", 	"m", 	"KWDMmultiplayerMenu"
+	TextItem	"Player Setup",	"p",	"CWDM_PlayerMenu"
 	TextItem 	"Options",		"o",	"CWDM_OptionsMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 210, "JANKY ALPHA VER. 20.05.26"
+	StaticText 64, 214, "JANKY ALPHA VER. 21.05.26"
 }
 
 OptionMenu CWDM_SoundOptions

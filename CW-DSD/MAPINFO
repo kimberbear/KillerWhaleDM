@@ -27,7 +27,7 @@ defaultmap
 	lightmode=3
 	AirControl=0.2
 	AllowJump
-	AllowCrouch
+	NoCrouch
 	AllowFreelook
 }
 
