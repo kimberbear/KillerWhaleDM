@@ -178,7 +178,7 @@ ACTOR CWDM_grenadeLauncher: CWDM_weapon
 
 Actor FlareProjectile
 {
-    Damage (80)
+    Damage (100)
     Radius 8
     Height 8
     Speed 70
