@@ -235,3 +235,13 @@ actor CWDM_telefog : TeleportFog replaces TeleportFog
 		stop
 	}
 }
+
+actor CWDM_WaterSplash : FXBase
+{
+	States
+	{
+	Spawn:
+		SPLS ABCDEFGHI 2
+		Stop
+	}
+}

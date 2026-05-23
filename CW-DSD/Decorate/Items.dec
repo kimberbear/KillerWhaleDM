@@ -10,6 +10,7 @@ actor CWDM_healthBonus : Health 15300
     Inventory.RespawnTics  200 
     Radius 24
     Height 24
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -30,6 +31,7 @@ actor CWDM_mediumHealth : Health 15301
 	Inventory.PickupMessage "$HEALMED"
     Radius 24
     Height 24
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -49,6 +51,7 @@ actor CWDM_bigHealth : Health 15302
 	Inventory.PickupMessage "$HEALBIG"
     Radius 24
     Height 24
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -68,6 +71,7 @@ actor CWDM_hugeHealth : Health 15303
 	Inventory.PickupMessage "$HEALHUGE"
     Radius 32
     Height 32
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -89,6 +93,7 @@ actor CWDM_armorBonus : BasicArmorBonus 15304
     Inventory.RespawnTics  200
     Radius 24
     Height 24
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -110,6 +115,7 @@ actor CWDM_mediumArmor : BasicArmorBonus  15305
 	Armor.SaveAmount 50
     Radius 24
     Height 24
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -131,6 +137,7 @@ actor CWDM_largeArmor : BasicArmorBonus  15306
 	Armor.SaveAmount 100
     Radius 24
     Height 24
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -152,6 +159,7 @@ actor CWDM_hugeArmor : BasicArmorBonus  15307
 	Armor.SaveAmount 200
     Radius 32
     Height 32
+	YScale 0.833333333			//aspect fix
 	States
 	{
 	spawn:
@@ -184,6 +192,7 @@ actor CWDM_deathPack : CustomInventory
 	+INVENTORY.ALWAYSPICKUP
     +INVENTORY.NEVERRESPAWN   
 	radius 20
+	YScale 0.833333333			//aspect fix
 
     States
     {
@@ -231,9 +240,10 @@ actor CWDM_skullOfPowerPickup : CustomInventory 17002
     Inventory.PickupMessage "Quad Damage!"
     Inventory.RespawnTics  2100 
 	scale 2
-    Radius 64
-    Height 64
-    States
+    Radius 48
+    Height 48
+	YScale 1.66666667			//aspect fix
+	states
     {
     Spawn:
         QUAD ABCDEFGH 4 bright
@@ -251,6 +261,7 @@ actor CWDM_bossPickup : CustomInventory
     +INVENTORY.AUTOACTIVATE   // auto-use when picked up
 	+INVENTORY.ALWAYSPICKUP
 	scale 2.0
+	YScale 1.66666667			//aspect fix
 	radius 20
 }
 

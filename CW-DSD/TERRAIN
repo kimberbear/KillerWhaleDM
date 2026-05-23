@@ -1,6 +1,13 @@
+Splash WaterSplash
+{
+    BaseClass        "CWDM_WaterSplash"
+    Sound        splash
+    noalert
+}
+
 Terrain WaterSink
 {
-    //Splash WaterSplash
+    Splash WaterSplash
     Footclip 8
 	liquid
     //StepSounds misc/waterstep
@@ -10,3 +17,4 @@ Terrain WaterSink
 }
 
 floor WYNWA1 WaterSink
+

@@ -3,14 +3,16 @@ actor CWDM_player : PlayerPawn
 	Speed 0.9
 	Health 100
 	Radius 20
-	Height 60
+	Height 50
 	Mass 90
 	Gravity 1.0
 	PainChance 255
 	Player.ColorRange 114, 124
-	player.jumpz 10
+	player.jumpz 11
 	DropItem "CWDM_deathPack"
 	Player.SoundClass "whale"
+	YScale 0.833333333			//aspect fix
+	Player.ViewHeight 36.0
 	+DONTGIB
 	States
 	{

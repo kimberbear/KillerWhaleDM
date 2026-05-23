@@ -174,6 +174,9 @@ hitsound3 			"Sounds/hitsounds/pipesound.ogg"
 killsound1 			"Sounds/killsounds/kill5.ogg"
 killsound2 			"Sounds/hitsounds/pipesound.ogg"
 
+misc/waterstep "sounds/misc/waterstep.ogg"
+splash	"sounds/splash.ogg"
+
 //-----------------------------------------------------
 // announcer
 //-----------------------------------------------------

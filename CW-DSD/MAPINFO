@@ -33,7 +33,7 @@ defaultmap
 	lightmode=3
 	AirControl=0.2
 	AllowJump
-	NoCrouch
+	AllowCrouch
 	AllowFreelook
 }
 
@@ -105,4 +105,10 @@ map DM5 "Goof"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/anchor_ingame.ogg"
+}
+
+map DM6 "Oil Rig"
+{
+	sky1 = "SICKSKY",0
+	music = "music/rig_ingame.ogg"
 }
