@@ -112,3 +112,12 @@ map DM6 "Oil Rig"
 	sky1 = "SICKSKY",0
 	music = "music/rig_ingame.ogg"
 }
+
+map DM7 "Pool Day"
+{
+	sky1 = "BEACHSKY",0
+	music = "music/resort_ingame.ogg"
+	Fade = 112735
+	
+}
+
