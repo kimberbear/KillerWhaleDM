@@ -22,7 +22,6 @@ GameInfo
 	ForceSpawnEventScripts = true
 	ForceDamageEventScripts = true
 	MenuBackButton = "M_BACK"
-	IntermissionMusic = "MUSINTER"
 	infopage = "HELP"
 }
 
@@ -35,6 +34,9 @@ defaultmap
 	AllowJump
 	AllowCrouch
 	AllowFreelook
+	losermusic = "Music/results/bigm_gameover.mp3"
+	winnermusic = "Music/results/bigm_actionwin.mp3"
+	intermusic = "Music/MUSINTER.ogg"
 }
 
 episode PROTO

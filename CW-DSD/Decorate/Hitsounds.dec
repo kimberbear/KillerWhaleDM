@@ -37,6 +37,45 @@ actor HitSoundBeep3 : HitSoundBeep
 	}
 }
 
+actor HitSoundBeep4 : HitSoundBeep
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("hitsound4", CHAN_5 , 0.7*(ACS_NamedExecuteWithResult("HitSoundVolume")/50.0), 0, 256)
+		Stop
+	}
+}
+
+actor HitSoundBeep5 : HitSoundBeep
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("hitsound5", CHAN_5 , 0.7*(ACS_NamedExecuteWithResult("HitSoundVolume")/50.0), 0, 256)
+		Stop
+	}
+}
+
+actor HitSoundBeep6 : HitSoundBeep
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("hitsound6", CHAN_5 , 0.7*(ACS_NamedExecuteWithResult("HitSoundVolume")/50.0), 0, 256)
+		Stop
+	}
+}
+
 Actor KillSoundBeep : HitSoundBeep
 {
 	States
@@ -59,6 +98,45 @@ Actor KillSoundBeep2 : HitSoundBeep
 		Loop
 	Pickup:
 		TNT1 A 0 A_PlaySound("killsound2", CHAN_6 , 0.7*(ACS_NamedExecuteWithResult("KillSoundVolume")/50.0), 0, 256)
+		Stop
+	}
+}
+
+Actor KillSoundBeep3 : HitSoundBeep
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("killsound3", CHAN_6 , 0.7*(ACS_NamedExecuteWithResult("KillSoundVolume")/50.0), 0, 256)
+		Stop
+	}
+}
+
+Actor KillSoundBeep4 : HitSoundBeep
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("killsound4", CHAN_6 , 0.7*(ACS_NamedExecuteWithResult("KillSoundVolume")/50.0), 0, 256)
+		Stop
+	}
+}
+
+Actor KillSoundBeep5 : HitSoundBeep
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Loop
+	Pickup:
+		TNT1 A 0 A_PlaySound("killsound5", CHAN_6 , 0.7*(ACS_NamedExecuteWithResult("KillSoundVolume")/50.0), 0, 256)
 		Stop
 	}
 }

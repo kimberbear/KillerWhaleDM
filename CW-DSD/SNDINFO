@@ -169,10 +169,28 @@ menu/clear			"sounds/weapons/unequip.ogg"
 
 hitsound1 			"Sounds/hitsounds/hit.ogg"
 hitsound2 			"Sounds/hitsounds/hit2.ogg"
-hitsound3 			"Sounds/hitsounds/pipesound.ogg"
+
+hitsound3			"Sounds/hitsounds/hit3.wav"
+
+mchit1				"Sounds/hitsounds/mchit1.ogg"
+mchit2				"Sounds/hitsounds/mchit2.ogg"
+mchit3				"Sounds/hitsounds/mchit3.ogg"
+
+$random 	hitsound4		
+{
+	mchit1
+	mchit2
+	mchit3
+}
+
+hitsound5			"Sounds/hitsounds/mmhit.wav"	
+hitsound6 			"Sounds/hitsounds/pipesound.ogg"
 
 killsound1 			"Sounds/killsounds/kill5.ogg"
-killsound2 			"Sounds/hitsounds/pipesound.ogg"
+killsound2			"Sounds/killsounds/mmkill.ogg"
+killsound3			"Sounds/killsounds/KO.wav"
+killsound4			"Sounds/killsounds/Wilhelm.ogg"
+killsound5 			"Sounds/hitsounds/pipesound.ogg"
 
 misc/waterstep "sounds/misc/waterstep.ogg"
 splash	"sounds/splash.ogg"

@@ -43,6 +43,9 @@ Script "HitProcess" (int type, int arg1, int arg2) EVENT
 				case 0: break;
 				case 1: GiveInventory("KillSoundBeep", 1); break;
 				case 2: GiveInventory("KillSoundBeep2", 1); break;
+				case 3: GiveInventory("KillSoundBeep3", 1); break;
+				case 4: GiveInventory("KillSoundBeep4", 1); break;
+				case 5: GiveInventory("KillSoundBeep5", 1); break;
 			}
 		}
 	}
@@ -56,6 +59,9 @@ Script "HitSoundAction" (int sound)
 		case 1: GiveInventory("HitSoundBeep", 1); break;
 		case 2: GiveInventory("HitSoundBeep2", 1); break;
 		case 3: GiveInventory("HitSoundBeep3", 1); break;
+		case 4: GiveInventory("HitSoundBeep4", 1); break;
+		case 5: GiveInventory("HitSoundBeep5", 1); break;
+		case 6: GiveInventory("HitSoundBeep6", 1); break;
 		// add more later!
 	}
 }

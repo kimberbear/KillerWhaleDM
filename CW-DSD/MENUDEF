@@ -31,15 +31,21 @@ OptionValue HitSounds
 {
 	0, "None"
 	1, "Quake"
-	2, "Click"
-	3, "Metal Pipe"
+	2, "MW Click"
+	3, "TF"
+	4, "Minecraft"
+	5, "Megaman"
+	6, "Metal Pipe"
 }
 
 OptionValue KillSounds
 {
 	0, "None"
 	1, "Bell"
-	2, "Metal Pipe"
+	2, "Megaman" 
+	3, "Bruiser KO"
+	4, "Wilhelm Scream"
+	5, "Metal Pipe"
 }
 
 optionMenu "CWDM_ExperienceMenu"
@@ -267,7 +273,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "JANKY ALPHA VER. 21.05.26"
+	StaticText 64, 214, "JANKY ALPHA VER. 25.05.26"
 }
 
 OptionMenu CWDM_SoundOptions
