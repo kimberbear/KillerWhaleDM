@@ -1,0 +1,150 @@
+decal EWall 1
+   {
+       pic EWALL
+       x-scale 1
+       y-scale 1
+   }
+
+decal Papers 2
+   {
+       pic pprs
+       x-scale 1
+       y-scale 1
+       randomflipx
+   }
+
+decal Moss 3
+   {
+       pic MOSSCAL
+       x-scale 1
+       y-scale 1
+       randomflipx
+   }
+
+decal Poop 4
+   {
+       pic POOPCAL
+       x-scale 1
+       y-scale 1
+       randomflipx
+   }
+   
+decal Posters 5
+   {
+       pic PSTRCLMP
+       x-scale 1
+       y-scale 1
+   }
+ 
+decal Corkboard 6
+   {
+       pic cockboard
+       x-scale 1
+       y-scale 1
+   }
+
+decal Blubco 7
+   {
+       pic BLBCOLFD
+       x-scale 1
+       y-scale 1
+   }
+
+decal LaguniScrawl1 8
+   {
+       pic LGNSCRL1
+       x-scale 1
+       y-scale 1
+   }
+
+decal LaguniScrawl2 9
+   {
+       pic LGNSCRL2
+       x-scale 1
+       y-scale 1
+   }
+
+decal LaguniScrawl3 10
+   {
+       pic LGNSCRL3
+       x-scale 1
+       y-scale 1
+   }
+
+decal LaguniScrawl4 11
+   {
+       pic LGNSCRL4
+       x-scale 1
+       y-scale 1
+   }
+
+decal pipemess 12
+   {
+       pic pipemess
+       x-scale 1
+       y-scale 1
+   }
+
+decal NBLSTRMB 13
+   {
+       pic NBLSTRMB
+       x-scale 1
+       y-scale 1
+   }
+
+decal NBLSTRMF 14
+   {
+       pic NBLSTRMF
+       x-scale 1
+       y-scale 1
+   }
+
+
+decal BulletHole
+{
+	pic BLDCL
+	x-scale 1
+	y-scale 1
+	randomflipx
+	randomflipy
+}
+
+decal ScorchMark
+{
+	pic SCORCH1
+	x-scale 1
+	y-scale 1
+	randomflipx
+	randomflipy
+}
+
+decal ScorchMarkSmall
+{
+	pic SCORCH2
+	x-scale 1
+	y-scale 1
+	randomflipx
+	randomflipy
+}
+
+decal Impact
+{
+	pic IMPACT
+	x-scale 1
+	y-scale 1
+	randomflipx
+	randomflipy
+}
+
+fader GenericFader1
+{ 
+	DecayStart 10 
+	DecayTime 1 
+}
+
+generator CWDM_rifle     BulletHole
+
+generator CWDM_Shotgun     BulletHole
+
+generator CWDM_stanRevolver     BulletHole
+

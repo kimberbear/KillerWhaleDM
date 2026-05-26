@@ -314,7 +314,7 @@ actor CWDM_stanRevolver : CWDM_weapon
 		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,4)
 		REVV A 0 A_Light2
 		REVV A 0 A_Quake(3,5,0,5)
-		REVV B 1 BRIGHT A_FireBullets(2,2,2,75,"CWDM_bulletPuff",FBF_NORANDOM)
+		REVV B 1 BRIGHT A_FireBullets(2,2,1,128,"CWDM_bulletPuff",FBF_NORANDOM)
 		REVV C 0 A_Light0
 		REVV CDDCF 2
 		REVV F 0 A_Refire
