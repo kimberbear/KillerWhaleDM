@@ -3,12 +3,10 @@
 
 
 
-script "PlayerSpawned" ENTER
-{
-	while (true) {
-		int newFOV = GetCVAR("cl_customFOV");
-		str command = StrParam(s:"fov ", d:newFOV);
-		ConsoleCommand(command);
-		delay(1);
-	}
+script "A_SetActorState" (int stateName) {
+	SetActorState(ActivatorTID(),stateName,true);
+}
+
+script "setPlayerSpeed" (int speed) {
+	SetActorProperty(ActivatorTID(),APROP_SPEED,speed*0.1);
 }

@@ -71,7 +71,7 @@ ACTOR CWDM_rifle: CWDM_weapon
 		RFLE A 0 A_GiveInventory("CWDM_rifleShotCount", 1)
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
-		RFLE B 1 BRIGHT A_FireBullets(2,2,1,26,"CWDM_bulletPuff",FBF_NORANDOM )
+		RFLE B 1 BRIGHT A_FireBullets(2,2,1,30,"CWDM_bulletPuff",FBF_NORANDOM )
 		RFLE B 0 A_Light0
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
@@ -311,18 +311,22 @@ actor CWDM_stanRevolver : CWDM_weapon
 		REVV A 1 A_Lower
 		Loop
 	Fire:
-		REVV E 4
+		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,4)
 		REVV A 0 A_Light2
 		REVV A 0 A_Quake(3,5,0,5)
 		REVV B 1 BRIGHT A_FireBullets(2,2,2,75,"CWDM_bulletPuff",FBF_NORANDOM)
 		REVV C 0 A_Light0
 		REVV CDDCF 2
 		REVV F 0 A_Refire
+		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,9)
 		goto ready
+	/*
 	AltFire:
+		TNT1 A 0 ACS_NamedExecute("A_SetActorState",0,"brewHold")
 		SBBF DEFG 2
 		TNT1 A 4
 		goto BrewHeld
+	*/
 	BrewHeld:
 		TNT1 A 1
 		TNT1 A 1 a_refire("BrewHeld")
@@ -422,10 +426,11 @@ actor CWDM_smasherWeapon : CWDM_weapon
 		TNT1 A 0
 		goto Running
 	Running:
-		TNT1 A 2 A_ChangeVelocity(2,0,0,CVF_RELATIVE)
+		TNT1 A 4 ACS_NamedExecute("setPlayerSpeed",0,12)
 		FIST A 0 A_Refire("Running")
 		goto Uppercut
 	Fire:
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,5)
 		TNT1 A 0 A_JumpIfInventory("CWDM_smasherPunchOnce",1,"PunchLeft")
 		goto PunchRight
 	PunchRight:
@@ -437,6 +442,7 @@ actor CWDM_smasherWeapon : CWDM_weapon
 		SSMW F 2 a_firecustommissile("CWDM_smasherPunchProjectile")
 		SSMW G 6
 		SSMW C 4
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
 		goto ready
 	PunchLeft:
 		TNT1 A 0 A_TakeInventory("CWDM_smasherPunchOnce", 1)
@@ -447,14 +453,17 @@ actor CWDM_smasherWeapon : CWDM_weapon
 		SSML C 2 a_firecustommissile("CWDM_smasherPunchProjectile")
 		SSML D 6
 		SSML B 4
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
 		goto ready
 	Uppercut:
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,1)
 		TNT1 A 5
 		SSML A 2
 		TNT1 A 0 a_playsound("weapons/dynamitetoss")
 		TNT1 A 2
 		SSMU B 2 a_firecustommissile("CWDM_smasherPunchProjectile")
 		SSMU CA 8
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
 		goto ready
 	}
 }

@@ -220,3 +220,93 @@ actor CWDM_PalmTree : Decoration 16134
 	}
 
 }
+
+actor CWDM_arrowSign : Decoration 16135
+{
+//$Category Decoration
+//$Title "Arrow sign"
+//$Sprite TTSGA0
+	Radius 16
+	Height 42
+	States
+	{
+	Spawn:
+	TTSG A -1
+	stop
+	}
+}
+
+actor CWDM_brellahBlu : Decoration 16136
+{
+//$Category Decoration
+//$Title "Umbrella (Blue)"
+//$Sprite UMBRA0
+	Radius 16
+	Height 42
+	States
+	{
+	Spawn:
+	UMBR A -1
+	stop
+	}
+}
+
+actor CWDM_brellahOran : Decoration 16137
+{
+//$Category Decoration
+//$Title "Umbrella (Orange)"
+//$Sprite UMBRB0
+	Radius 16
+	Height 42
+	States
+	{
+	Spawn:
+	UMBR B -1
+	stop
+	}
+}
+
+actor CWDM_brellahRainbow : Decoration 16138
+{
+//$Category Decoration
+//$Title "Umbrella (Rainbow)"
+//$Sprite UMBRC0
+	Radius 16
+	Height 42
+	States
+	{
+	Spawn:
+	UMBR C -1
+	stop
+	}
+}
+
+actor CWDM_trafficCone : Decoration 16139
+{
+//$Category Decoration
+//$Title "Traffic Cone"
+//$Sprite TFCNA0
+	Radius 16
+	Height 16
+	States
+	{
+	Spawn:
+	TFCN A -1
+	stop
+	}
+}
+
+actor CWDM_stitchesBear : Decoration 16140
+{
+//$Category Decoration
+//$Title "Plush bear"
+//$Sprite BEARA0
+	Radius 16
+	Height 16
+	States
+	{
+	Spawn:
+	BEAR A -1
+	stop
+	}
+}

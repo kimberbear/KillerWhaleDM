@@ -28,3 +28,36 @@ StatusBar normal, fullscreenoffsets, forcescaled
 	//DrawNumber 3, SMALLFONT, WHITE, Frags, 64, -18;
 	}
 }
+
+/*
+Resolution 320,240;
+
+StatusBar normal, fullscreenoffsets, forcescaled
+{
+	IfSpectator
+	{
+	}
+	ELSE
+	{
+	//Health and Icon
+	//DrawImage "HLTHICON", -56 + center, -19;
+
+	DrawImage "VALBG", 48, -48;
+	DrawNumber 3, BIGFONT, untranslated, Health, alignment(left),69,-46;
+	//DrawString SMALLFONT, untranslated, "/200",91, -42,0,alignment(left);
+	
+	//DrawBar "KWHP_0", "KWHPBACK", health, vertical, 36, -58;
+	DrawImage translatable "KWHP_COL", 36, -58;
+	
+	//DrawString SMALLFONT, untranslated, playerclass, 91, -48,0,alignment(left);
+	
+	//Armor and Icon
+	DrawImage "VALBG", 35, -81;
+	DrawImage "MORAICON", 36 , -80;
+	DrawNumber 3, BIGFONT, untranslated, Armor, alignment(left), 56, -79;
+	
+	//DrawString SMALLFONT, WHITE, "FRAGS:",48, -18;
+	//DrawNumber 3, SMALLFONT, WHITE, Frags, 64, -18;
+	}
+}
+*/

@@ -330,7 +330,7 @@ actor CWDM_stanClass : CWDM_bossClass
 {
 	Player.DisplayName "Stanley Steel Press"
 	Height 64
-	Player.ViewHeight 48.0
+	Player.ViewHeight 40.0
 	States
 	{
 	Spawn:
@@ -340,21 +340,27 @@ actor CWDM_stanClass : CWDM_bossClass
 		STAF BCDEFD 3
 		loop
 	Missile:
-		STAN H 6 BRIGHT
-		STAN IJ 6
+		STAN H 4 BRIGHT
+		STAN IJ 4
 		goto see
 	Melee:
-		STAN H 6 BRIGHT
-		STAN IJ 6
+		STAN H 4 BRIGHT
+		STAN IJ 4
 		goto see
 	Pain:
-		STAN R 4
+		STAN R 8
 		goto see
 	Death:
 		SPOS L 0 ACS_NamedExecuteAlways("stanDied",0)
 		STAM ABCDEFGHIJKLM 4
 		STAM M -1
 		Loop
+	BrewHold:
+		STAN S 1
+		loop
+	BrewThrow:
+		STAF B 12
+		goto spawn
 	}
 }
 

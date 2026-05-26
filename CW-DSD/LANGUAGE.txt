@@ -20,10 +20,10 @@ DEATHPAK = "\c[White]Fragtastically fried fish! \c[gold]+25 HP +25 AP";
 
 OBSHGUN = "%o tasted %k's boomstick.";
 OBRIFLE = "%k opened fire on %o.";
-OBFLARE = "%o was toasted by a flare.";
-OBBREW = "%o tasted a Boom Brew's explosive flavour!";
-OBSTAN = "%o was taken away for a long, long time.";
-OBSMASH = "%o was pummeled into a fine paste.";
+OBFLARE = "%o was toasted by %k's flare.";
+OBBREW = "%o tasted a Boom Brew's explosive flavour, courtesy of %k!";
+OBSTAN = "%k took %o away for a long, long time.";
+OBSMASH = "%o was pummeled into a fine paste by the fists of %k!";
 
 //Bosses
 

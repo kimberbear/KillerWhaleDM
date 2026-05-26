@@ -36,7 +36,7 @@ defaultmap
 	AllowFreelook
 	losermusic = "Music/results/bigm_gameover.mp3"
 	winnermusic = "Music/results/bigm_actionwin.mp3"
-	intermusic = "Music/MUSINTER.ogg"
+	//intermusic = "Music/MUSINTER.ogg"
 }
 
 episode PROTO
@@ -66,6 +66,8 @@ map CTF1 "Training day"
 	sky1 = "DASKY25",0
 	music = "music/anchor_ingame.ogg"
 	OutsideFog = b05b44
+	ExitPic = BGCTF1
+	EnterPic = BGCTF1
 }
 
 map CTF2 "Killer Clamyon"
@@ -79,22 +81,28 @@ map CTF3 "Crossroads"
 	sky1 = "VOLCNSKY",0
 	music = "music/anchor_ingame.ogg"
 }
-
-map DM1 "Lava"
+/*
+map DM1OLD "Lava"
 {
 	sky1 = "DASKY25",0
 	music = "music/dave_ingame.ogg"
 }
+*/
 
 map DM2 "Hangar"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/factory_ingame.ogg"
+	ExitPic = BGDM2
+	EnterPic = BGDM2
+
 }
 map DM3 "Clash of the Equatorial"
 {
 	sky1 = "DASKY25",0
 	music = "music/burning_ingame.ogg"
+	ExitPic = BGDM3
+	EnterPic = BGDM3
 }
 
 map DM4 "Quaint Home"
@@ -102,24 +110,41 @@ map DM4 "Quaint Home"
 	sky1 = "VOLCNSKY",0
 	music = "music/well_ingame.ogg"
 }
-
+/*
+// TOO MUCH GOOF.
 map DM5 "Goof"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/anchor_ingame.ogg"
 }
+*/
+
+map DM5 "Magma Processing"
+{
+	sky1 = "SALTYSKY",0
+	music = "music/dave_ingame.ogg"
+	Fade = 623f3f
+	ExitPic = BGDM1EX
+	EnterPic = BGDM1EX
+}
+/*
+
+// sucks as of 26/05/26
+// so i am disabling it
 
 map DM6 "Oil Rig"
 {
 	sky1 = "SICKSKY",0
 	music = "music/rig_ingame.ogg"
+	Fade = 112735
 }
-
+*/
 map DM7 "Pool Day"
 {
 	sky1 = "BEACHSKY",0
 	music = "music/resort_ingame.ogg"
 	Fade = 112735
-	
+	ExitPic = BGDM7
+	EnterPic = BGDM7
 }
 

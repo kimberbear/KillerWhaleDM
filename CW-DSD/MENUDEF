@@ -123,9 +123,9 @@ OptionMenu "CWDM_OptionsMenu"
 OptionMenu "CWDM_DisplayMenu"
 {
 	Title "Display & Video options"
-	Submenu "OpenGL Options", 			"OpenGLOptions"
 	SubMenu "Resolution & Mode", 		"VideoModeMenu"
 	Option "Vertical Sync",				"vid_vsync", "OnOff"
+	Submenu "OpenGL Options", 			"OpenGLOptions"
 	StaticText " "
 	Slider "FOV",						"fov",							75.0, 120.0, 0.1, 1
 	StaticText " "
@@ -273,7 +273,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "JANKY ALPHA VER. 25.05.26"
+	StaticText 64, 214, "ALPHA VER. 26.05.26"
 }
 
 OptionMenu CWDM_SoundOptions
