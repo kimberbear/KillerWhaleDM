@@ -205,7 +205,7 @@ actor CWDM_deathPack : CustomInventory
         Stop
     }
 }
-actor QuadDamage : Powerup
+actor QuadDamage : PowerDamage
 {
     DamageFactor "Normal", 4
     Inventory.Icon "QUADC0"

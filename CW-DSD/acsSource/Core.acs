@@ -10,3 +10,12 @@ script "A_SetActorState" (int stateName) {
 script "setPlayerSpeed" (int speed) {
 	SetActorProperty(ActivatorTID(),APROP_SPEED,speed*0.1);
 }
+
+script "stopMusicOnRoundEnd" (int type,int stink, int extrastink) EVENT
+{
+	if (type == GAMEEVENT_ROUND_ENDS)
+	{
+		setmusic("Music/Nothing.ogg");
+		ActivatorSound("alert/end",127);
+	}
+}

@@ -74,12 +74,16 @@ map CTF2 "Killer Clamyon"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/viciousvenice.ogg"
+	ExitPic = BGCTF2
+	EnterPic = BGCTF2
 }
 
 map CTF3 "Crossroads"
 {
 	sky1 = "VOLCNSKY",0
-	music = "music/anchor_ingame.ogg"
+	music = "music/resort_ingame.ogg"
+	ExitPic = BGCTF3
+	EnterPic = BGCTF3
 }
 /*
 map DM1OLD "Lava"
@@ -109,6 +113,8 @@ map DM4 "Quaint Home"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/well_ingame.ogg"
+	ExitPic = BGDM4
+	EnterPic = BGDM4
 }
 /*
 // TOO MUCH GOOF.
