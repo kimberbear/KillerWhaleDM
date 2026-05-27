@@ -16,6 +16,7 @@ kimberbear
 Music & Sound
 -------------
 Ciaran Games
+Peter Hajba
 
 Playtesting
 -----------
@@ -23,6 +24,9 @@ Playtesting
 @2sapartybut3isacrowd
 @spectral_lantern
 @zoeoftheapocalypse
+@fathead22
+@thegoldentail
+
 
 Special Thanks
 --------------
