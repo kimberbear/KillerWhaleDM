@@ -4,6 +4,10 @@ blank "blank"
 // weapons
 //-----------------------------------------------------
 
+weapons/quadattack	"Sounds/quadattack.ogg"
+
+$volume weapons/quadattack 0.8
+
 weapons/riflefire "Sounds/Weapons/chaingunfire.ogg"
 weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
 weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"

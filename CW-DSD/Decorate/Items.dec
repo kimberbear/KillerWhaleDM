@@ -215,7 +215,7 @@ actor CWDM_skullOfPower : PowerupGiver
 {
     Powerup.Type "QuadDamage"   
     Powerup.Duration 1050
-    Powerup.Color "Gold", 0.25
+    Powerup.Color "Gold", 0.0
 
     +Inventory.AUTOACTIVATE
     +Inventory.FANCYPICKUPSOUND
@@ -238,7 +238,7 @@ actor CWDM_skullOfPowerPickup : CustomInventory 17002
     +INVENTORY.ALWAYSPICKUP
     Inventory.Pickupsound "powerup"
     Inventory.PickupMessage "Quad Damage!"
-    Inventory.RespawnTics  2100 
+    Inventory.RespawnTics  1050 
 	scale 2
     Radius 48
     Height 48

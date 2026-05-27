@@ -1,4 +1,5 @@
 Resolution 320,240;
+Height 0;
 
 StatusBar normal, fullscreenoffsets, forcescaled
 {
@@ -7,6 +8,17 @@ StatusBar normal, fullscreenoffsets, forcescaled
 	}
 	ELSE
 	{
+	
+	InInventory QuadDamage
+	{
+	DrawImage "OVR2QUAD",0,0;
+	DrawImage "OVRLQUAD",0,-100;
+	
+	DrawImage "OVRRQUAD",-100,0;
+	DrawImage "OVR0QUAD",-100,-100;
+	DrawNumber 3, SMALLFONT, untranslated, PowerupTime CWDM_skullOfPower, alignment(center), prefix("", "QUAD: "),-160,-20;
+	}
+	
 	//Health and Icon
 	//DrawImage "HLTHICON", -56 + center, -19;
 

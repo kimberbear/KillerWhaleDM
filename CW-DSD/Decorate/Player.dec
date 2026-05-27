@@ -11,6 +11,7 @@ actor CWDM_shotgunnerClass : CWDM_player
 	Player.ColorRange 179, 191
 	Player.Portrait "SGPORTR8"
 	Player.SoundClass "whale"
+	Player.ScoreIcon "SGICON"
 
 	States
 	{
@@ -86,7 +87,8 @@ actor CWDM_riflemanClass : CWDM_player
 	Player.StartItem "CWDM_isSRifleman"
 	Player.ColorRange 197, 207				// fuck my stupid chungus life
 	Player.SoundClass "whale"
-	
+	Player.ScoreIcon "RFICON"
+
 	States
 	{
 	Spawn:
@@ -160,6 +162,7 @@ actor CWDM_murkymanClass : CWDM_player
 	Player.StartItem "CWDM_isMurkyman"
 	Player.ColorRange 114, 122
 	Player.SoundClass "whale"
+	Player.ScoreIcon "MURICON"
 	States
 	{
 	Spawn:
@@ -233,7 +236,7 @@ actor CWDM_grenadierClass : CWDM_player
 	Player.StartItem "CWDM_grenadeLauncher"
 	Player.StartItem "CWDM_isGrenadier"
 	Player.SoundClass "whale"
-	
+	Player.ScoreIcon "GRNICON"
 	States
 	{
 	Spawn:

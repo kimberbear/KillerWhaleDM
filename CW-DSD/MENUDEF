@@ -17,11 +17,11 @@ OptionMenu "KWDMoptions"
 	StaticText ""
     StaticText "Hit sounds", 1
 	StaticText ""
-	Option "Sound type","cl_HitSound", "HitSounds"
-	Slider	"Hitsound Volume",	"cl_HitsoundVolume", 0, 100, 1
+	Option "Sound type","cl_CWDSD_HitSound", "HitSounds"
+	Slider	"Hitsound Volume",	"cl_CWDSD_HitsoundVolume", 0, 100, 1
 	StaticText ""
-	Option "Killsound type","cl_KillSound", "KillSounds"
-	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
+	Option "Killsound type","cl_CWDSD_KillSound", "KillSounds"
+	Slider	"Killsound Volume",	"cl_CWDSD_KillsoundVolume", 0, 100, 1
 	
 	StaticText ""
 	//Slider	"Custom FOV",	"cl_customFOV", 50, 120, 1
@@ -56,13 +56,13 @@ optionMenu "CWDM_ExperienceMenu"
 	StaticText ""
 	
     StaticText "Hit sounds",1
-	Option "Sound type","cl_HitSound", "HitSounds"
-	Slider	"Hitsound Volume",	"cl_HitsoundVolume", 0, 100, 1
+	Option "Sound type","cl_CWDSD_HitSound", "HitSounds"
+	Slider	"Hitsound Volume",	"cl_CWDSD_HitsoundVolume", 0, 100, 1
 	StaticText ""
 	
 	StaticText "Kill sounds",1
-	Option "Killsound type","cl_KillSound", "KillSounds"
-	Slider	"Killsound Volume",	"cl_KillsoundVolume", 0, 100, 1
+	Option "Killsound type","cl_CWDSD_KillSound", "KillSounds"
+	Slider	"Killsound Volume",	"cl_CWDSD_KillsoundVolume", 0, 100, 1
 	StaticText ""
 	
 	StaticText "Players",1
@@ -273,7 +273,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "ALPHA VER. 26.05.26"
+	StaticText 64, 214, "ALPHA VER. 27.05.26"
 }
 
 OptionMenu CWDM_SoundOptions
