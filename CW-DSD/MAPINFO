@@ -36,7 +36,7 @@ defaultmap
 	AllowFreelook
 	losermusic = "Music/results/bigm_gameover.mp3"
 	winnermusic = "Music/results/bigm_actionwin.mp3"
-	//intermusic = "Music/MUSINTER.ogg"
+	intermusic = "Music/results/bigm_stratwin.mp3"
 }
 
 episode PROTO
@@ -82,6 +82,7 @@ map CTF3 "Crossroads"
 {
 	sky1 = "VOLCNSKY",0
 	music = "music/resort_ingame.ogg"
+	Fade = 112735
 	ExitPic = BGCTF3
 	EnterPic = BGCTF3
 }
