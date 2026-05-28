@@ -1,7 +1,7 @@
 Programming
 -----------
 kimberbear
-BYOC team (hit sounds and being a useful resource to learn from :])
+BYOC team (excellent resource and basis of hitsound system)
 
 Map design
 ----------
@@ -36,4 +36,6 @@ for logo sketch and title suggestion!
 for the final logo!
 @mgrobing0 
 @zoeoftheapocalypse
-for the overwhelming support and great feedback and suggestions!
+for the overwhelming support, 
+eagerness to hop on a server 
+and great feedback and suggestions!

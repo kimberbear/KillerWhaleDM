@@ -13,6 +13,7 @@ weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
 weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"
 weapons/weaponopen "Sounds/Weapons/weaponopen.ogg"
 weapons/weaponclose "Sounds/Weapons/weaponclose.ogg"
+weapons/shotgunopenclose "Sounds/Weapons/shotgunopenclose.ogg"
 weapons/flarefire "Sounds/Weapons/flaregunfire.ogg"
 weapons/flareload "Sounds/Weapons/flaregunload.ogg"
 weapons/1887fire "Sounds/Weapons/1887fire.wav"
@@ -206,6 +207,7 @@ splash	"sounds/splash.ogg"
 // announcer
 //-----------------------------------------------------
 
+alert/gotquad		"Sounds/Alerts/specialwavestart.ogg"
 alert/countdown		"Sounds/Alerts/wavecountdown.ogg"
 alert/roundstart	"Sounds/Alerts/wavestart.ogg"
 alert/score			"Sounds/Alerts/score.ogg"

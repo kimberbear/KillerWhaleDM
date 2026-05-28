@@ -102,6 +102,16 @@ map DM2 "Hangar"
 	EnterPic = BGDM2
 
 }
+
+map DM2EX "Hangar (EX)"
+{
+	sky1 = "VOLCNSKY",0
+	music = "music/factory_ingame.ogg"
+	ExitPic = BGDM2
+	EnterPic = BGDM2
+	Fade = 623f3f
+}
+
 map DM3 "Clash of the Equatorial"
 {
 	sky1 = "DASKY25",0

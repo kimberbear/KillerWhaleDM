@@ -19,3 +19,21 @@ script "stopMusicOnRoundEnd" (int type,int stink, int extrastink) EVENT
 		ActivatorSound("alert/end",127);
 	}
 }
+
+script "playerGotQuad" (void) {
+	int ogActivator = PlayerNumber();
+	str pName = StrParam(n: ogActivator+1);
+    int i;
+	str msg = strparam(s:pName,s:" has got the quad!");
+    for (i = 0; i < PlayerCount(); i++)
+    {
+		if (i != ogActivator) {
+			SetActivatorToPlayer(i);
+			SetFont("BIGFONT");
+			HudMessage(s:msg;
+					   HUDMSG_PLAIN, 501, CR_GOLD, 0.5, 0.9, 5.0);
+			ActivatorSound("alert/gotquad",1.0);
+		}
+    }
+
+}

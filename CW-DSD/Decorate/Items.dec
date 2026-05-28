@@ -8,7 +8,7 @@ actor CWDM_healthBonus : Health 15300
     Inventory.Amount 2 
 	Inventory.MaxAmount 200
     Inventory.RespawnTics  200 
-    Radius 24
+    Radius 16
     Height 24
 	YScale 0.833333333			//aspect fix
 	States
@@ -29,7 +29,7 @@ actor CWDM_mediumHealth : Health 15301
 	Inventory.MaxAmount 200
 	Inventory.PickupSound "items/eat"
 	Inventory.PickupMessage "$HEALMED"
-    Radius 24
+    Radius 16
     Height 24
 	YScale 0.833333333			//aspect fix
 	States
@@ -49,7 +49,7 @@ actor CWDM_bigHealth : Health 15302
 	Inventory.MaxAmount 200
 	Inventory.PickupSound "items/eat"
 	Inventory.PickupMessage "$HEALBIG"
-    Radius 24
+    Radius 16
     Height 24
 	YScale 0.833333333			//aspect fix
 	States
@@ -91,7 +91,7 @@ actor CWDM_armorBonus : BasicArmorBonus 15304
 	Inventory.PickupSound "items/abonpickup"
 	Inventory.PickupMessage "$ARMSMALL"
     Inventory.RespawnTics  200
-    Radius 24
+    Radius 16
     Height 24
 	YScale 0.833333333			//aspect fix
 	States
@@ -113,7 +113,7 @@ actor CWDM_mediumArmor : BasicArmorBonus  15305
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
 	Armor.SaveAmount 50
-    Radius 24
+    Radius 16
     Height 24
 	YScale 0.833333333			//aspect fix
 	States
@@ -135,7 +135,7 @@ actor CWDM_largeArmor : BasicArmorBonus  15306
 	Armor.SavePercent 75
 	Armor.MaxSaveAmount 200
 	Armor.SaveAmount 100
-    Radius 24
+    Radius 16
     Height 24
 	YScale 0.833333333			//aspect fix
 	States
@@ -251,6 +251,7 @@ actor CWDM_skullOfPowerPickup : CustomInventory 17002
 
     Pickup:
         TNT1 A 0 A_GiveInventory("CWDM_skullOfPower", 1)
+		TNT1 A 0 ACS_NamedExecuteAlways("playerGotQuad")
         Stop
     }
 }
