@@ -310,3 +310,18 @@ actor CWDM_stitchesBear : Decoration 16140
 	stop
 	}
 }
+
+actor CWDM_orcaStatue : Decoration 16141
+{
+//$Category Decoration
+//$Title "Gold Orca Statue"
+//$Sprite ORSTA0
+	Radius 16
+	Height 16
+	States
+	{
+	Spawn:
+	ORST A -1
+	stop
+	}
+}

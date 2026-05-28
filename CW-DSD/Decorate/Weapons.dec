@@ -5,6 +5,7 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 	Weapon.AmmoUse 1
 	Weapon.SlotNumber 2
 	Weapon.KickBack 0
+	+WEAPON.NOAUTOFIRE
 
 	Xscale 0.5
 	Yscale 0.5
@@ -27,16 +28,33 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 	Fire:
 		SHGN B 0 A_Light2
 		SHGN B 0 A_Quake(2,5,0,5)
+		SHGN B 1 BRIGHT
+		
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
-		SHGN B 1 BRIGHT A_FireBullets(8,6,8,18,"CWDM_bulletPuff",FBF_NORANDOM)
+		// A_FireBullets(8,6,8,18,"CWDM_bulletPuff",FBF_NORANDOM)
+		TNT1 A 0 A_FireBullets (-4.0, 0, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (4.0, 0, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-2.6, -1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (2.6, -1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (1.4, 1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-1.4, 1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (0, 0, 1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
+
 		SHGN B 0 A_Light0
-		SHGN CCCDDA 4
+		SHGN CCCDD 4
 		Goto Ready
 	QuadFire:
-		SHGN B 1 BRIGHT A_FireBullets(8,6,8,18,"CWDM_quadPuff",FBF_NORANDOM)
+		//SHGN B 1 BRIGHT A_FireBullets(8,6,8,18,"CWDM_quadPuff",FBF_NORANDOM)
+		TNT1 A 0 	A_FireBullets (-4.0, 0, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (4.0, 0, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (-2.6, -1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (2.6, -1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (1.4, 1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (-1.4, 1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (0, 0, 1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
 		TNT1 A 0 A_PlaySound("weapons/quadattack",CHAN_7  )
 		SHGN B 0 A_Light0
-		SHGN CCCDDA 4
+		SHGN CCCDD 4
 		goto Ready
 	}
 }
@@ -204,7 +222,7 @@ ACTOR CWDM_grenadeLauncher: CWDM_weapon
 
 Actor FlareProjectile
 {
-    Damage (120)
+    Damage (65)
     Radius 8
     Height 8
     Speed 70
@@ -222,6 +240,7 @@ Actor FlareProjectile
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
         TNT1 A 0 A_SpawnItem("CWDM_smallExplosion") 
+		TNT1 A 0 A_explode((70))
         TNT1 A 25 A_PlaySound("whale/flaregunexplode", CHAN_5)
         Stop
     }
@@ -333,6 +352,7 @@ actor CWDM_stanRevolver : CWDM_weapon
 	AttackSound "weapons/revolverfire"
 	Tag "Revolver"
 	Obituary "$OBSTAN"
+	+WEAPON.NOAUTOFIRE
 	States
 	{
 	Spawn:

@@ -42,3 +42,25 @@ texture WINEMST1
 	pic WINEMST2 tics 3 
 	pic WINEMST3 tics 3 
 	pic WINEMST4 tics 3 
+	
+texture PVMST1
+    pic PVMST1 tics 3
+    pic PVMST2 tics 3
+    pic PVMST3 tics 3
+    pic PVMST4 tics 3
+
+texture RDRSCRN1
+	pic RDRSCRN1 tics 4
+	pic RDRSCRN2 tics 4
+	pic RDRSCRN3 tics 4
+	pic RDRSCRN4 tics 4
+	pic RDRSCRN5 tics 4
+	pic RDRSCRN6 tics 4
+	pic RDRSCRN7 tics 4
+	pic RDRSCRN8 tics 4
+	
+texture RDRERR1
+	pic RDRERR1 tics 2
+	pic RDRERR2 tics 2
+	pic RDRERR3 tics 2
+	pic RDRERR4 tics 2

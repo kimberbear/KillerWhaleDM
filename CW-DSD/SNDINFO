@@ -153,6 +153,9 @@ misc/teleport "Sounds/enemyspawn.ogg"
 misc/chat "Sounds/chatSound.wav"
 misc/chat2 "Sounds/chatSound.wav"
 
+$volume misc/chat 0.8
+$volume misc/chat2 0.8
+
 zandronum/connect "Sounds/scifibeep.ogg"
 
 usefail "Sounds/usefail.ogg"
