@@ -1,8 +1,6 @@
 #library "Core.acs"
 #include "zcommon.acs"
 
-
-
 script "A_SetActorState" (int stateName) {
 	SetActorState(ActivatorTID(),stateName,true);
 }
@@ -37,3 +35,13 @@ script "playerGotQuad" (void) {
     }
 
 }
+
+/*
+script 413 ENTER {
+    if (GameType() == GAME_TITLE_MAP)
+        terminate;
+	SetFont("SMALLFONT");
+	HudMessage(s:"Welcome to CW:DSD [alpha]!\nAll content is subject to change and likely unfinshed.\nThanks for playing!";
+					   HUDMSG_FADEOUT, 413, CR_GOLD, 0.5, 0.5, 5.0);
+}
+*/

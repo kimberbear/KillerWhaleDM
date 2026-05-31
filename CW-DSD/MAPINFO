@@ -64,27 +64,39 @@ map MAP01 "Don't pick me!"
 map CTF1 "Training day"
 {
 	sky1 = "DASKY25",0
-	music = "music/anchor_ingame.ogg"
+	music = "music/cwvd/anchor_ingame.ogg"
 	OutsideFog = b05b44
 	ExitPic = BGCTF1
 	EnterPic = BGCTF1
+	GameMode = "oneflagctf"
 }
 
 map CTF2 "Killer Clamyon"
 {
 	sky1 = "VOLCNSKY",0
-	music = "music/viciousvenice.ogg"
+	music = "music/cwvd/viciousvenice.ogg"
 	ExitPic = BGCTF2
 	EnterPic = BGCTF2
+	GameMode = "ctf"
 }
 
 map CTF3 "Crossroads"
 {
 	sky1 = "VOLCNSKY",0
-	music = "music/resort_ingame.ogg"
+	music = "music/cwvd/resort_ingame.ogg"
 	Fade = 112735
 	ExitPic = BGCTF3
 	EnterPic = BGCTF3
+	GameMode = "ctf"
+}
+
+map CTF4 "Mt. Moby Cliffedge"
+{
+	sky1 = "VOLCNSKY",0
+	//Fade = e1d3c8
+	GameMode = "ctf"
+	ExitPic = BGCTF4
+	EnterPic = BGCTF4
 }
 /*
 map DM1OLD "Lava"
@@ -94,38 +106,43 @@ map DM1OLD "Lava"
 }
 */
 
+/*
 map DM2 "Hangar"
 {
 	sky1 = "VOLCNSKY",0
-	music = "music/factory_ingame.ogg"
+	music = "music/cwvd/factory_ingame.ogg"
 	ExitPic = BGDM2
 	EnterPic = BGDM2
+	GameMode = "deathmatch"
 
 }
-
-map DM2EX "Hangar (EX)"
+*/
+map DM2 "Hangar"
 {
 	sky1 = "VOLCNSKY",0
-	music = "music/factory_ingame.ogg"
-	ExitPic = BGDM2
-	EnterPic = BGDM2
+	music = "music/cwvd/factory_ingame.ogg"
+	ExitPic = BGDM2EX
+	EnterPic = BGDM2EX
 	Fade = 623f3f
+	GameMode = "deathmatch"
 }
 
 map DM3 "Clash of the Equatorial"
 {
 	sky1 = "DASKY25",0
-	music = "music/burning_ingame.ogg"
+	music = "music/cwvd/burning_ingame.ogg"
 	ExitPic = BGDM3
 	EnterPic = BGDM3
+	GameMode = "deathmatch"
 }
 
 map DM4 "Quaint Home"
 {
 	sky1 = "VOLCNSKY",0
-	music = "music/well_ingame.ogg"
+	music = "music/cwvd/well_ingame.ogg"
 	ExitPic = BGDM4
 	EnterPic = BGDM4
+	GameMode = "deathmatch"
 }
 /*
 // TOO MUCH GOOF.
@@ -139,10 +156,11 @@ map DM5 "Goof"
 map DM5 "Magma Processing"
 {
 	sky1 = "SALTYSKY",0
-	music = "music/dave_ingame.ogg"
+	music = "music/cwvd/dave_ingame.ogg"
 	Fade = 623f3f
 	ExitPic = BGDM1EX
 	EnterPic = BGDM1EX
+	GameMode = "deathmatch"
 }
 /*
 
@@ -159,9 +177,10 @@ map DM6 "Oil Rig"
 map DM7 "Pool Day"
 {
 	sky1 = "BEACHSKY",0
-	music = "music/resort_ingame.ogg"
+	music = "music/cwvd/resort_ingame.ogg"
 	Fade = 112735
 	ExitPic = BGDM7
 	EnterPic = BGDM7
+	GameMode = "deathmatch"
 }
 

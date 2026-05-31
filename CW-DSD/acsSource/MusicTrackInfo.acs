@@ -1,0 +1,12 @@
+#include "zcommon.acs"
+#define HUDMSG_TRACKINFO 676
+
+function void displayTrackCard(int trackTitle, int trackArtist, int trackSource) {
+	SetFont("SMALLFONT");
+	HudMessage(s:trackTitle,c:'\n',s:trackArtist,c:'\n',s:trackSource;
+			   HUDMSG_FADEOUT, HUDMSG_TRACKINFO, CR_WHITE, 0, 0.6, 10.0);
+}
+
+script "showMusicCard" (int trackTitle, int trackArtist, int trackSource) {
+	displayTrackCard(trackTitle,trackArtist,trackSource);
+}

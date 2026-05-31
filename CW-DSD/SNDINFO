@@ -10,6 +10,7 @@ $volume weapons/quadattack 0.8
 
 weapons/riflefire "Sounds/Weapons/chaingunfire.ogg"
 weapons/shotgunfire "Sounds/Weapons/shotgunprimary.ogg"
+//weapons/shotgunfire "Sounds/shotgn2.wav"
 weapons/grenadefire "Sounds/Weapons/grenadiershoot.ogg"
 weapons/weaponopen "Sounds/Weapons/weaponopen.ogg"
 weapons/weaponclose "Sounds/Weapons/weaponclose.ogg"
@@ -74,6 +75,9 @@ items/arm3pickup "sounds/items/arm3pickup.ogg"
 
 misc/jump "Sounds/jump.ogg"
 misc/land "Sounds/land.ogg"
+
+murky/cloak "Sounds/spy_cloak.wav"
+murky/uncloak "Sounds/spy_uncloak.wav"
 
 whale/pain1 "Sounds/whales/whalepain1.ogg"
 whale/pain2 "Sounds/whales/whalepain2.ogg"
@@ -157,7 +161,7 @@ misc/chat2 "Sounds/chatSound.wav"
 $volume misc/chat 0.8
 $volume misc/chat2 0.8
 
-zandronum/connect "Sounds/scifibeep.ogg"
+zandronum/connect "scifibeep.ogg"
 
 usefail "Sounds/usefail.ogg"
 

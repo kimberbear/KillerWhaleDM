@@ -104,7 +104,7 @@ actor boomBarrel : Decoration 16128
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
 		TNT1 A 0 A_PlaySound("misc/explode", CHAN_AUTO, 1.0, 0)
-		TNT1 A 0 A_SpawnItemEX("CWDM_explosion")
+		TNT1 A 0 A_SpawnItemEX("CWDM_mushExplosion")
 		//TNT1 A 0 A_Explode(128, 192, XF_HURTSOURCE|XF_EXPLICITDAMAGETYPE, damagetype: "ExplosiveDamage")
 		TNT1 A 0 A_Explode(128, 192)
 		TNT1 A 35 
@@ -166,7 +166,7 @@ actor CWDM_dummyShotgunner : Decoration 16131
 	}
 }
 
-actor CWDM_Rifleman : Decoration 16132
+actor CWDM_dummyRifleman : Decoration 16132
 {
 //$Category Dummies
 //$Title "Rifleman"
@@ -324,4 +324,144 @@ actor CWDM_orcaStatue : Decoration 16141
 	ORST A -1
 	stop
 	}
+}
+
+actor CWDM_bigPalmTree : CWDM_PalmTree 16142
+{
+//$Category Decoration
+//$Title "Big Palm Tree"
+//$Sprite TREMA0
+	States
+	{
+	Spawn:
+	TREM A -1
+	stop
+	}
+
+}
+
+actor WhyIsMarioAndLuigiSoCoolQuestion : Decoration 16143
+{
+//$Category Decoration
+//$Title "Flower"
+//$Sprite BMLCA0
+	-SOLID
+	States
+	{
+	Spawn:
+	BMLC A -1
+	Stop
+	}
+}
+
+actor BlueRoses : Decoration 16144
+{
+//$Category Decoration
+//$Title "Blue Roses"
+//$Sprite BLRSA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	BLRS A -1
+	Stop
+	}
+}
+
+actor RedRoses : Decoration 16145
+{
+//$Category Decoration
+//$Title "Red Roses"
+//$Sprite RDRSA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	RDRS A -1
+	Stop
+	}
+}
+
+actor WhiteRoses : Decoration 16146
+{
+//$Category Decoration
+//$Title "White Roses"
+//$Sprite WTRSA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	WTRS A -1
+	Stop
+	}
+}
+
+actor GoldRoses : Decoration 16147
+{
+//$Category Decoration
+//$Title "Gold Roses"
+//$Sprite GLRSA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	GLRS A -1
+	Stop
+	}
+}
+
+actor Hibiscus : Decoration 16148
+{
+//$Category Decoration
+//$Title "Hibiscus"
+//$Sprite HBCSA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	HBCS A -1
+	Stop
+	}
+}
+
+actor Fern : Decoration 16149
+{
+//$Category Decoration
+//$Title "Fern"
+//$Sprite FERNA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	FERN A -1
+	Stop
+	}
+}
+
+actor FlowerBush : Decoration 16150
+{
+//$Category Decoration
+//$Title "Flower Bush"
+//$Sprite HBBHA0
+	-SOLID 
+	States
+	{
+	Spawn:
+	HBBH A -1
+	Stop
+	}
+}
+
+actor CWDM_curvedPalmTree : CWDM_PalmTree 16151
+{
+//$Category Decoration
+//$Title "Curved Palm Tree"
+//$Sprite PLM2A0
+	States
+	{
+	Spawn:
+	PLM2 A -1
+	stop
+	}
+
 }

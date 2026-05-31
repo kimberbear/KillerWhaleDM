@@ -25,6 +25,8 @@ OBBREW = "%o tasted a Boom Brew's explosive flavour, courtesy of %k!";
 OBSTAN = "%k took %o away for a long, long time.";
 OBSMASH = "%o was pummeled into a fine paste by the fists of %k!";
 
+OBFIRE = "%o was caught in %k's flames.";
+
 //Bosses
 
 STANSTRT = "STANLEY ARRIVES AT THE SCENE!";

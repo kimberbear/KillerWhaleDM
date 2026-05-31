@@ -77,7 +77,8 @@ script "stanTransformed" (void)
         HudMessage(l:"STANSTRT";
                    HUDMSG_PLAIN, 501, CR_GOLD, 0.5, bossTextY, 5.0);
 
-        SetMusic("music/stanfight_ingame.ogg");
+        SetMusic("music/cwvd/stanfight_ingame.ogg");
+		ACS_namedExecute("showMusicCard",0,"He's The Law","Casen [c] Wiegman","Captain Wayne - Vacation Desperation OST");
         //LocalAmbientSound("voice/stanNotice", 127);
     }
 }
@@ -140,7 +141,7 @@ script "EARLTransformed" (void)
             5.0
         );
     }
-	SetMusic("music/earlsong.ogg");
+    SetMusic("music/cwvd/earlsong.ogg");
 	//AmbientSound("voice/stanNotice",127);
 }
 
@@ -202,7 +203,8 @@ script "smasherTransformed" (void)
             0.5, bossTextY,
             5.0
         );
-		SetMusic("music/earlsong.ogg");
+		ACS_namedExecute("showMusicCard",0,"Unnamed special wave track","Casen [c] Wiegman","Captain Wayne - Vacation Desperation OST");
+        SetMusic("music/cwvd/earlsong.ogg");
 		//AmbientSound("voice/stanNotice",127);
     }
 }

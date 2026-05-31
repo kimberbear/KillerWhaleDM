@@ -273,7 +273,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "ALPHA VER. 27.05.26"
+	StaticText 64, 214, "ALPHA VER. 31.05.26"
 }
 
 OptionMenu CWDM_SoundOptions
