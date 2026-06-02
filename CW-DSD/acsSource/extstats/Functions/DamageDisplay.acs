@@ -1,0 +1,223 @@
+// [Binary] Shows damage popups on hit, not much else to it.
+// (besides the stat tracker)
+Function Int abs(Int val) {
+	Return val < 0 ? -val : val;
+}
+
+Function Int atan(Int x)
+{
+	Return VectorAngle(1.0, x);
+}
+Function Int atan2(Int y, int x)
+{
+	Return VectorAngle(y, x);
+}
+
+Function Int GetDigit(Int number, Int position) {
+	Int divisor = 1;
+	For (Int i = 0; i < position; i++) {
+		divisor *= 10;
+	}
+	Return (number / divisor) % 10;
+}
+Function Str GetWeaponName(Void)
+{
+	str wepActor = GetWeapon();
+	int u = UniqueTID();
+	SpawnForced(wepActor, 0, 0, 0, u, 0);
+	str res = GetActorProperty(u, Aprop_NameTag);
+	Thing_Remove(u);
+	return res;
+}
+
+/*
+
+//original display names
+
+#define MAX_DISPLAY 13
+str DamageDisplay_Names[MAX_DISPLAY] = {
+	"Borderlands",
+	"Chex",
+	"DoomClassic",
+	"DoomModern",
+	"DoomSmall",
+	"Hacx",
+	"Harmony",
+	"RavenBig",
+	"RavenSmall",
+	"Raventory",
+	"Square",
+	"Strife",
+	"UrbanBrawl",
+};
+
+*/
+
+#define MAX_DISPLAY 4
+str DamageDisplay_Names[MAX_DISPLAY] = {
+	"Big",
+	"Small",
+	"Flat",
+	"Giant",
+};
+
+Script "ExtStats_DamageDisplay" (int type, int arg1, int arg2) EVENT
+{
+	If(type == GAMEEVENT_ACTOR_DAMAGED)
+	{
+		bool isPlayer = false;
+		bool isExplosion = false;
+		
+		int damage = arg1;
+		int damageProp = GetActorProperty(0, APROP_Damage) << 16;
+		str damageType = arg2;
+		SetActivator(0, AAPTR_DAMAGE_INFLICTOR);
+		//Log(s:"Damage ",	i:damageProp);
+		//Log(s:"Arg1 ",		i:damage);
+		if(damage > 10000) { //max digits supported
+			damage = 9999;
+		}
+		
+		SetUserVariable(0, "user_damageDisplayExemptProj", 1);
+		If(GetUserVariable(0, "user_damageDisplayExemptProj")) Terminate;
+		
+		If( (round(damageProp) != round(damage) && ClassifyActor(0) & ACTOR_MISSILE) ||
+		(damageType == MOD_R_SPLASH || damageType == MOD_BARREL ) ) {
+			isExplosion = true; // not sure how to do this properly. whatever.
+		}
+		
+		// Check if player
+		SetActivator(0, AAPTR_DAMAGE_SOURCE);
+		If(ClassifyActor(0) & ACTOR_PLAYER) {
+			isPlayer = true;
+			int num = PlayerNumber();
+			str weapon = GetWeaponName();
+		}
+		
+		SetActivator(0, AAPTR_DAMAGE_TARGET);
+		SetUserVariable(0, "user_damageDisplayExemptMonst", 1);
+		If(GetUserVariable(0, "user_damageDisplayExemptMonst")) Terminate;
+		// Actor is probably dead, store the stats for the player if possible.
+		If(GetActorProperty(0, APROP_Health) - damage <= 0 && isPlayer) {
+			if(GetGameModeState() == GAMESTATE_INPROGRESS)
+				TrackWeapon(num, weapon);
+		}
+		
+		// Now spawn the damage display
+		int x = GetActorX(0) + random(-10.0, 10.0);
+		int y = GetActorY(0) + random(-10.0, 10.0);
+		int z = GetActorZ(0) + GetActorProperty(0, APROP_HEIGHT) + random(-10.0, 10.0);
+		int angle = GetActorAngle(0);
+		
+		ACS_NamedExecuteWithResult("ExtStats_SpawnDamageDisplay", x, y, z, damage);
+	}
+}
+
+#DEFINE MAX_COLS 20
+
+#DEFINE DamBrick 480
+#DEFINE DamTan 481
+#DEFINE DamGray 482
+#DEFINE DamGreen 483
+#DEFINE DamBrown 484
+#DEFINE DamGold 485
+#DEFINE DamRed 486
+#DEFINE DamBlue 487
+#DEFINE DamOrange 488
+#DEFINE DamWhite 489
+#DEFINE DamYellow 490
+#DEFINE DamBlack 491
+#DEFINE DamLightBlue 492
+#DEFINE DamCream 493
+#DEFINE DamOlive 494
+#DEFINE DamDarkGreen 495
+#DEFINE DamDarkBrown 496
+#DEFINE DamPurple 497
+#DEFINE DamDarkGray 498
+#DEFINE DamCyan 499
+#DEFINE DamDarkRed 500
+
+Script "ExtStats_DamageDisplayCOL" OPEN CLIENTSIDE {
+	CreateTranslation(DamBrick, 0:255=%[0,0,0]:[1.00, 0.60, 0.50]);
+	CreateTranslation(DamTan, 0:255=%[0,0,0]:[0.80, 0.70, 0.55]);
+	CreateTranslation(DamGray, 0:255=%[0,0,0]:[0.80, 0.80, 0.80]);
+	CreateTranslation(DamGreen, 0:255=%[0,0,0]:[0.00, 0.80, 0.00]);
+	CreateTranslation(DamBrown, 0:255=%[0,0,0]:[0.60, 0.40, 0.20]);
+	CreateTranslation(DamGold, 0:255=%[0,0,0]:[1.00, 0.65, 0.20]);
+	CreateTranslation(DamRed, 0:255=%[0,0,0]:[1.00, 0.00, 0.00]);
+	CreateTranslation(DamBlue, 0:255=%[0,0,0]:[0.12, 0.12, 1.00]);
+	CreateTranslation(DamOrange, 0:255=%[0,0,0]:[0.80, 0.35, 0.00]);
+	CreateTranslation(DamWhite, 0:255=%[0,0,0]:[1.00, 1.00, 1.00]);
+	CreateTranslation(DamYellow, 0:255=%[0,0,0]:[0.93, 0.93, 0.20]);
+	CreateTranslation(DamBlack, 0:255=%[0,0,0]:[0.25, 0.25, 0.25]);
+	CreateTranslation(DamLightBlue, 0:255=%[0,0,0]:[0.70, 0.70, 1.00]);
+	CreateTranslation(DamCream, 0:255=%[0,0,0]:[1.00, 0.80, 0.70]);
+	CreateTranslation(DamOlive, 0:255=%[0,0,0]:[0.70, 0.75, 0.50]);
+	CreateTranslation(DamDarkGreen, 0:255=%[0,0,0]:[0.00, 0.55, 0.00]);
+	CreateTranslation(DamDarkRed, 0:255=%[0,0,0]:[0.50, 0.00, 0.00]);
+	CreateTranslation(DamDarkBrown, 0:255=%[0,0,0]:[0.40, 0.30, 0.10]);
+	CreateTranslation(DamPurple, 0:255=%[0,0,0]:[0.80, 0.20, 0.80]);
+	CreateTranslation(DamDarkGray, 0:255=%[0,0,0]:[0.50, 0.50, 0.50]);
+	CreateTranslation(DamCyan, 0:255=%[0,0,0]:[0.00, 0.85, 0.85]);
+}
+
+Script "ExtStats_SpawnDamageDisplay" (int x, int y, int z, int damage) CLIENTSIDE {
+	int cpn = ConsolePlayerNumber();
+	if(GetUserCVar(cpn, "exst_damageDisplay") && damage > 0) {
+		int mode = GetUserCVar(cpn, "exst_damageDisplayVel");
+		int option = GetUserCVar(cpn, "exst_dsd_damageDisplayMode");
+		int _max = 1;
+		if(damage >= 10000) _max = 5;
+		else if(damage >= 1000) _max = 4;
+		else if(damage >= 100) _max = 3;
+		else if(damage >= 10) _max = 2;
+		int var = GetUserCVar(cpn, "exst_damageDisplayCol");
+		int col = var + DamBrick;
+		if (var == -1)
+			col = random(DamBrick, DamDarkRed);
+		
+		int velX = random(-0.25, 0.25);
+		int velY = random(-0.25, 0.25);
+		int velZ = 0.25;
+		int thr = random(-4, -2);
+		
+		switch(mode) {
+			case 1: // toss
+				int posDiffY = GetActorY(0) - y;
+				int posDiffX = GetActorX(0) - x;
+				int ang = ((atan2(posDiffY, posDiffX) + 360.0) % 360.0) + (random(-5, 5) * 0.15);
+				velY = sin(ang);
+				velX = cos(ang);
+				velZ = random(3, 4) * 0.25;
+			break;
+		}
+		
+		//int scale = GetUserCVar(cpn, "exst_damageDisplayScale");
+		//int scaleMul = (_max * scale);
+		for(int i = 1; i <= _max; i++) {
+			int pos = _max - i;
+			if(pos < 0) pos = 0;
+			if(_max == 1) pos = 0;
+			int digit = GetDigit(damage, pos);
+			//Log(i:pos, s: " - digit ", i:digit);
+			
+			str actor = StrParam(s:"ExtStats_DamageDisplay_", s:DamageDisplay_Names[option], s:"_", i:_max);
+			int u = UniqueTID();
+			SpawnForced(actor, x, y, z, u);
+			SetActivator(u);
+			SetUserVariable(0, "user_digitThr", thr);
+			
+			/*
+			if(scale > 0.0) {
+				int newScale = scaleMul;
+				SetActorProperty(u, APROP_ScaleX, GetActorProperty(u, APROP_ScaleX) * (newScale));
+				SetActorProperty(u, APROP_ScaleY, GetActorProperty(u, APROP_ScaleY) * (newScale));
+			}
+			*/
+			SetActorVelocity(0, velX, velY, velZ, 0, 0);
+			Thing_SetTranslation(0, col);
+			SetActorState(0, StrParam(s:"Spr",i:pos+1),1);
+			SetActorState(0, StrParam(s:"Digit",i:digit),0);
+		}
+	}
+}

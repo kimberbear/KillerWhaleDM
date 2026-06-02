@@ -1,0 +1,65 @@
+// [Binary] This may have more uses later, but
+// for now it defines the global variables/functions for tracking stats.
+
+// this stores the wep actors into a list and use count
+global str 54: stats_weps_str[];
+global int 55: stats_weps_index[];
+global int 56: stats_weps_max_index;
+
+// this stores the class actors into a list and use count
+global str 57: stats_class_str[];
+global int 58: stats_class_index[];
+global int 59: stats_class_max_index;
+
+Function Void ResetStats(Void)
+{
+	For(Int i = 0; i < stats_weps_max_index; i++) {
+		stats_weps_str[i] = "";
+		stats_weps_index[i] = 0;
+	}
+	stats_weps_max_index = 0;
+	For(i = 0; i < stats_class_max_index; i++) {
+		stats_class_str[i] = "";
+		stats_class_index[i] = 0;
+	}
+	stats_class_max_index = 0;
+}
+
+// Tracking stats
+Function Void TrackWeapon(int pNum, Str wep)
+{
+	int ID = -1;
+	For(Int i = 0; i < stats_weps_max_index; i++) {
+		// Found it in the array!!1
+		If(!StrICmp(stats_weps_str[i], wep)) {
+			ID = i;
+		}
+	}
+	if(ID == -1) {
+		stats_weps_str[stats_weps_max_index] = wep;
+		ID = stats_weps_max_index;
+		stats_weps_max_index++;
+	}
+	if(ID != -1) {
+		stats_weps_index[ID] += 1;
+	}
+}
+
+Function Void TrackClass(int pNum, Str wep)
+{
+	int ID = -1;
+	For(Int i = 0; i < stats_class_max_index; i++) {
+		// Found it in the array!!1
+		If(!StrICmp(stats_class_str[i], wep)) {
+			ID = i;
+		}
+	}
+	if(ID == -1) {
+		stats_class_str[stats_class_max_index] = wep;
+		ID = stats_class_max_index;
+		stats_class_max_index++;
+	}
+	if(ID != -1) {
+		stats_class_index[ID] += 1;
+	}
+}

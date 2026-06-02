@@ -3,3 +3,23 @@ user int cl_CWDSD_HitsoundVolume = 80;
 
 user int cl_CWDSD_Killsound = 1;
 user int cl_CWDSD_KillsoundVolume = 80;
+
+user bool exst_notification = true;
+
+//0 = none, 1 = notification, 2 = notif + sound
+user int exst_notifyAllSecrets = 2;
+
+//0 = none, 1 = notification, 2 = notif + sound, 3 = notif + sound + log who killed the last monster
+user int exst_notifyAllMonsters = 3;
+
+user bool exst_damageDisplay = true;
+user int exst_damageDisplayVel = 1;
+user float exst_damageDisplayScale = 0.05;
+user int exst_dsd_damageDisplayMode = 2;
+user int exst_damageDisplayCol = -1;
+
+server bool exst_resetStats = true;
+server bool exst_logStats = false; //temp
+server bool exst_monsterNotify = false;
+server bool exst_secretNotify = true;
+server bool exst_Everything = true; // Except damage display

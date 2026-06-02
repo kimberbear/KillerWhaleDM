@@ -1,0 +1,6 @@
+// [Binary] Temporary strings for the server to set
+// so CLIENTSIDE scripts work.
+// (do NOT remove them)
+server noarchive string exst_tempTop0;
+server noarchive string exst_tempTop1;
+server noarchive string exst_tempTop2;

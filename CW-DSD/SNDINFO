@@ -79,6 +79,9 @@ misc/land "Sounds/land.ogg"
 murky/cloak "Sounds/spy_cloak.wav"
 murky/uncloak "Sounds/spy_uncloak.wav"
 
+$volume murky/cloak 2.0
+$volume murky/uncloak 2.0
+
 whale/pain1 "Sounds/whales/whalepain1.ogg"
 whale/pain2 "Sounds/whales/whalepain2.ogg"
 whale/pain3 "Sounds/whales/whalepain3.ogg"

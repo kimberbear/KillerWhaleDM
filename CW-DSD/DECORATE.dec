@@ -1,3 +1,5 @@
+#include "Decorate/extstats/DamageNumbers.txt"
+
 #include "Decorate/Bases.dec"
 #include "Decorate/FX.dec"
 #include "Decorate/Player.dec"

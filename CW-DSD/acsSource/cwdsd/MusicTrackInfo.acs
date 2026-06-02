@@ -1,4 +1,3 @@
-#include "zcommon.acs"
 #define HUDMSG_TRACKINFO 676
 
 function void displayTrackCard(int trackTitle, int trackArtist, int trackSource) {
@@ -8,5 +7,10 @@ function void displayTrackCard(int trackTitle, int trackArtist, int trackSource)
 }
 
 script "showMusicCard" (int trackTitle, int trackArtist, int trackSource) {
-	displayTrackCard(trackTitle,trackArtist,trackSource);
+    int i;
+    for (i = 0; i < PlayerCount(); i++)
+    {
+        SetActivatorToPlayer(i);
+		displayTrackCard(trackTitle,trackArtist,trackSource);
+	}
 }

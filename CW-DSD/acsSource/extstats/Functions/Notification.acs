@@ -1,0 +1,11 @@
+// [Binary] Notify players to use a keybind to open the menu on connect.
+Script "ExStats_Notifier" OPEN CLIENTSIDE {
+	If(!GetCVar("exst_Everything")) Terminate;
+	if(GetUserCvar(ConsolePlayerNumber(), "exst_notification")) {
+		Log (
+			s:StrParam (
+				s:"\ccExtra Stats Enabled. Type \cg!exstats \ccin console for options."
+			)
+		);
+	}
+}

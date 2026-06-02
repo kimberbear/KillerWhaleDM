@@ -162,6 +162,17 @@ map DM5 "Magma Processing"
 	EnterPic = BGDM1EX
 	GameMode = "deathmatch"
 }
+
+map DMCTF4 "Mt. Moby Cliffedge (DM)"
+{
+	sky1 = "VOLCNSKY",0
+	//Fade = e1d3c8
+	GameMode = "deathmatch"
+	ExitPic = BGCTF4
+	EnterPic = BGCTF4
+}
+
+
 /*
 
 // sucks as of 26/05/26

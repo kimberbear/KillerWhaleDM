@@ -1,6 +1,3 @@
-#library "BossTransforms.acs"
-#include "zcommon.acs"
-
 bool BossActive = false;
 int bossType;
 int bossTextY = 0.2;

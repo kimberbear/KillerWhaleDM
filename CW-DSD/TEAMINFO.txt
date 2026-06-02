@@ -3,7 +3,7 @@ ClearTeams
 
 Team "Red"
 {
-	PlayerColor "e6 45 39"
+	PlayerColor "ff 00 00"
 	TextColor "Red"
 	RailColor "FF 00 00"
 
@@ -19,7 +19,7 @@ Team "Red"
 
 Team "Blue"
 {
-	PlayerColor "4f a4 b8"
+	PlayerColor "00 00 ff"
 	TextColor "Blue"
 	RailColor "00 00 FF"
 

@@ -1,0 +1,79 @@
+OptionMenu "ExtraStatsMenu"
+{
+	Title "Extra Stats"
+	StaticText " "
+	StaticText  "Client Options", 1
+	Option "Show Notification on Map load", "exst_notification", "YesNo"
+	Option "Notify on All Secrets", "exst_notifyAllSecrets", "ExtraStats_SecretNotif"
+	Option "Notify on All Monsters Killed", "exst_notifyAllMonsters", "ExtraStats_MonsterNotif"
+	Option "Damage Display", "exst_damageDisplay", "OnOff"
+	Option "Damage Display Font", "exst_dsd_damageDisplayMode", "DamFonts"
+	Option "Damage Display Color", "exst_damageDisplayCol", "DamCol"
+	Option "Damage Display Velocity", "exst_damageDisplayVel", "DamVel"
+	//Slider "Damage Display Damage Scale", "exst_damageDisplayScale", 0.0, 1.25, 0.01
+	StaticText " "
+	StaticText  "Server Options", 1
+	Option "Log Stats On MapSwitch", "exst_logStats", "OnOff"
+	Option "Reset Stats On MapSwitch", "exst_resetStats", "OnOff"
+	Option "Monster Notifier (Server)", "exst_monsterNotify", "OnOff"
+	Option "Secret Notifier (Server)", "exst_secretNotify", "OnOff"
+	StaticText " "
+	Option "Functionality of the entire mod", "exst_Everything", "OnOff"
+	StaticText "If the game is lagging for any reason with this, turn this off."
+	StaticText " "
+}
+OptionValue "ExtraStats_SecretNotif"
+{
+	0, "No"
+	1, "Notification Only"
+	2, "Notification + Sound"
+}
+OptionValue "ExtraStats_MonsterNotif"
+{
+	0, "No"
+	1, "Notification Only"
+	2, "Notification + Sound"
+	3, "Notif., Sound, Log who killed last monster"
+}
+
+OptionValue "DamFonts"
+{
+	0, "Big"
+	1, "Small"
+	2, "Flat"
+	3, "Giant"
+}
+
+OptionValue "DamVel"
+{
+	0, "Float"
+	1, "Toss"
+	
+}
+
+// thankfully notepad++ macros exist
+OptionValue "DamCol"
+{
+	-1, "Random"
+	0, "\caBrick"
+	1, "\cbTan"
+	2, "\ccGray"
+	3, "\cdGreen"
+	4, "\ceBrown"
+	5, "\cfGold"
+	6, "\cgRed"
+	7, "\chBlue"
+	8, "\ciOrange"
+	9, "\cjWhite"
+	10, "\ckYellow"
+	11, "\cmBlack"
+	12, "\cnLight Blue"
+	13, "\coCream"
+	14, "\cpOlive"
+	15, "\cqDark Green"
+	16, "\csDark Brown"
+	17, "\ctPurple"
+	18, "\cuDark Gray"
+	19, "\cvCyan"
+	20, "\crDark Red"
+}

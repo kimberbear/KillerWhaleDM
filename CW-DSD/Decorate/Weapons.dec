@@ -31,13 +31,16 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 		
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
 		// A_FireBullets(8,6,8,18,"CWDM_bulletPuff",FBF_NORANDOM)
-		TNT1 A 0 A_FireBullets (-4.0, 0, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (4.0, 0, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (-2.6, -1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (2.6, -1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (1.4, 1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (-1.4, 1.5, -1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (0, 0, 1, 18, "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		// furthest pellets
+		TNT1 A 0 A_FireBullets (-4.0, 0, -1, (18), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (4.0, 0, -1, (18), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-2.6, -1.5, -1, (14), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (2.6, -1.5, -1, (14), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		// closest pellets
+		TNT1 A 0 A_FireBullets (1.4, 1.5, -1, (12), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-1.4, 1.5, -1, (12), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		// dead centre
+		TNT1 A 0 A_FireBullets (0, 0, 1, (9), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
 
 		SHGN B 0 A_Light0
 		SHGN C 4
@@ -47,13 +50,13 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 		Goto Ready
 	QuadFire:
 		//SHGN B 1 BRIGHT A_FireBullets(8,6,8,18,"CWDM_quadPuff",FBF_NORANDOM)
-		TNT1 A 0 	A_FireBullets (-4.0, 0, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (4.0, 0, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (-2.6, -1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (2.6, -1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (1.4, 1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (-1.4, 1.5, -1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (0, 0, 1, 14, "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 	A_FireBullets (-4.0, 0, -1, (18), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (4.0, 0, -1, (18), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (-2.6, -1.5, -1, (14), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (2.6, -1.5, -1, (14), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (1.4, 1.5, -1, (12), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (-1.4, 1.5, -1, (12), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (0, 0, 1, (9), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
 		TNT1 A 0 A_PlaySound("weapons/quadattack",CHAN_7  )
 		SHGN B 0 A_Light0
 		SHGN C 4
@@ -102,21 +105,23 @@ ACTOR CWDM_rifle: CWDM_weapon
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
-		RFLE B 1 BRIGHT A_FireBullets(2,2,1,30,"CWDM_bulletPuff",FBF_NORANDOM )
+		RFLE B 1 BRIGHT A_FireBullets(3,4,-1,(15),"CWDM_bulletPuff",FBF_NORANDOM )
 		RFLE B 0 A_Light0
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
 		Goto Ready
 	QuadFire:
-		RFLE B 1 BRIGHT A_FireBullets(2,2,1,30,"CWDM_quadPuff",FBF_NORANDOM )
+		RFLE B 1 BRIGHT A_FireBullets(3,4,-1,(15),"CWDM_quadPuff",FBF_NORANDOM )
 		TNT1 A 0 A_PlaySound("weapons/quadattack",CHAN_7  )
 		RFLE B 0 A_Light0
 		RFLE CCA 1
 		RFLE A 0 A_ReFire
 		Goto Ready
 	Reload:
+		RFLE A 0 A_JumpIfInventory("CWDM_rifleShotCount",1,"ActualReload")
+		goto ready
+	ActualReload:
 		RFLE A 0 A_TakeInventory("CWDM_rifleShotCount",24)
-
 		RFLE ADEFGHI 2
 		TNT1 A 0 A_PlaySound("weapons/weaponopen")
 		RFLE JKLMNOP 2
@@ -190,7 +195,7 @@ ACTOR CWDM_brewGrenade: grenade
         TNT1 A 0 A_Quake(3, 4, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
-		TNT1 A 0 A_Explode((120),128)
+		TNT1 A 0 A_Explode((110),128)
 		TNT1 A 0 A_CheckFloor("FloorEX")
         TNT1 A 0 A_SpawnItem("CWDM_smallExplosion")
 		TNT1 A 25 A_PlaySound("misc/explode", CHAN_AUTO)
@@ -256,7 +261,7 @@ ACTOR CWDM_grenadeLauncher: CWDM_weapon
 
 Actor FlareProjectile
 {
-    Damage (85)
+    Damage (100)
     Radius 8
     Height 8
     Speed 70
@@ -274,6 +279,8 @@ Actor FlareProjectile
         TNT1 A 0 A_Quake(2, 8, 0, 1024, "dsnone")
         TNT1 A 0 A_Quake(1, 12, 0, 1024, "dsnone")
         //TNT1 A 0 A_SpawnItem("CWDM_smallExplosion") 
+		//make sure to get rid of the line below if you uncomment the explosion!
+		TNT1 AAAA 0 A_SpawnItemEX("CWDM_dustCloud", random(-20, 20), random(-20, 20), random(-20, 20),0,0,0 , random(0,360))
 		TNT1 A 0 A_explode((70))
         TNT1 A 25 A_PlaySound("whale/flaregunexplode", CHAN_5)
         Stop
@@ -282,7 +289,7 @@ Actor FlareProjectile
 
 actor CWDM_murkyCloak : PowerInvisibility
 {
-    Powerup.Duration 35
+    Powerup.Duration 2
 	Powerup.mode Translucent
 	Powerup.Strength 100
 }
@@ -290,7 +297,7 @@ actor CWDM_murkyCloak : PowerInvisibility
 actor CWDM_murkyCloakGiver : PowerupGiver
 {
     Powerup.Type "CWDM_murkyCloak"   
-    Powerup.Duration 35
+    Powerup.Duration 2
     +Inventory.AUTOACTIVATE
     States
     {
@@ -338,7 +345,8 @@ ACTOR CWDM_flare: CWDM_weapon
 		FLGN BBCCA 3
 		FLGN DEFGHIJK 2
 		FLGN B 0 A_PlayWeaponSound("weapons/flareload")
-		FLGN LMNOPQ 2
+		FLGN LMN 2
+		FLGN OPQ 2 A_WeaponReady
 		Goto Ready
 	QuadFire:
 		TNT1 A 0 A_PlaySound("weapons/quadattack",CHAN_7  )
@@ -348,22 +356,33 @@ ACTOR CWDM_flare: CWDM_weapon
 		FLGN BBCCA 3
 		FLGN DEFGHIJK 2
 		FLGN B 0 A_PlayWeaponSound("weapons/flareload")
-		FLGN LMNOPQ 2
+		FLGN LMN 2
+		FLGN OPQ 2 A_WeaponReady
 		Goto Ready
 	Altfire:
 		TNT1 A 0 A_JumpIfInventory("CWDM_isCloaked",1,"holdingInvis")
+		TNT1 A 0 A_JumpIfInventory("RedFlag",1,"ready")
+		TNT1 A 0 A_JumpIfInventory("BlueFlag",1,"ready")
+		TNT1 A 0 A_JumpIfInventory("GoldFlag",1,"ready")
+		TNT1 A 0 A_JumpIfInventory("GreenFlag",1,"ready")
+		TNT1 A 0 A_JumpIfInventory("WhiteFlag",1,"ready")
 		TNT1 A 0 a_giveinventory("CWDM_isCloaked",1)
 		TNT1 A 0 a_playsound("murky/cloak")
-		TNT1 AAAAA 2
+		FLGC ABCDE 3
 		goto holdingInvis
 	holdingInvis:
 		TNT1 A 1 a_giveinventory("CWDM_murkyCloakGiver",1)
+		TNT1 A 0 A_JumpIfInventory("RedFlag",1,"stopInvis")
+		TNT1 A 0 A_JumpIfInventory("BlueFlag",1,"stopInvis")
+		TNT1 A 0 A_JumpIfInventory("GoldFlag",1,"stopInvis")
+		TNT1 A 0 A_JumpIfInventory("GreenFlag",1,"stopInvis")
+		TNT1 A 0 A_JumpIfInventory("WhiteFlag",1,"stopInvis")
 		TNT1 A 0 a_refire
 		goto stopInvis
 	stopInvis:
 		TNT1 A 0 a_takeinventory("CWDM_isCloaked",1)
 		TNT1 A 0 a_playsound("murky/uncloak")
-		TNT1 AAAAA 2
+		FLGC EDCBA 3
 		goto ready
 	}
 }
@@ -445,19 +464,19 @@ actor CWDM_stanRevolver : CWDM_weapon
 		REVV A 0 A_Light2
 		REVV A 0 A_Quake(3,5,0,5)
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
-		REVV B 1 BRIGHT A_FireBullets(2,2,1,128,"CWDM_bulletPuff",FBF_NORANDOM)
+		REVV B 1 BRIGHT A_FireBullets(2,2,1,(64),"CWDM_bulletPuff",FBF_NORANDOM)
 		REVV C 0 A_Light0
 		REVV CDDCF 2
 		REVV F 0 A_Refire
-		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,9)
+		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
 		goto ready
 	QuadFire:
-		REVV B 1 BRIGHT A_FireBullets(2,2,1,128,"CWDM_quadPuff",FBF_NORANDOM)
+		REVV B 1 BRIGHT A_FireBullets(2,2,1,(64),"CWDM_quadPuff",FBF_NORANDOM)
 		TNT1 A 0 A_PlaySound("weapons/quadattack",CHAN_7  )
 		REVV C 0 A_Light0
 		REVV CDDCF 2
 		REVV F 0 A_Refire
-		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,9)
+		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
 		goto ready
 	/*
 	AltFire:
@@ -581,7 +600,7 @@ actor CWDM_smasherWeapon : CWDM_weapon
 		SSMW F 2 a_firecustommissile("CWDM_smasherPunchProjectile")
 		SSMW G 6
 		SSMW C 4
-		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,6)
 		goto ready
 	PunchLeft:
 		TNT1 A 0 A_TakeInventory("CWDM_smasherPunchOnce", 1)
@@ -592,7 +611,7 @@ actor CWDM_smasherWeapon : CWDM_weapon
 		SSML C 2 a_firecustommissile("CWDM_smasherPunchProjectile")
 		SSML D 6
 		SSML B 4
-		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,6)
 		goto ready
 	Uppercut:
 		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,1)
@@ -602,7 +621,7 @@ actor CWDM_smasherWeapon : CWDM_weapon
 		TNT1 A 2
 		SSMU B 2 a_firecustommissile("CWDM_smasherPunchProjectile")
 		SSMU CA 8
-		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,7)
+		TNT1 A 0 ACS_NamedExecute("setPlayerSpeed",0,6)
 		goto ready
 	}
 }

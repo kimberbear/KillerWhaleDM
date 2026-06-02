@@ -1,6 +1,3 @@
-#library "HitSound.acs"
-#include "zcommon.acs"
-
 // special thanks to the BYOC team for being a huge help in making the programming possible!
 // this script is based upon their hitsound code
 // without their work, i wouldn't have gotten this working

@@ -1,0 +1,36 @@
+Actor ExtStats_DamageDisplay_BaseFlat : ExtStats_DamageDisplay_Base {
+	Alpha 1.0
+	Scale 1.0
+}
+
+Actor ExtStats_DamageDisplay_Flat_0 : ExtStats_DamageDisplay_BaseFlat {States{
+Spawn: _F11 A 0 A_Recoil(0) Goto Frame
+}}
+Actor ExtStats_DamageDisplay_Flat_1 : ExtStats_DamageDisplay_BaseFlat {States{
+Spawn: _F21 A 0 A_Recoil(0) Goto Spr
+Spr2: _F22 "#" 0 A_Recoil(0) Goto Frame
+Spr3: _F23 "#" 0 A_Recoil(0) Goto Frame
+Spr4: _F24 "#" 0 A_Recoil(0) Goto Frame
+Spr5: _F25 "#" 0 A_Recoil(0) Goto Frame
+}}
+Actor ExtStats_DamageDisplay_Flat_2 : ExtStats_DamageDisplay_BaseFlat {States{
+Spawn: _F31 A 0 A_Recoil(0) Goto Spr
+Spr2: _F32 "#" 0 A_Recoil(0) Goto Frame
+Spr3: _F33 "#" 0 A_Recoil(0) Goto Frame
+Spr4: _F34 "#" 0 A_Recoil(0) Goto Frame
+Spr5: _F35 "#" 0 A_Recoil(0) Goto Frame
+}}
+Actor ExtStats_DamageDisplay_Flat_3 : ExtStats_DamageDisplay_BaseFlat {States{
+Spawn: _F41 A 0 A_Recoil(0) Goto Spr
+Spr2: _F42 "#" 0 A_Recoil(0) Goto Frame
+Spr3: _F43 "#" 0 A_Recoil(0) Goto Frame
+Spr4: _F44 "#" 0 A_Recoil(0) Goto Frame
+Spr5: _F45 "#" 0 A_Recoil(0) Goto Frame
+}}
+Actor ExtStats_DamageDisplay_Flat_4 : ExtStats_DamageDisplay_BaseFlat {States{
+Spawn: _F51 A 0 A_Recoil(0) Goto Spr
+Spr2: _F52 "#" 0 A_Recoil(0) Goto Frame
+Spr3: _F53 "#" 0 A_Recoil(0) Goto Frame
+Spr4: _F54 "#" 0 A_Recoil(0) Goto Frame
+Spr5: _F55 "#" 0 A_Recoil(0) Goto Frame
+}}

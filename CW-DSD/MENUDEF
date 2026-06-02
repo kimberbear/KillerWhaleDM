@@ -51,9 +51,12 @@ OptionValue KillSounds
 optionMenu "CWDM_ExperienceMenu"
 {
 	TITLE "Experience"
+	
+	Submenu "Extra Stats",		"ExtraStatsMenu"
+	StaticText ""
 	Option		"Free chasecam",		"cl_freechase",			"YesNo"
 	Option "Death camera",				"r_deathcamera", "OnOff"
-	StaticText ""
+	
 	
     StaticText "Hit sounds",1
 	Option "Sound type","cl_CWDSD_HitSound", "HitSounds"
@@ -273,7 +276,7 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "ALPHA VER. 31.05.26"
+	StaticText 64, 214, "ALPHA VER. 02.06.26"
 }
 
 OptionMenu CWDM_SoundOptions

@@ -1,22 +1,56 @@
+CAPTAIN WAYNE:
+  _____  ______ ______ _____                                           
+ |  __ \|  ____|  ____|  __ \                                          
+ | |  | | |__  | |__  | |__) |                                         
+ | |  | |  __| |  __| |  ___/                                          
+ | |__| | |____| |____| |                                              
+ |_____/|______|______|_|                                              
+  / ____|  ____|   /\                                                  
+ | (___ | |__     /  \                                                 
+  \___ \|  __|   / /\ \                                                
+  ____) | |____ / ____ \                                               
+ |_____/|______/_/    \_\____ _    _ __  __       _______ _____ _    _ 
+ |  __ \|  ____|   /\|__   __| |  | |  \/  |   /\|__   __/ ____| |  | |
+ | |  | | |__     /  \  | |  | |__| | \  / |  /  \  | | | |    | |__| |
+ | |  | |  __|   / /\ \ | |  |  __  | |\/| | / /\ \ | | | |    |  __  |
+ | |__| | |____ / ____ \| |  | |  | | |  | |/ ____ \| | | |____| |  | |
+ |_____/|______/_/    \_\_|  |_|  |_|_|  |_/_/    \_\_|  \_____|_|  |_|
+ 
+THIS IS A FAN-MADE PROJECT AND IS NOT AFFILIATED WITH OR ENDORSED BY CIARAN GAMES
+THIS GAME SHOULD NOT BE SOLD!
+https://discord.gg/ugCrkT2nxA
+
+If you like this game... Go show your support by buying a pirate ship!
+...or well, you can buy the game on Steam too.
+captain-wayne.com                                                        
+                                                                       
+EXTRASTATS
+----------
+Binary (@binarycode_)
+
 Programming
 -----------
-kimberbear
+testsubjectkim
 BYOC team (excellent resource and basis of hitsound system)
 
 Map design
 ----------
-kimberbear
+testsubjectkim
 Ciaran Games
 
 Art
 ---
 Ciaran Games
-kimberbear
+testsubjectkim
 
 Music & Sound
 -------------
-Ciaran Games
-Peter Hajba
+Ciaran Games	(music, most sounds)
+Peter Hajba		(big money OST)
+Valve			(various sounds)
+Mojang			(Minecraft hit sound)
+Capcom			(Megaman hit/kill sound)
+
 
 Playtesting
 -----------
@@ -27,18 +61,30 @@ Playtesting
 @fathead22
 @thegoldentail
 
+DON'T SEE YOUR NAME AND KNOW YOU PLAYTESTED?
+REACH OUT!
+https://discord.gg/ugCrkT2nxA
+@testsubjectkim
 
 Special Thanks
 --------------
 @ashtyn78 
 for logo sketch and title suggestion!
+
 @spectral_lantern 
 for the final logo!
+
 @mgrobing0 
+for being an og
+
 @zoeoftheapocalypse
 for the overwhelming support, 
 eagerness to hop on a server 
 and great feedback and suggestions!
+
 @extended_tangent
 for the help debugging and fixing acs
 i hate acs
+
+and the folks over at
+BYOC: Tennie's Choice

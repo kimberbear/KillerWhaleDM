@@ -1,0 +1,43 @@
+// [Binary] Notify when all monsters are killed.
+bool allMonsters = false;
+Script "ExtStats_AllMonstersReset" OPEN
+{
+	Delay(10);
+	allMonsters = false;
+}
+
+Script "ExtStats_AllMonstersGet" (int type, int arg1, int arg2) EVENT
+{
+	If(!GetCVar("exst_Everything")) Terminate;
+	If(!GetCVar("exst_monsterNotify")) Terminate;
+	if(type == GAMEEVENT_ACTOR_DAMAGED && !allMonsters)
+	{
+		int mtotal = GetLevelInfo(LEVELINFO_TOTAL_MONSTERS),
+			mkilled = GetLevelInfo(LEVELINFO_KILLED_MONSTERS);
+		
+		SetActivator(0, AAPTR_DAMAGE_SOURCE);
+		int who = PlayerNumber();
+		
+		SetActivator(0, AAPTR_DAMAGE_TARGET);
+		If(GetActorProperty(0, APROP_Health) - arg1 <= 0 && (ClassifyActor(0) & ACTOR_MONSTER) && CheckFlag(0, "COUNTKILL"))
+		{
+			If(mkilled + 1 >= mtotal)
+			{
+				allMonsters = true;
+				ACS_NamedExecuteWithResult("ExtStats_AllMonstersNotif", who);
+			}
+		}
+	}
+}
+// Due to above call, this is called for every player.
+Script "ExtStats_AllMonstersNotif" (int who) CLIENTSIDE
+{
+	int var = GetUserCVar(ConsolePlayerNumber(), "exst_notifyAllMonsters");
+	if (var >= 1)
+		Log(s:"\c-All monsters killed!");
+	if(var >= 2)
+		AmbientSound("extrastats/allmonsters", 127);
+	if (var >= 3)
+		Log(n:who+1, s:"\c- killed the last monster.");
+}
+

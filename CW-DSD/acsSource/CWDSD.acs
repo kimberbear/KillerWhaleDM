@@ -1,0 +1,7 @@
+#library "CWDSD"
+#include "ZCommon.acs"
+
+#include "Core.acs"
+#include "BossTransforms.acs"
+#include "HitSound.acs"
+#include "MusicTrackInfo.acs"

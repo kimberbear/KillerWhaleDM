@@ -12,7 +12,7 @@ actor CWDM_shotgunnerClass : CWDM_player
 	Player.Portrait "SGPORTR8"
 	Player.SoundClass "whale"
 	Player.ScoreIcon "SGICON"
-
+	Speed 0.8
 	States
 	{
 	Spawn:
@@ -325,6 +325,7 @@ actor CWDM_gunslingerClass : CWDM_player
 actor CWDM_bossClass : CWDM_player
 {
 	+NOSKIN
+	DamageFactor 0.75
 	//Health 500
 }
 
@@ -372,7 +373,7 @@ actor CWDM_smasherClass : CWDM_bossClass
 	Player.DisplayName "Sunken Smasher"
 	Height 72.0
 	Player.ViewHeight 64.0
-	Speed 0.75
+	Speed 0.6
 	player.jumpz 0
 	States
 	{

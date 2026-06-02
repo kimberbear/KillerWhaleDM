@@ -1,3 +1,5 @@
+
+base doom;
 Resolution 320,240;
 Height 0;
 
@@ -8,36 +10,34 @@ StatusBar normal, fullscreenoffsets, forcescaled
 	}
 	ELSE
 	{
-	
-	InInventory QuadDamage
-	{
-	DrawImage "OVR2QUAD",0,0;
-	DrawImage "OVRLQUAD",0,-100;
-	
-	DrawImage "OVRRQUAD",-100,0;
-	DrawImage "OVR0QUAD",-100,-100;
-	DrawNumber 3, SMALLFONT, untranslated, PowerupTime CWDM_skullOfPower, alignment(center), prefix("", "QUAD: "),-160,-20;
-	}
-	
-	//Health and Icon
-	//DrawImage "HLTHICON", -56 + center, -19;
+		InInventory QuadDamage
+		{
+			DrawImage "OVR2QUAD",0,0;
+			DrawImage "OVRLQUAD",0,-100;
+			
+			DrawImage "OVRRQUAD",-100,0;
+			DrawImage "OVR0QUAD",-100,-100;
+			DrawNumber 3, SMALLFONT, untranslated, PowerupTime CWDM_skullOfPower, alignment(center), prefix("", "QUAD: "),-160,-20;
+		}
+		
+		//Health and Icon
+		//DrawImage "HLTHICON", -56 + center, -19;
 
-	DrawImage "VALBG", 48, -48;
-	DrawNumber 3, DIALFONT, untranslated, Health, alignment(right),91,-46;
-	DrawString SMALLFONT, untranslated, "/200",91, -42,0,alignment(left);
-	
-	//DrawBar "KWHP_0", "KWHPBACK", health, vertical, 36, -58;
-	DrawImage translatable "KWHP_COL", 36, -58;
-	
-	//DrawString SMALLFONT, untranslated, playerclass, 91, -48,0,alignment(left);
-	
-	//Armor and Icon
-	DrawImage "VALBG", 35, -81;
-	DrawImage "MORAICON", 36 , -80;
-	DrawNumber 3, DIALFONT, untranslated, Armor, alignment(left), 56, -79;
-	
-	//DrawString SMALLFONT, WHITE, "FRAGS:",48, -18;
-	//DrawNumber 3, SMALLFONT, WHITE, Frags, 64, -18;
+		DrawImage "VALBG", 48, -48;
+		DrawNumber 3, DIALFONT, untranslated, Health, alignment(right),91,-46;
+		DrawString SMALLFONT, untranslated, "/200",91, -42,0,alignment(left);
+		
+		//DrawBar "KWHP_0", "KWHPBACK", health, vertical, 36, -58;
+		DrawImage translatable "KWHP_COL", 36, -58;
+		//DrawString SMALLFONT, untranslated, playerclass, 91, -48,0,alignment(left);
+		
+		//Armor and Icon
+		DrawImage "VALBG", 35, -81;
+		DrawImage "MORAICON", 36 , -80;
+		DrawNumber 3, DIALFONT, untranslated, Armor, alignment(left), 56, -79;
+		
+		//DrawString SMALLFONT, WHITE, "FRAGS:",48, -18;
+		//DrawNumber 3, SMALLFONT, WHITE, Frags, 64, -18;
 	}
 }
 

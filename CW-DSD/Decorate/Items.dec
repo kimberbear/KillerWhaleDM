@@ -197,7 +197,7 @@ actor CWDM_deathPack : CustomInventory
     States
     {
 	spawn:
-		FFIH A -1
+		FFIH A 350
 		loop
     Pickup:
         TNT1 A 0 A_GiveInventory("CWDM_smallHealthBonus", 1) // give health

@@ -1,0 +1,67 @@
+Actor ExtStats_DamageDisplay_Base
+{
+	Radius 8
+	Height 8
+	RenderStyle Translucent
+	Alpha 1.0
+	Scale 0.75
+	Gravity 0.1
+	+BRIGHT
+	+NOTONAUTOMAP
+	+NOBLOCKMAP
+	+DONTBLAST
+	+DONTREFLECT
+	+FORCEXYBILLBOARD
+	var int user_digitPlace;
+	var int user_digitValue;
+	var int user_digitThr;
+	States
+	{
+		Spawn:
+			TNT1 A 1
+		Goto Spr
+		Frame: // Digit value
+			"####" "#" 0 A_JumpIf(user_digitValue == 0, "Digit0")
+			"####" "#" 0 A_JumpIf(user_digitValue == 1, "Digit1")
+			"####" "#" 0 A_JumpIf(user_digitValue == 2, "Digit2")
+			"####" "#" 0 A_JumpIf(user_digitValue == 3, "Digit3")
+			"####" "#" 0 A_JumpIf(user_digitValue == 4, "Digit4")
+			"####" "#" 0 A_JumpIf(user_digitValue == 5, "Digit5")
+			"####" "#" 0 A_JumpIf(user_digitValue == 6, "Digit6")
+			"####" "#" 0 A_JumpIf(user_digitValue == 7, "Digit7")
+			"####" "#" 0 A_JumpIf(user_digitValue == 8, "Digit8")
+			"####" "#" 0 A_JumpIf(user_digitValue == 9, "Digit9")
+			"####" "#" 1
+		Goto FrameDone
+		Spr: // Digit count
+			"####" "#" 0 A_JumpIf(user_digitPlace == 1, "Spr2")
+			"####" "#" 0 A_JumpIf(user_digitPlace == 2, "Spr3")
+			"####" "#" 0 A_JumpIf(user_digitPlace == 3, "Spr4")
+			"####" "#" 0 A_JumpIf(user_digitPlace == 4, "Spr5")
+		Goto Frame
+		Spr2: Spr3: Spr4: Spr5: "####" "#" 0
+		Spr1: Spr0: //failsafes
+		Goto Frame
+		Digit0: "####" A 0 A_Recoil(0) Goto FrameDone
+		Digit1: "####" B 0 A_Recoil(0) Goto FrameDone
+		Digit2: "####" C 0 A_Recoil(0) Goto FrameDone
+		Digit3: "####" D 0 A_Recoil(0) Goto FrameDone
+		Digit4: "####" E 0 A_Recoil(0) Goto FrameDone
+		Digit5: "####" F 0 A_Recoil(0) Goto FrameDone
+		Digit6: "####" G 0 A_Recoil(0) Goto FrameDone
+		Digit7: "####" H 0 A_Recoil(0) Goto FrameDone
+		Digit8: "####" I 0 A_Recoil(0) Goto FrameDone
+		Digit9: "####" J 0 A_Recoil(0) Goto FrameDone
+		FrameDone:
+			"####" "##########" 1 BRIGHT A_FadeOut(0.02)
+			//"####" "#" 0 ThrustThingZ(0, user_digitThr, 0, 0)
+			"####" "##" 1 A_SetScale(ScaleX - 0.02, ScaleY - 0.04)
+			"####" "#" 1 BRIGHT A_FadeOut(0.02)
+		Wait
+	}
+}
+
+#include "Decorate/extstats/DamageNumbers/Big.txt"
+#include "Decorate/extstats/DamageNumbers/Small.txt"
+#include "Decorate/extstats/DamageNumbers/Flat.txt"
+#include "Decorate/extstats/DamageNumbers/Giant.txt"
