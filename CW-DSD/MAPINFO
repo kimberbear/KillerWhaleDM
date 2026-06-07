@@ -43,19 +43,20 @@ episode PROTO
 {
 	name = "Test map"
 }
+//hmmm....
+/*
 
-map MAP01 "Don't pick me!"
+// well i tried fixing it up some more but honestly- 
+// it's such an undertaking and frankly you could *never* get it
+// perfect or whatever. it's too hard.
+
+// testsubjectkim 07/06/26
+
+map EMIVITA "Emivita"
 {
+	sky1 = "SALTYSKY",0
 }
-
-//TOO BROKEN!
-
-// map EMIVITA "Emivita"
-// {
-// 	sky1 = "SALTYSKY",0
-// 	music = "music/viciousvenice.ogg"
-// }
-
+*/
 // map PROTO "Test map"
 // {
 // 	sky1 = "VOLCNSKY",0
@@ -98,6 +99,15 @@ map CTF4 "Mt. Moby Cliffedge"
 	ExitPic = BGCTF4
 	EnterPic = BGCTF4
 }
+
+
+map CTF5 "Warehouse (scuffed)"
+{
+	sky1 = "VOLCNSKY",0
+	Fade = 623f3f
+	GameMode = "ctf" 
+}
+
 /*
 map DM1OLD "Lava"
 {
@@ -117,6 +127,15 @@ map DM2 "Hangar"
 
 }
 */
+
+map MAP01 "Entryway (scuffed)"
+{
+	sky1 = "DASKY25",0
+	music = "music/cwvd/anchor_ingame.ogg"
+	OutsideFog = b05b44
+	GameMode = "deathmatch"
+}
+
 map DM2 "Hangar"
 {
 	sky1 = "VOLCNSKY",0
@@ -172,19 +191,13 @@ map DMCTF4 "Mt. Moby Cliffedge (DM)"
 	EnterPic = BGCTF4
 }
 
-
-/*
-
-// sucks as of 26/05/26
-// so i am disabling it
-
-map DM6 "Oil Rig"
+map DM6 "Oil Rig (scuffed)"
 {
 	sky1 = "SICKSKY",0
 	music = "music/rig_ingame.ogg"
 	Fade = 112735
 }
-*/
+
 map DM7 "Pool Day"
 {
 	sky1 = "BEACHSKY",0

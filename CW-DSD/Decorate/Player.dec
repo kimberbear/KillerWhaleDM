@@ -160,7 +160,7 @@ actor CWDM_murkymanClass : CWDM_player
 	Player.DisplayName "Murkyman"
 	Player.StartItem "CWDM_flare"
 	Player.StartItem "CWDM_isMurkyman"
-	Player.ColorRange 114, 122
+	Player.ColorRange 120, 122
 	Player.SoundClass "whale"
 	Player.ScoreIcon "MURICON"
 	States
