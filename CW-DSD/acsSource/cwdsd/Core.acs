@@ -31,6 +31,15 @@ script "playerGotQuad" (void) {
 		}
     }
 
+	SetActivatorToPlayer(ogActivator);
+    int ang = GetActorAngle(ogActivator) >> 8; 
+    int distance = 2.0;
+	
+	while (CheckInventory("QuadDamage") > 0) {
+		Spawn("CWDM_QuadTrail",GetActorX(ogActivator) - FixedMul(cos(ang), distance),GetActorY(ogActivator) - FixedMul(sin(ang), distance),GetActorZ(ogActivator),0,0);
+		delay(5);
+	}
+
 }
 
 /*

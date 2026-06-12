@@ -1,0 +1,9 @@
+pointlight quadLight
+{
+    color 1.0 0.1 0.83
+    size 192
+    offset 0 60 0//The offset for the light in map units. 
+	//This is relative to a thing's sprite, not the world, so the Y axis is height and the Z axis is depth. Defaults to 0,0,0.
+	//attenuate 1// Attenuated lights illuminate surfaces depending on surface angle — surfaces that are not facing the light will get progressively less illuminated.
+
+}

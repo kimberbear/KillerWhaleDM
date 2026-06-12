@@ -45,7 +45,7 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 		SHGN B 0 A_Light0
 		SHGN C 4
 		SHGN DD 4
-		//TNT1 A 0 A_PlaySound("weapons/weaponopen",CHAN_AUTO)
+		TNT1 A 0 A_PlaySound("weapons/weaponopen",CHAN_AUTO)
 		SHGN EE 4 
 		Goto Ready
 	QuadFire:
@@ -61,7 +61,7 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 		SHGN B 0 A_Light0
 		SHGN C 4
 		SHGN DD 4
-		//TNT1 A 0 A_PlaySound("weapons/weaponopen",CHAN_AUTO)
+		TNT1 A 0 A_PlaySound("weapons/weaponopen",CHAN_AUTO)
 		SHGN EE 4 
 		goto Ready
 	}

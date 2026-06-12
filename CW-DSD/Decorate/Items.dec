@@ -238,7 +238,7 @@ actor CWDM_skullOfPowerPickup : CustomInventory 17002
     +INVENTORY.ALWAYSPICKUP
     Inventory.Pickupsound "powerup"
     Inventory.PickupMessage "Quad Damage!"
-    Inventory.RespawnTics  1400 
+    Inventory.RespawnTics  5250 
 	scale 2
     Radius 48
     Height 48
