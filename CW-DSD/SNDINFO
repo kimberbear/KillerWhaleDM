@@ -210,6 +210,8 @@ killsound5 			"Sounds/hitsounds/pipesound.ogg"
 misc/waterstep "sounds/misc/waterstep.ogg"
 splash	"sounds/splash.ogg"
 
+quadready "sounds/quadready.ogg"
+
 //-----------------------------------------------------
 // announcer
 //-----------------------------------------------------

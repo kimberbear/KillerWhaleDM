@@ -91,16 +91,6 @@ map CTF3 "Crossroads"
 	GameMode = "ctf"
 }
 
-map CTF4 "Mt. Moby Cliffedge"
-{
-	sky1 = "VOLCNSKY",0
-	//Fade = e1d3c8
-	GameMode = "ctf"
-	ExitPic = BGCTF4
-	EnterPic = BGCTF4
-}
-
-
 map CTF5 "Warehouse (scuffed)"
 {
 	sky1 = "VOLCNSKY",0
@@ -127,14 +117,6 @@ map DM2 "Hangar"
 
 }
 */
-
-map MAP01 "Entryway (scuffed)"
-{
-	sky1 = "DASKY25",0
-	music = "music/cwvd/anchor_ingame.ogg"
-	OutsideFog = b05b44
-	GameMode = "deathmatch"
-}
 
 map DM2 "Hangar"
 {
@@ -182,7 +164,7 @@ map DM5 "Magma Processing"
 	GameMode = "deathmatch"
 }
 
-map DMCTF4 "Mt. Moby Cliffedge (DM)"
+map DMCTF4 "Mt. Moby Cliffedge"
 {
 	sky1 = "VOLCNSKY",0
 	//Fade = e1d3c8

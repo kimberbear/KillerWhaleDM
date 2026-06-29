@@ -266,19 +266,6 @@ OptionMenu KWDM_PlayerColours
 	ColorPicker	"Enemy color",			"cl_enemycolor"
 }
 
-LISTMENU "MainMenu"
-{
-	StaticPatch 94, 2, "M_DOOM"
-	Position 97, 152
-	TextItem 	"Multiplayer", 	"m", 	"KWDMmultiplayerMenu"
-	TextItem	"Player Setup",	"p",	"CWDM_PlayerMenu"
-	TextItem 	"Options",		"o",	"CWDM_OptionsMenu"
-	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
-	Position 0, 0
-	Font "SmallFont", "White"
-	StaticText 64, 214, "ALPHA VER. 12.06.26"
-}
-
 OptionMenu CWDM_SoundOptions
 {
 	Title "SOUND OPTIONS"
@@ -320,4 +307,17 @@ OptionMenu CWDM_SoundOptions
 	Submenu "Advanced options",			"AdvSoundOptions"
 	//Submenu "Module replayer options",	"ModReplayerOptions"
 	Submenu "Voice chat options",		"ZA_VoiceChatOptions" // [AK]
+}
+
+LISTMENU "MainMenu"
+{
+	StaticPatch 94, 2, "M_DOOM"
+	Position 97, 152
+	TextItem 	"Multiplayer", 	"m", 	"KWDMmultiplayerMenu"
+	TextItem	"Player Setup",	"p",	"CWDM_PlayerMenu"
+	TextItem 	"Options",		"o",	"CWDM_OptionsMenu"
+	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
+	Position 0, 0
+	Font "SmallFont", "White"
+	StaticText 64, 214, "ALPHA VER. 29.06.26"
 }
