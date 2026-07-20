@@ -185,8 +185,8 @@ ACTOR CWDM_Shotgun : CWDM_weapon
 		SGVS KLMN 3
 		goto Ready
 	Flash:
-		TNT1 A 1 A_SetPitch(pitch-1)
-		TNT1 AAAA 1 A_SetPitch(pitch+.25)
+		TNT1 A 1 A_SetPitch(pitch-1.5)
+		TNT1 AAAAAA 1 A_SetPitch(pitch+.25)
 		Goto LightDone
 	}
 }
