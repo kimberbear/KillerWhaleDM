@@ -72,6 +72,37 @@ ACTOR CWDM_Shotgun: CWDM_weapon
 }
 */
 
+ACTOR CWDM_BulletCasing
+{
+	Radius 2
+	Height 2
+	Speed 10
+	gravity 0.5
+	scale 0.4
+	Projectile
+	Bouncetype doom
+	ProjectileKickBack 0
+	+THRUACTORS
+	-NOGRAVITY
+	+BOUNCEONWALLS
+	+BOUNCEONCEILINGS
+	+FORCEXYBILLBOARD
+	+CLIENTSIDEONLY
+}
+
+ACTOR CWDM_ShellCasing : CWDM_BulletCasing
+{
+	States
+	{
+	Spawn:
+		CASI A -1
+		loop
+	Death:
+		CASI AAAAAAAAAAAA 2 A_FadeOut(0.1)
+		stop
+	}
+}
+
 ACTOR CWDM_Shotgun : CWDM_weapon 
 {
 	Obituary "$OBSHGUN"
@@ -103,44 +134,60 @@ ACTOR CWDM_Shotgun : CWDM_weapon
 	Fire:
 		SGVS B 0 A_Light2
 		SGVS B 0 A_Quake(2,5,0,5)
-		SGVS B 2 BRIGHT
+		SGVS B 1 BRIGHT
+		TNT1 A 0 A_GunFlash
+		
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",-4.0,false,0.0,0.0,2,0)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",4.0,false,0.0,0.0,2,0)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",-2.6,false,0.0,0.0,2,-1.5)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",2.6,false,0.0,0.0,2,-1.5)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",1.4,false,0.0,0.0,2,1.5)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",-1.4,false,0.0,0.0,2,1.5)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",0,false,0.0,0.0,2,0)
+		
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
 		// A_FireBullets(8,6,8,18,"CWDM_bulletPuff",FBF_NORANDOM)
 		// furthest pellets
-		TNT1 A 0 A_FireBullets (-4.0, 0, -1, (18), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (4.0, 0, -1, (18), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (-2.6, -1.5, -1, (14), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (2.6, -1.5, -1, (14), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-4.0, 0, -1, (20), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (4.0, 0, -1, (20), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-2.6, -1.5, -1, (16), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (2.6, -1.5, -1, (16), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
 		// closest pellets
-		TNT1 A 0 A_FireBullets (1.4, 1.5, -1, (12), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0 A_FireBullets (-1.4, 1.5, -1, (12), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (1.4, 1.5, -1, (14), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (-1.4, 1.5, -1, (14), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
 		// dead centre
-		TNT1 A 0 A_FireBullets (0, 0, 1, (9), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 A_FireBullets (0, 0, 1, (10), "CWDM_bulletPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
 
 		SGVS B 0 A_Light0
-		SGVS DEF 3
+		SGVS CDEFG 3
 		TNT1 A 0 A_PlaySound("weapons/weaponopen",CHAN_AUTO)
-		SGVS GH 3
+		TNT1 A 0 A_SpawnItemEX("CWDM_ShellCasing",8,16,24,2,-4,4,0,SXF_CLIENTSIDE | SXF_NOCHECKPOSITION,0,0)
+		SGVS HIJ 3
 		TNT1 A 0 A_PlaySound("weapons/weaponclose",CHAN_AUTO)
-		SGVS IJKL 3
+		SGVS KLMN 3
 		Goto Ready
 	QuadFire:
 		//SHGN B 1 BRIGHT A_FireBullets(8,6,8,18,"CWDM_quadPuff",FBF_NORANDOM)
-		TNT1 A 0 	A_FireBullets (-4.0, 0, -1, (18), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (4.0, 0, -1, (18), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (-2.6, -1.5, -1, (14), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (2.6, -1.5, -1, (14), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (1.4, 1.5, -1, (12), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (-1.4, 1.5, -1, (12), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
-		TNT1 A 0	A_FireBullets (0, 0, 1, (9), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0 	A_FireBullets (-4.0, 0, -1, (20), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (4.0, 0, -1, (20), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (-2.6, -1.5, -1, (16), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (2.6, -1.5, -1, (16), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (1.4, 1.5, -1, (14), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (-1.4, 1.5, -1, (14), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_NORANDOM|FBF_EXPLICITANGLE)
+		TNT1 A 0	A_FireBullets (0, 0, 1, (10), "CWDM_quadPuff", FBF_NORANDOMPUFFZ|FBF_USEAMMO|FBF_NORANDOM|FBF_EXPLICITANGLE)
 		TNT1 A 0 A_PlaySound("weapons/quadattack",CHAN_7  )
 		SGVS B 0 A_Light0
-		SGVS DEF 3
+		SGVS CDEFG 3
 		TNT1 A 0 A_PlaySound("weapons/weaponopen",CHAN_AUTO)
-		SGVS GH 3
+		TNT1 A 0 A_SpawnItemEX("CWDM_ShellCasing",8,16,24,2,-4,4,0,SXF_CLIENTSIDE | SXF_NOCHECKPOSITION,0,0)
+		SGVS HIJ 3
 		TNT1 A 0 A_PlaySound("weapons/weaponclose",CHAN_AUTO)
-		SGVS IJKL 3
+		SGVS KLMN 3
 		goto Ready
+	Flash:
+		TNT1 A 1 A_SetPitch(pitch-1)
+		TNT1 AAAA 1 A_SetPitch(pitch+.25)
+		Goto LightDone
 	}
 }
 
@@ -183,6 +230,7 @@ ACTOR CWDM_rifle: CWDM_weapon
 		RFLE A 0 A_GiveInventory("CWDM_rifleShotCount", 1)
 		RFLE B 0 A_Light2
 		RFLE B 0 A_Quake(1,5,0,5)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",0,false,0.0,0.0,2,0)
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
 		RFLE B 1 BRIGHT A_FireBullets(3,4,-1,(15),"CWDM_bulletPuff",FBF_NORANDOM )
 		RFLE B 0 A_Light0
@@ -564,6 +612,7 @@ actor CWDM_stanRevolver : CWDM_weapon
 		REVV A 0 ACS_NamedExecute("setPlayerSpeed",0,4)
 		REVV A 0 A_Light2
 		REVV A 0 A_Quake(3,5,0,5)
+		TNT1 A 0 a_firecustommissile("CWDM_tracer",0,false,0.0,0.0,2,0)
 		TNT1 A 0 A_JumpIfInventory("QuadDamage",1,"QuadFire")
 		REVV B 1 BRIGHT A_FireBullets(2,2,1,(64),"CWDM_bulletPuff",FBF_NORANDOM)
 		REVV C 0 A_Light0

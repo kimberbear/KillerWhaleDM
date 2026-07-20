@@ -43,6 +43,10 @@ Art
 Ciaran Games
 testsubjectkim
 
+Models
+------
+powerup1: 'BulletZBorn' tracers
+
 Music & Sound
 -------------
 Ciaran Games	(music, most sounds)
