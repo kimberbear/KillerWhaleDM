@@ -59,10 +59,10 @@ ACTOR CWDM_ammo : Ammo
 
 ACTOR CWDM_weapon : Weapon 
 {
-	Weapon.BobRangeX 0.7
-	Weapon.BobRangeY 0.5
-	Weapon.BobSpeed 2
-	Weapon.BobStyle InverseSmooth
+	Weapon.BobRangeX 2.2
+	Weapon.BobRangeY 1.5
+	Weapon.BobStyle "InverseSmooth"
+	Weapon.BobSpeed 2.8
 	Weapon.SelectionOrder 350
 	Inventory.PickupSound "misc/usgpickup"
 	+AMMO_OPTIONAL
