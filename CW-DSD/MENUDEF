@@ -319,5 +319,5 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "ALPHA VER. 29.06.26"
+	StaticText 64, 214, "ALPHA VER. 20.07.26"
 }
