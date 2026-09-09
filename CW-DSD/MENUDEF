@@ -27,6 +27,48 @@ OptionMenu "KWDMoptions"
 	//Slider	"Custom FOV",	"cl_customFOV", 50, 120, 1
 }
 
+OptionValue "DamFonts"
+{
+	0, "Big"
+	1, "Small"
+	2, "Flat"
+	3, "Giant"
+}
+
+OptionValue "DamVel"
+{
+	0, "Float"
+	1, "Toss"
+	
+}
+
+// thankfully notepad++ macros exist
+OptionValue "DamCol"
+{
+	-1, "Random"
+	0, "\caBrick"
+	1, "\cbTan"
+	2, "\ccGray"
+	3, "\cdGreen"
+	4, "\ceBrown"
+	5, "\cfGold"
+	6, "\cgRed"
+	7, "\chBlue"
+	8, "\ciOrange"
+	9, "\cjWhite"
+	10, "\ckYellow"
+	11, "\cmBlack"
+	12, "\cnLight Blue"
+	13, "\coCream"
+	14, "\cpOlive"
+	15, "\cqDark Green"
+	16, "\csDark Brown"
+	17, "\ctPurple"
+	18, "\cuDark Gray"
+	19, "\cvCyan"
+	20, "\crDark Red"
+}
+
 OptionValue HitSounds
 {
 	0, "None"
@@ -52,7 +94,12 @@ optionMenu "CWDM_ExperienceMenu"
 {
 	TITLE "Experience"
 	
-	Submenu "Extra Stats",		"ExtraStatsMenu"
+	//Submenu "Extra Stats",		"ExtraStatsMenu"
+	Option "Damage Display", "exst_damageDisplay", "OnOff"
+	Option "Damage Display Font", "exst_dsd_damageDisplayMode", "DamFonts"
+	Option "Damage Display Color", "exst_damageDisplayCol", "DamCol"
+	Option "Damage Display Velocity", "exst_damageDisplayVel", "DamVel"
+	
 	StaticText ""
 	Option		"Free chasecam",		"cl_freechase",			"YesNo"
 	Option "Death camera",				"r_deathcamera", "OnOff"
@@ -319,5 +366,5 @@ LISTMENU "MainMenu"
 	TextItem 	"Quit Game", 	"q", 	"QuitMenu"
 	Position 0, 0
 	Font "SmallFont", "White"
-	StaticText 64, 214, "ALPHA VER. 20.07.26"
+	StaticText 64, 214, "ALPHA VER. 26.07.26"
 }

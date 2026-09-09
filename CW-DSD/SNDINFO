@@ -61,7 +61,8 @@ items/respawn "sounds/items/itemspawn.ogg"
 
 items/eat "Sounds/yom.ogg"
 items/armor1 "Sounds/arm1pickup.ogg"
-ammoget "Sounds/ammoget.ogg"
+ammoget "Sounds/items/ammoget.ogg"
+cellpickup "Sounds/items/cellpickup.ogg"
 powerup "Sounds/powerup.ogg"
 
 items/abonpickup "sounds/items/abonpickup.ogg"
@@ -113,19 +114,32 @@ $random whale/laugh
 	whale/laugh2
 }
 
-$playeralias 	"whale" 		male 	*jump 		misc/jump
-$playeralias 	"whale" 		male 	*land 		misc/land
-$playeralias 	"whale" 		male 	*grunt 		whale/pain
-$playeralias 	"whale" 		male 	*pain100	 	whale/pain
-$playeralias    "whale"			male   	*usefail    usefail
-$playeralias    "whale"			male    	*death		whale/die
-$playeralias    "whale"			male    	*xdeath		*death	
-$playeralias    "whale"			male    	*wimpydeath		*death	
-$playeralias    "whale"			male    	*taunt		whale/laugh
+$playeralias 	whale 	male 	*jump 		misc/jump
+$playeralias 	whale 	male 	*land 		misc/land
+$playeralias 	whale 	male 	*grunt 		whale/pain
+$playeralias 	whale 	male 	*pain100 	whale/pain
+$playeralias 	whale 	male 	*pain75 	whale/pain
+$playeralias 	whale 	male 	*pain50 	whale/pain
+$playeralias 	whale 	male 	*pain25 	whale/pain
+$playeralias    whale	male   	*usefail    	usefail
+$playeralias    whale	male    *death			whale/die
+$playeralias    whale	male    *xdeath			whale/die
+$playeralias    whale	male    *wimpydeath		whale/die	
+$playeralias    whale	male    *taunt			whale/laugh
+
 
 voice/stanNotice1	"sounds/bosses/stan/stan_notice_01.ogg"
 voice/stanNotice2	"sounds/bosses/stan/stan_notice_02.ogg"
 voice/stanNotice3	"sounds/bosses/stan/stan_notice_03.ogg"
+
+voice/stanPain1 "sounds/bosses/stan/stan_painlow_01.ogg"
+voice/stanPain2 "sounds/bosses/stan/stan_painlow_02.ogg"
+voice/stanPain3 "sounds/bosses/stan/stan_painlow_03.ogg"
+voice/stanPain4 "sounds/bosses/stan/stan_painlow_04.ogg"
+voice/stanPain5 "sounds/bosses/stan/stan_painlow_05.ogg"
+voice/stanPain6 "sounds/bosses/stan/stan_painlow_06.ogg"
+voice/stanPain7 "sounds/bosses/stan/stan_painlow_07.ogg"
+voice/stanPain8 "sounds/bosses/stan/stan_painlow_08.ogg"
 
 $random voice/stanNotice
 {
@@ -133,6 +147,25 @@ $random voice/stanNotice
 	voice/stanNotice2
 	voice/stanNotice3
 }
+
+$random voice/stanPain
+{
+	voice/stanPain1
+	voice/stanPain2
+	voice/stanPain3
+	voice/stanPain4
+	voice/stanPain5
+	voice/stanPain6
+	voice/stanPain7
+	voice/stanPain8
+}
+
+$playeralias 	stan 		male 	*jump 		misc/jump
+$playeralias 	stan 		male 	*land 		misc/land
+$playeralias 	stan 		male 	*grunt 		stanPain
+$playeralias 	stan 		male 	*pain100	stanPain
+$playeralias    stan		male   	*usefail    usefail
+
 
 weapons/revolverfire1	"sounds/bosses/stan/stanrevshot1.ogg"
 weapons/revolverfire2	"sounds/bosses/stan/stanrevshot2.ogg"

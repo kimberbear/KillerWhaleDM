@@ -6,6 +6,7 @@ actor CWDM_isShotgunner : ClassToken
 actor CWDM_shotgunnerClass : CWDM_player
 {
 	Player.DisplayName "Shotgunner"
+	Player.StartItem "CWDM_shell" 10
 	Player.StartItem "CWDM_Shotgun"
 	Player.StartItem "CWDM_isShotgunner"
 	Player.ColorRange 179, 191
@@ -88,7 +89,7 @@ actor CWDM_riflemanClass : CWDM_player
 	Player.ColorRange 197, 207				// fuck my stupid chungus life
 	Player.SoundClass "whale"
 	Player.ScoreIcon "RFICON"
-
+	Player.StartItem "CWDM_bullet" 96
 	States
 	{
 	Spawn:
@@ -158,9 +159,10 @@ actor CWDM_isMurkyman : ClassToken
 actor CWDM_murkymanClass : CWDM_player
 {
 	Player.DisplayName "Murkyman"
-	Player.StartItem "CWDM_flare"
+	Player.StartItem "CWDM_flareGun"
+	Player.StartItem "CWDM_flareAmmo" 6
 	Player.StartItem "CWDM_isMurkyman"
-	Player.ColorRange 120, 122
+	Player.ColorRange 117, 118
 	Player.SoundClass "whale"
 	Player.ScoreIcon "MURICON"
 	States
@@ -234,6 +236,7 @@ actor CWDM_grenadierClass : CWDM_player
 {
 	Player.DisplayName "Grenadier"
 	Player.StartItem "CWDM_grenadeLauncher"
+	Player.StartItem "CWDM_boomBrew" 6
 	Player.StartItem "CWDM_isGrenadier"
 	Player.SoundClass "whale"
 	Player.ScoreIcon "GRNICON"
@@ -335,6 +338,7 @@ actor CWDM_stanClass : CWDM_bossClass
 	Player.DisplayName "Stanley Steel Press"
 	Height 64
 	Player.ViewHeight 40.0
+	Player.SoundClass "stan"
 	States
 	{
 	Spawn:

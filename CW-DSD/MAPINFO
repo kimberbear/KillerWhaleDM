@@ -190,3 +190,10 @@ map DM7 "Pool Day"
 	GameMode = "deathmatch"
 }
 
+map DM8 "Pump Station"
+{
+	sky1 = "BEACHSKY",0
+	music = "music/cwvd/rig_ingame.ogg"
+	Fade = 112735
+	GameMode = "deathmatch"
+}

@@ -1,13 +1,36 @@
-ACTOR CWDM_shell : CWDM_ammo 
+ACTOR CWDM_shell : Ammo  12300
 {
 //$Category Ammo
-//$Title "Shells"
+//$Title "Shells (4 shells)"
+//$Sprite SHELA0
+	Inventory.RestrictedTo "CWDM_shotgunnerClass"
+	Inventory.PickupSound "ammoget"
+	Inventory.RespawnTics  200 
+    Radius 16
+    Height 24
+	Inventory.Icon "SHELA0"
+	Inventory.PickupMessage "$SHELLSMALL"
+	Inventory.Amount 4
+	Inventory.MaxAmount 34
+	Ammo.BackpackAmount 4
+	Ammo.BackpackMaxAmount 34
+	states
+	{
+	Spawn:
+		SHEL A -1
+		stop
+	}
+}
+
+ACTOR CWDM_shellBox : CWDM_shell 12301
+{
+//$Category Ammo
+//$Title "Shell Box (10 shells)"
 //$Sprite SHELB0
-	Inventory.PickupMessage "Shells!"
+	Inventory.Icon "SHELB0"
+	Inventory.PickupMessage "$SHELLBOX"
 	Inventory.Amount 10
-	Inventory.MaxAmount 48
 	Ammo.BackpackAmount 10
-	Ammo.BackpackMaxAmount 48
 	states
 	{
 	Spawn:
@@ -16,20 +39,108 @@ ACTOR CWDM_shell : CWDM_ammo
 	}
 }
 
-ACTOR CWDM_bullet : CWDM_ammo 
+ACTOR CWDM_bullet : Ammo 12302
 {
 //$Category Ammo
-//$Title "Bullets"
-//$Sprite BLTSB0
+//$Title "Bullets (6 bullets)"
+//$Sprite BLTSA0
+	Inventory.RestrictedTo "CWDM_riflemanClass"
+	Inventory.PickupSound "ammoget"
+	Inventory.RespawnTics  200 
+    Radius 16
+    Height 24
+	Inventory.Icon "BLTSA0"
 	Inventory.PickupMessage "Bullets!"
-	Inventory.Amount 10
-	Inventory.MaxAmount 48
-	Ammo.BackpackAmount 10
-	Ammo.BackpackMaxAmount 48
+	Inventory.Amount 6
+	Inventory.MaxAmount 96
+	Ammo.BackpackAmount 6
+	Ammo.BackpackMaxAmount 96
+	states
+	{
+	Spawn:
+		BLTS A -1
+		stop
+	}
+}
+
+ACTOR CWDM_bulletbox : CWDM_bullet 12303
+{
+//$Category Ammo
+//$Title "Box of Bullets (24 bullets)"
+//$Sprite BLTSB0
+	Inventory.Icon "BLTSB0"
+	Inventory.PickupMessage "A Box of Bullets!"
+	Inventory.Amount 24
+	Ammo.BackpackAmount 24
 	states
 	{
 	Spawn:
 		BLTS B -1
+		stop
+	}
+}
+
+ACTOR CWDM_boomBrew : Ammo 12304
+{
+//$Category Ammo
+//$Title "Boom Brew (1 Brew)"
+//$Sprite DYAMA0
+	Inventory.RestrictedTo "CWDM_grenadierClass"
+	Inventory.PickupSound "ammoget"
+	Inventory.RespawnTics  200 
+    Radius 16
+    Height 24
+	Inventory.Icon "DYAMA0"
+	Inventory.PickupMessage "Booming with flavor!"
+	Inventory.Amount 1
+	Inventory.MaxAmount 12
+	Ammo.BackpackAmount 1
+	Ammo.BackpackMaxAmount 12
+	states
+	{
+	Spawn:
+		DYAM A -1
+		stop
+	}
+}
+
+ACTOR CWDM_brewCase : CWDM_boomBrew 12305
+{
+//$Category Ammo
+//$Title "Six pack of Boom Brew (6 brew)"
+//$Sprite DYAMB0
+	Inventory.Icon "DYAMB0"
+	Inventory.PickupMessage "A six pack of Boom Brews!"
+	Inventory.Amount 6
+	Ammo.BackpackAmount 6
+	states
+	{
+	Spawn:
+		DYAM B -1
+		stop
+	}
+}
+
+ACTOR CWDM_flareAmmo : Ammo 12306
+{
+//$Category Ammo
+//$Title "Flares (2 Flares)"
+//$Sprite FLA0A0
+	Inventory.RestrictedTo "CWDM_murkymanClass"
+	Inventory.PickupSound "ammoget"
+	Inventory.RespawnTics  200 
+    Radius 16
+    Height 24
+	Inventory.Icon "FLA0A0"
+	Inventory.PickupMessage "Flares!"
+	Inventory.Amount 2
+	Inventory.MaxAmount 12
+	Ammo.BackpackAmount 2
+	Ammo.BackpackMaxAmount 12
+	states
+	{
+	Spawn:
+		FLA0 A -1
 		stop
 	}
 }

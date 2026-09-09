@@ -13,6 +13,7 @@ actor CWDM_player : PlayerPawn
 	Player.SoundClass "whale"
 	YScale 0.833333333			//aspect fix
 	Player.ViewHeight 36.0
+	PainSound "whale/pain"
 	+DONTGIB
 	States
 	{
@@ -52,20 +53,14 @@ actor CWDM_player : PlayerPawn
 	}
 }
 
-ACTOR CWDM_ammo : Ammo 
-{
-
-}
-
 ACTOR CWDM_weapon : Weapon 
 {
-	Weapon.BobRangeX 2.2
-	Weapon.BobRangeY 1.5
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.75
 	Weapon.BobStyle "InverseSmooth"
-	Weapon.BobSpeed 2.8
+	Weapon.BobSpeed 2
 	Weapon.SelectionOrder 350
-	Inventory.PickupSound "misc/usgpickup"
-	+AMMO_OPTIONAL
+	//+AMMO_OPTIONAL
 	+WEAPON.NOAUTOAIM
 	Weapon.SwayStyle "HorizontalOnly"
 	Weapon.ViewSwaySpeed 2.5

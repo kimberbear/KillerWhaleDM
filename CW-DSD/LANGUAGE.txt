@@ -3,6 +3,8 @@
 LANGUAGE = "english";
 
 //Items
+SHELLSMALL = "\c[White]Shells! \c[gold]+4 Shells";
+SHELLBOX = "\c[White]A box of shells! \c[gold]+10 Shells";
 
 HEALBON = "\c[White]Snacked on a shrimp! \c[gold]+2 HP";
 HEALMED = "\c[White]Drank some fish blood! \c[gold]+50 HP";
